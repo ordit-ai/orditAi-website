@@ -4,5 +4,5 @@ export const APP_ROUTES = {
   PRICING: "/",
   ABOUT_US: "/",
   RESOURCES: "/",
-  CONTACT: "/"
+  CONTACT: "/",
 };

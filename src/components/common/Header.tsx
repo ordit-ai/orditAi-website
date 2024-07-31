@@ -34,7 +34,6 @@ const Header = () => {
   ];
 
   return (
-    
     <div className="absolute h-[80px] flex items-center  w-[100vw] justify-center">
       <div className="flex items-center justify-between    w-[80vw] h-[60px] px-4 border-b-[1px]">
         <img src={Logo} alt="Logo" className="h-[25px]" />

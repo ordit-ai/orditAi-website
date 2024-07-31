@@ -4,14 +4,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary : "#4E2DBE"
+        primary: "#4E2DBE",
       },
       fontFamily: {
-        primary: ["Onest", "sans-serif"]
+        primary: ["Onest", "sans-serif"],
       },
       backgroundImage: {
         bg2: "url('assets/images/bg2.png')",
-      }
+      },
     },
   },
   plugins: [],

@@ -34,9 +34,8 @@ const Home = () => {
                 <LuMoveRight />
               </Button>
 
-
               <Button variant="quickAction" className="flex items-center justify-between">
-              Get a Demo
+                Get a Demo
               </Button>
             </div>
           </div>
@@ -81,7 +80,9 @@ const Home = () => {
             <Typography.H2 className="text-gray-800 leading-[1.3em]">Multiple Workspaces</Typography.H2>
 
             <Typography.Text className="text-gray-800 font-light">
-            Create different workspaces for each client to seamlessly manage the accounting and audit needs of the clients. Assign workspaces to members of your organization based on the tasks assigned to each member of the organization
+              Create different workspaces for each client to seamlessly manage the accounting and audit needs of the
+              clients. Assign workspaces to members of your organization based on the tasks assigned to each member of
+              the organization
             </Typography.Text>
 
             <Button variant="default" className="flex items-center justify-between">
@@ -102,12 +103,12 @@ const Home = () => {
             <img src={MessageIcon} alt="message-chat-circle" className="w-[50%]" />
           </div>
 
-          
-
           <Typography.H2 className="text-gray-800 leading-[1.3em]">Add Collaborators</Typography.H2>
 
           <Typography.Text className="text-gray-800 font-light">
-          Collaborate easily by inviting members of your organization to your workspace and assign roles and permissions to them on OrditAI. Ensure efficiency and due process by assigning tasks based on your pre-set roles
+            Collaborate easily by inviting members of your organization to your workspace and assign roles and
+            permissions to them on OrditAI. Ensure efficiency and due process by assigning tasks based on your pre-set
+            roles
           </Typography.Text>
 
           <Button variant="default">
@@ -171,30 +172,28 @@ const Home = () => {
         </div>
 
         <div className="bg-primary h-[400px] rounded-lg w-[100%]  flex items-center justify-between">
-
           <div className="flex items-center justify-between w-[95%] mx-auto ">
-          <div className="w-[40%] space-y-3">
-            <Typography.SubText className="font-light text-white uppercase tracking-[3px]">
-              Get Started with OrditAI Today
-            </Typography.SubText>
+            <div className="w-[40%] space-y-3">
+              <Typography.SubText className="font-light text-white uppercase tracking-[3px]">
+                Get Started with OrditAI Today
+              </Typography.SubText>
 
-            <Typography.Headers className="text-white leading-[1.3em]">Effortless Automation</Typography.Headers>
+              <Typography.Headers className="text-white leading-[1.3em]">Effortless Automation</Typography.Headers>
 
-            <Typography.SubText className="font-light text-white leading-6 w-[95%] pb-5">
-              Join the hundreds of global companies transforming their financial operations with OrditAI. Our AI-powered
-              tools streamline processes, improve accuracy, and boost efficiency. Don't miss out on the opportunity to
-              elevate your business.
-            </Typography.SubText>
+              <Typography.SubText className="font-light text-white leading-6 w-[95%] pb-5">
+                Join the hundreds of global companies transforming their financial operations with OrditAI. Our
+                AI-powered tools streamline processes, improve accuracy, and boost efficiency. Don't miss out on the
+                opportunity to elevate your business.
+              </Typography.SubText>
 
-            <Button variant="quickAction" className="">
-              Sign Up for a Free Trial
-              <LuMoveRight />
-            </Button>
+              <Button variant="quickAction" className="">
+                Sign Up for a Free Trial
+                <LuMoveRight />
+              </Button>
+            </div>
+
+            <img src={Effortless} alt="Effortless" className="w-[50%] rounded-lg" />
           </div>
-
-          <img src={Effortless} alt="Effortless" className="w-[50%] rounded-lg" />
-          </div>
-        
         </div>
       </div>
     </div>

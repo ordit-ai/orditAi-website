@@ -2,8 +2,6 @@ import React from "react";
 
 interface TypographyProps extends React.HTMLProps<HTMLParagraphElement> {}
 
-
-
 function Typography({ ...props }: TypographyProps) {
   return <p {...props} className={`${props.className} text-sm`} />;
 }
@@ -37,7 +35,6 @@ Typography.Headers = function ({ ...props }: TypographyProps) {
     </p>
   );
 };
-
 
 Typography.H1 = function ({ ...props }: TypographyProps) {
   return (

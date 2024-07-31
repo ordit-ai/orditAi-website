@@ -38,20 +38,18 @@ export interface ButtonProps
   loading?: boolean;
 }
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, ...props }, ref) => {
-    const Comp =  "button";
-    if (props.loading) {
-      props.disabled = true;
-    }
-    return (
-      <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props}>
-        <div className="flex gap-x-2 text-md items-center">{props.children}</div>
-        {props.loading == true && <FaSpinner className="animate-spin" />}
-      </Comp>
-    );
-  },
-);
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(({ className, variant, size, ...props }, ref) => {
+  const Comp = "button";
+  if (props.loading) {
+    props.disabled = true;
+  }
+  return (
+    <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props}>
+      <div className="flex gap-x-2 text-md items-center">{props.children}</div>
+      {props.loading == true && <FaSpinner className="animate-spin" />}
+    </Comp>
+  );
+});
 Button.displayName = "Button";
 
 export { Button };
