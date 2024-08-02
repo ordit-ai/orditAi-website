@@ -11,6 +11,7 @@ export default {
       },
       backgroundImage: {
         bg2: "url('assets/images/bg2.png')",
+        mobileBg2: "url('assets/images/mobileBg2.png')",
       },
     },
   },
