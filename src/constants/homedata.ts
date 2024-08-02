@@ -25,3 +25,39 @@ export const whyChoose = [
     image: Precison,
   },
 ];
+
+export const featuresData = [
+  {
+    id: "features1",
+    name: "Journal Entry Automation",
+    description: [
+      "Simplify your bookkeeping with automated journal entries. OrditAI captures and categorizes transactions in real-time, reducing manual effort and minimizing errors.",
+      "With automated journal entry, you can ensure accurate financial records and save significant time, allowing your team to focus on strategic tasks that add value to your business.",
+    ],
+  },
+  {
+    id: "features2",
+    name: "Data Extraction",
+    description: [
+      "Quickly and accurately pull data from invoices, receipts, and other documents. OrditAI’s smart extraction ensures you have reliable data without manual entry.",
+    ],
+  },
+  {
+    id: "features3",
+    name: "Anomaly Detection",
+    description: [
+      "Detect and address irregularities in your financial data automatically. OrditAI helps you catch issues early to maintain accurate and trustworthy records.",
+    ],
+  },
+  {
+    id: "features4",
+    name: "Real-time Reporting",
+    description: [""],
+  },
+
+  {
+    id: "features5",
+    name: "Compliance",
+    description: [""],
+  },
+];

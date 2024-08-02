@@ -7,8 +7,8 @@ const Footer = () => {
   return (
     <div className="p-4">
       <div className="bg-[#040126] w-[100%]  mx-auto rounded-t-md p-10">
-        <div className="border-b-[1px] border-gray-500 py-6 flex items-start justify-between">
-          <div className="w-[20%] space-y-6">
+        <div className="border-b-[1px] border-gray-500 py-6 flex md:flex-row flex-col items-start justify-between">
+          <div className="md:w-[20%] w-[100%] space-y-6">
             <img src={Logo} alt="Logo" className="h-[25px]" />
 
             <Typography.SubText className="text-white">
@@ -16,7 +16,7 @@ const Footer = () => {
             </Typography.SubText>
           </div>
 
-          <div className="flex items-start justify-around w-[65%]">
+          <div className="md:flex grid grid-cols-2 items-start justify-around md:w-[65%] w-[100%] md:gap-0 gap-6 md:py-0 py-[2em]">
             {footerCol.map((el) => (
               <div key={el.name} className="space-y-3">
                 <Typography.MicroText className="text-gray-300">{el.name}</Typography.MicroText>

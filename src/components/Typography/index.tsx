@@ -30,7 +30,7 @@ Typography.SubHeading = function ({ ...props }: TypographyProps) {
 
 Typography.Headers = function ({ ...props }: TypographyProps) {
   return (
-    <p {...props} className={`text-4xl font-secondary font-semibold ${props.className}`}>
+    <p {...props} className={`sm:text-4xl text-2xl font-secondary font-semibold ${props.className}`}>
       {props.children}
     </p>
   );
@@ -38,7 +38,7 @@ Typography.Headers = function ({ ...props }: TypographyProps) {
 
 Typography.H1 = function ({ ...props }: TypographyProps) {
   return (
-    <p {...props} className={`text-5xl font-primary font-semibold ${props.className}`}>
+    <p {...props} className={`md:text-5xl text-4xl font-primary font-semibold ${props.className}`}>
       {props.children}
     </p>
   );
@@ -46,7 +46,7 @@ Typography.H1 = function ({ ...props }: TypographyProps) {
 
 Typography.H2 = function ({ ...props }: TypographyProps) {
   return (
-    <p {...props} className={`text-3xl font-primary font-semibold ${props.className}`}>
+    <p {...props} className={`sm:text-3xl text-2xl font-primary font-semibold ${props.className}`}>
       {props.children}
     </p>
   );
