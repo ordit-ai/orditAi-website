@@ -46,10 +46,7 @@ const Header = () => {
             {React.Children.toArray(
               links?.map((link) => (
                 <NavLink to={link.path} className={({ isActive }) => (isActive ? "text-white" : "text-white")}>
-                  <Typography.SubText>
-                  {link.name}
-                  </Typography.SubText>
-               
+                  <Typography.SubText>{link.name}</Typography.SubText>
                 </NavLink>
               )),
             )}
@@ -61,11 +58,8 @@ const Header = () => {
             <Typography.SubText className="text-white">Login</Typography.SubText>
           </Link>
 
-          <Button variant="quickAction">
-            Get Started
-          </Button>
+          <Button variant="quickAction">Get Started</Button>
         </div>
-
 
         <HiMenu className="flex md:hidden text-white text-3xl cursor-pointer" />
       </div>

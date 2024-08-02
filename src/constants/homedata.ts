@@ -38,12 +38,16 @@ export const featuresData = [
   {
     id: "features2",
     name: "Data Extraction",
-    description: ["Quickly and accurately pull data from invoices, receipts, and other documents. OrditAI’s smart extraction ensures you have reliable data without manual entry."],
+    description: [
+      "Quickly and accurately pull data from invoices, receipts, and other documents. OrditAI’s smart extraction ensures you have reliable data without manual entry.",
+    ],
   },
   {
     id: "features3",
     name: "Anomaly Detection",
-    description: ["Detect and address irregularities in your financial data automatically. OrditAI helps you catch issues early to maintain accurate and trustworthy records."],
+    description: [
+      "Detect and address irregularities in your financial data automatically. OrditAI helps you catch issues early to maintain accurate and trustworthy records.",
+    ],
   },
   {
     id: "features4",
