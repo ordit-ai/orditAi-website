@@ -3,7 +3,6 @@ import Typography from "../Typography";
 import { footerCol, footerRow } from "@/constants/footer-routes";
 
 const Footer = () => {
-  console.log(footerCol, "footerCol");
   return (
     <div className="p-4">
       <div className="bg-[#040126] w-[100%]  mx-auto rounded-t-md p-10">
