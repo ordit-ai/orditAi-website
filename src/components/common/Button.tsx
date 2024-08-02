@@ -14,7 +14,7 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground  hover:bg-secondary-hover active:bg-secondary-active",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        quickAction: "text-[#4E2DBE] bg-white text-xs py-[6px] px-3 rounded font-[500]",
+        quickAction: "text-gray-700 bg-white text-xs py-[6px] px-3 rounded font-[500]",
         glass: "bg-white bg-opacity-[0.20]",
       },
       size: {
