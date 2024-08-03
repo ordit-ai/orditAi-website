@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="text-white flex items-center justify-between pt-6">
+        <div className="text-white flex md:flex-row flex-col items-center justify-between pt-6 md:space-y-0 space-y-2">
           <Typography.SubText>{footerRow.name}</Typography.SubText>
 
           <div className="flex items-center space-x-5">
