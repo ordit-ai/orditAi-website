@@ -3,7 +3,7 @@ name: Deploy to DigitalOcean Droplet
 on:
   push:
     branches:
-      - develop  # Adjust this to your main branch
+      - staging  # Adjust this to your main branch
 
 jobs:
   build:
@@ -16,16 +16,16 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '16'  # Set this to the version you are using
+        node-version: '18'  # Set this to the version you are using
 
     - name: Install dependencies
       run: npm install
 
     - name: Build the React app
-      run: npm run build
+      run: npm run build  # Assuming this command generates the dist directory
 
-    - name: List build directory contents
-      run: ls -al build
+    - name: List dist directory contents
+      run: ls -al dist
 
     - name: Install sshpass
       run: sudo apt-get update && sudo apt-get install -y sshpass
@@ -43,8 +43,8 @@ jobs:
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H $SSH_HOST_NAME >> ~/.ssh/known_hosts
         
-        # Transfer build files to the app directory on the droplet
-        rsync -avz --delete-after build/ $SSH_USERNAME@$SSH_HOST_NAME:$DEPLOYMENT_DIRECTORY/
+        # Transfer dist files to the app directory on the droplet
+        rsync -avz --delete-after dist/ $SSH_USERNAME@$SSH_HOST_NAME:$DEPLOYMENT_DIRECTORY/
 
         # Restart Nginx using sshpass to handle the password
         sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$SSH_HOST_NAME "echo $SSH_PASSWORD | sudo -S systemctl restart nginx"
