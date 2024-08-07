@@ -3,7 +3,7 @@ name: Deploy to DigitalOcean Droplet
 on:
   push:
     branches:
-      - staging  # Adjust this to your main branch
+      - develop  # Adjust this to your main branch
 
 jobs:
   build:
