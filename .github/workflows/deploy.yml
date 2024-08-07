@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "staging" ] # Adjust branches as needed
   pull_request:
-    branches: [ "staging" ] # Adjust branches as needed
+    branches: ["staging" ] # Adjust branches as needed
 
 jobs:
   build:
@@ -50,7 +50,7 @@ jobs:
         # Remove all files in the deployment directory
         sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$SSH_HOST_NAME "rm -rf $DEPLOYMENT_DIRECTORY/*"
 
-        # Transfer dist files to the deployment directory
+        # Transfer only the contents of the dist directory
         rsync -avz --delete-after dist/ $SSH_USERNAME@$SSH_HOST_NAME:$DEPLOYMENT_DIRECTORY/
 
         # Restart Nginx using sshpass to handle the password
