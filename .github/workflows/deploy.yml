@@ -1,9 +1,10 @@
-name: Deploy to DigitalOcean Droplet
+name: Deploy React TypeScript App to DigitalOcean Droplet
 
 on:
   push:
-    branches:
-      - develop  # Adjust this to your main branch
+    branches: [ "staging" ] # Adjust branches as needed
+  pull_request:
+    branches: ["staging" ] # Adjust branches as needed
 
 jobs:
   build:
@@ -14,15 +15,18 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Set up Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
-        node-version: '18'  # Set this to the version you are using
+        node-version: '18'  # Ensure this matches your project's Node.js version
 
     - name: Install dependencies
       run: npm install
 
+    - name: Lint code
+      run: npm run lint
+
     - name: Build the React app
-      run: npm run build  # Assuming this command generates the dist directory
+      run: npm run build
 
     - name: List dist directory contents
       run: ls -al dist
@@ -43,7 +47,10 @@ jobs:
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H $SSH_HOST_NAME >> ~/.ssh/known_hosts
         
-        # Transfer dist files to the app directory on the droplet
+        # Remove all files in the deployment directory
+        sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$SSH_HOST_NAME "rm -rf $DEPLOYMENT_DIRECTORY/*"
+
+        # Transfer only the contents of the dist directory
         rsync -avz --delete-after dist/ $SSH_USERNAME@$SSH_HOST_NAME:$DEPLOYMENT_DIRECTORY/
 
         # Restart Nginx using sshpass to handle the password
