@@ -1,0 +1,47 @@
+name: Deploy ordit website to Droplet
+
+on:
+  push:
+    branches:
+      - develop  
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18'  # Set this to the version you are using
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build the React app
+      run: npm run build
+
+    - name: Install sshpass
+      run: sudo apt-get update && sudo apt-get install -y sshpass
+
+    - name: Deploy to Droplet via SSH
+      env:
+        SSH_SECRET: ${{ secrets.SSH_SECRET }}
+        SSH_HOST_NAME: ${{ secrets.SSH_HOST_NAME }}
+        SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+        SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
+        DEPLOYMENT_DIRECTORY: ${{ secrets.DEPLOYMENT_DIRECTORY }}
+      run: |
+        mkdir -p ~/.ssh
+        echo "$SSH_SECRET" | tr -d '\r' > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan -H $SSH_HOST_NAME >> ~/.ssh/known_hosts
+        
+        # Transfer build files to the app directory on the droplet
+        rsync -avz --delete-after build/ $SSH_USERNAME@$SSH_HOST_NAME:$DEPLOYMENT_DIRECTORY/
+
+        # Restart Nginx using sshpass to handle the password
+        sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_USERNAME@$SSH_HOST_NAME "echo $SSH_PASSWORD | sudo -S systemctl restart nginx"
