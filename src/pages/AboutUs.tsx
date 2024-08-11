@@ -99,11 +99,17 @@ const AboutUs = () => {
           </div>
 
           <div className="flex items-center space-x-3 py-4">
-            <div className="bg-white w-[40px] h-[40px] flex items-center justify-center rounded-full border-[1px] hover:bg-slate-100 cursor-pointer" onClick={() => scroll("left")}>
+            <div
+              className="bg-white w-[40px] h-[40px] flex items-center justify-center rounded-full border-[1px] hover:bg-slate-100 cursor-pointer"
+              onClick={() => scroll("left")}
+            >
               <GoArrowLeft />
             </div>
 
-            <div onClick={() => scroll("right")} className="bg-white w-[40px] h-[40px] flex items-center justify-center rounded-full border-[1px] hover:bg-slate-100 cursor-pointer">
+            <div
+              onClick={() => scroll("right")}
+              className="bg-white w-[40px] h-[40px] flex items-center justify-center rounded-full border-[1px] hover:bg-slate-100 cursor-pointer"
+            >
               <GoArrowRight />
             </div>
           </div>
