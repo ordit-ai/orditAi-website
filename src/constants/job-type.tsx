@@ -1,5 +1,3 @@
-
-
 enum JOB_TYPE {
   DESIGN = "design",
   ENGINEERING = "enginerring",
