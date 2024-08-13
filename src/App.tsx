@@ -3,10 +3,12 @@ import WebsiteLayout from "./Layouts/WebsiteLayout";
 import Home from "./pages/Home";
 import { APP_ROUTES } from "./constants/app-routes";
 import { routes } from "./utils/routes";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
   const Element = {
     [APP_ROUTES.HOME]: <Home />,
+    [APP_ROUTES.ABOUT_US]: <AboutUs />,
   };
 
   return (

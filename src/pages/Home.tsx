@@ -13,8 +13,8 @@ import ImageTextSection from "@/components/common/ImageTextSection";
 const Home = () => {
   return (
     <div>
-      <div className=" h-[100vh] w-[100%] flex md:items-end items-start justify-center bg-gradient-to-b from-[#050E2FFA] to-[#17052A] py-[2em] md:pt-0 pt-[30%]">
-        <div className="w-[85%] flex items-start justify-between">
+      <div className=" h-[100vh] w-[100%] flex md:items-end items-start justify-center bg-gradient-to-b from-[#050E2FFA] to-[#17052A] md:py-0 py-[2em] md:pt-0 pt-[30%]">
+        <div className="w-[85%] h-[100%] flex md:items-center items-start justify-between">
           <div className="md:w-[45%] w-[100%] space-y-4">
             <Typography.H1 className="text-white leading-[1.3em] ">
               Ensure transparency and trust with AI powered accounting and auditing
@@ -47,7 +47,7 @@ const Home = () => {
             </div>
           </div>
 
-          <img src={HeroImg} className="w-[55%] place-self-end hidden md:flex" alt="HeroImg" />
+          <img src={HeroImg} className="w-[60%] place-self-end hidden md:flex" alt="HeroImg" />
         </div>
       </div>
 
