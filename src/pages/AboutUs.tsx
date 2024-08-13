@@ -78,7 +78,7 @@ const AboutUs = () => {
             <Typography.Text className="text-slate-600 font-light">
               Odio felis sagittis, morbi feugiat tortor vitae feugiat fusce aliquet. Nam elementum urna nisi aliquet
               erat dolor enim. Ornare id morbi eget ipsum. Sapien, dictum molestie sem tempor. Diam elit, orci,
-              tincidunt aenean tempus. 
+              tincidunt aenean tempus.
             </Typography.Text>
           </div>
         </div>
