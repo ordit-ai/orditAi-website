@@ -20,7 +20,7 @@ on:
 jobs:
   run_tests:
     uses: ./.github/workflows/common.yml
-  
+
   build_and_deploy_develop:
     name: Build and Deploy to Develop
     runs-on: ubuntu-latest
