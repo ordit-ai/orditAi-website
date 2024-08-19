@@ -1,3 +1,4 @@
+import JobCard from "@/components/TeamCards/JobCard";
 import TeamCard1 from "@/components/TeamCards/TeamCard1";
 import Typography from "@/components/Typography";
 import SectionHeaders from "@/components/common/SectionHeaders";
@@ -77,7 +78,7 @@ const AboutUs = () => {
             <Typography.Text className="text-slate-600 font-light">
               Odio felis sagittis, morbi feugiat tortor vitae feugiat fusce aliquet. Nam elementum urna nisi aliquet
               erat dolor enim. Ornare id morbi eget ipsum. Sapien, dictum molestie sem tempor. Diam elit, orci,
-              tincidunt aenean tempus. Quis velit eget ut tortor tellus. Sed vel, congue felis elit erat nam nibh orci.
+              tincidunt aenean tempus.
             </Typography.Text>
           </div>
         </div>
@@ -113,6 +114,21 @@ const AboutUs = () => {
               <GoArrowRight />
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="w-[85%] mx-auto py-[4em]">
+        <SectionHeaders
+          introText="Open positions"
+          header="We’re looking for talented people"
+          subHeader="We’re a 100% remote team spread all across the world. Join us!"
+          color="primary"
+        />
+
+        <div className="grid grid-cols-2 gap-[1.5em] gap-x-[3em] py-[2em]">
+          {[1, 2, 3, 4, 5, 6, 7].map((el) => (
+            <JobCard key={`${el}-JobCard`} />
+          ))}
         </div>
       </div>
     </div>
