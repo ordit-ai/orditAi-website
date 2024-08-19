@@ -1,0 +1,11 @@
+name: Static Analysis and Unit Test Suite
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  run_tests:
+    uses: ./.github/workflows/common.yml
