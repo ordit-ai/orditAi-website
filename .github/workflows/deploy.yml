@@ -7,15 +7,15 @@ on:
       ENVIRONMENT:
         description: "Select the environment you want to deploy to."
         required: true
-        default: develop
+        default: staging
         choices:
-          - develop
+          - staging
           - production
 
   # Automatic trigger on push to the develop branch
   push:
     branches:
-      - develop # Automatically deploy on push to the develop branch
+      - staging # Automatically deploy on push to the develop branch
 
 jobs:
   run_tests:
