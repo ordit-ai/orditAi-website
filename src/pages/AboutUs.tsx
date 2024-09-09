@@ -36,49 +36,22 @@ const AboutUs = () => {
       </div>
 
       <div className="w-[85%] mx-auto py-[4em]">
-        <SectionHeaders
-          introText="Our story"
-          header="We’re just getting started"
-          subHeader="We’ve already helped over 4,000 companies achieve remarkable results."
-          color="secondary"
-        />
+        <SectionHeaders introText="Our story" header="We’re just getting started" subHeader="" color="secondary" />
 
         <div className="flex items-center gap-6  justify-center pt-6">
           <div className="space-y-4">
             <Typography.Text className="text-slate-600 font-light">
-              Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget
-              vestibulum felis. Dictum quis montes, sit sit. Tellus aliquam enim urna, etiam.
+              OrditAI was born out of a desire to revolutionize the way businesses handle their accounting and auditing
+              processes. In a world where precision and transparency are paramount, we recognized the need for a
+              solution that not only simplifies these complex tasks but also ensures accuracy and compliance with global
+              standards.
             </Typography.Text>
 
             <Typography.Text className="text-slate-600 font-light">
-              Eget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed
-              auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at
-              donec. In turpis vel et quam imperdiet. Ipsum molestie aliquet sodales id est ac volutpat.
-            </Typography.Text>
-
-            <Typography.Text className="text-slate-600 font-light">
-              Odio felis sagittis, morbi feugiat tortor vitae feugiat fusce aliquet. Nam elementum urna nisi aliquet
-              erat dolor enim. Ornare id morbi eget ipsum. Sapien, dictum molestie sem tempor. Diam elit, orci,
-              tincidunt aenean tempus. Quis velit eget ut tortor tellus. Sed vel, congue felis elit erat nam nibh orci.
-            </Typography.Text>
-          </div>
-
-          <div className="space-y-4">
-            <Typography.Text className="text-slate-600 font-light">
-              Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam suspendisse morbi eleifend faucibus eget
-              vestibulum felis. Dictum quis montes, sit sit. Tellus aliquam enim urna, etiam.
-            </Typography.Text>
-
-            <Typography.Text className="text-slate-600 font-light">
-              Eget quis mi enim, leo lacinia pharetra, semper. Eget in volutpat mollis at volutpat lectus velit, sed
-              auctor. Porttitor fames arcu quis fusce augue enim. Quis at habitant diam at. Suscipit tristique risus, at
-              donec. In turpis vel et quam imperdiet. Ipsum molestie aliquet sodales id est ac volutpat.
-            </Typography.Text>
-
-            <Typography.Text className="text-slate-600 font-light">
-              Odio felis sagittis, morbi feugiat tortor vitae feugiat fusce aliquet. Nam elementum urna nisi aliquet
-              erat dolor enim. Ornare id morbi eget ipsum. Sapien, dictum molestie sem tempor. Diam elit, orci,
-              tincidunt aenean tempus.
+              By harnessing the power of artificial intelligence, we set out to create an AI that could think, analyze,
+              and act like a seasoned accountant and auditor. Our journey has been one of innovation, dedication, and a
+              relentless pursuit of excellence, leading to the development of George, the AI that is transforming the
+              financial landscape.
             </Typography.Text>
           </div>
         </div>
