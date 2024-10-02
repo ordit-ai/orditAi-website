@@ -107,12 +107,15 @@ const Home = () => {
           />
         </div>
 
-        <div className="py-[2em] absolute md:top-[30%] top-[52%] w-[100%]">
+        <div className="py-[2em] absolute md:top-[25%] top-[52%] w-[100%] bg-transparent flex items-center justify-center overflow-hidden rounded-xl ">
+          {/* <video className="w-[100%] rounded-xl" autoPlay muted controls>
+            <source src={video} type="video/mp4" />
+          </video> */}
+
           <iframe
-            className="w-[100%] rounded-xl  md:h-[500px] h-[200px]"
-            src="https://www.youtube.com/embed/1PwRA3XDJcg"
-            title="Tinubu&#39;s Speech at APC Town Hall Meeting in Imo State | Bala blu | Blu blu | Bula ba"
-            frameBorder="0"
+            className="w-[100%] rounded-xl  md:h-[600px] h-[200px]"
+            src="https://www.youtube.com/embed/g4IDYwkycaI"
+            title="orditAi product demo"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
@@ -120,7 +123,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="bg-[#EFF4FF] md:pt-[18%] pt-[30%] md:pb-0 pb-[2.5em]">
+      <div className="bg-[#EFF4FF] md:pt-[25%] pt-[30%] md:pb-0 pb-[2.5em]">
         <div className="w-[85%] mx-auto py-[2em] hidden  md:block  ">
           <SectionHeaders
             introText="Discover the Power of OrditAI"
