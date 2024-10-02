@@ -11,7 +11,7 @@ const SectionHeaders = ({ introText, header, subHeader, color }: TProps) => {
   return (
     <div className="space-y-2">
       <Typography.SubText
-        className={`font-light ${color === "secondary" ? "text-green-600" : "text-primary"}  tracking-[3px] uppercase`}
+        className={`font-light ${color === "secondary" ? "text-primary" : "text-primary"}  tracking-[3px] uppercase`}
       >
         {introText}
       </Typography.SubText>

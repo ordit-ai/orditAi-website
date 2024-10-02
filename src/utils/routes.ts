@@ -7,4 +7,10 @@ export const routes = [
   {
     path: APP_ROUTES.ABOUT_US,
   },
+  {
+    path: APP_ROUTES.CONTACT,
+  },
+  {
+    path: APP_ROUTES.PRICING,
+  },
 ];
