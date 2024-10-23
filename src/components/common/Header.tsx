@@ -13,7 +13,6 @@ const Header = () => {
 
   const locationArray = location.pathname.split("/");
   const links = [
-   
     {
       name: "Features",
       path: APP_ROUTES.FEATURES,
@@ -72,7 +71,7 @@ const Header = () => {
           <div className="hidden items-center gap-x-6 md:flex">
             {React.Children.toArray(
               links?.map((link) => (
-                <NavLink to={link.path} className={ "text-black"}>
+                <NavLink to={link.path} className={"text-black"}>
                   <Typography.SubText>{link.name}</Typography.SubText>
                 </NavLink>
               )),
@@ -87,7 +86,7 @@ const Header = () => {
             </Typography.SubText>
           </Link>
 
-          <Button variant={ "default" }>Hire George Today</Button>
+          <Button variant={"default"}>Hire George Today</Button>
         </div>
 
         <HiMenu className="flex md:hidden text-white text-3xl cursor-pointer" />

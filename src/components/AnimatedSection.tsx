@@ -50,7 +50,10 @@ const AnimatedSection = ({ data, position }: TProps) => {
       <div className="w-[35%] space-y-4">
         {data.map((el, i) => (
           <motion.div
-            className={cn("border-[1px] rounded-xl p-6 space-y-3 transition-all duration-300 cursor-pointer bg-white ", count === i ? "" : "")}
+            className={cn(
+              "border-[1px] rounded-xl p-6 space-y-3 transition-all duration-300 cursor-pointer bg-white ",
+              count === i ? "" : "",
+            )}
             key={el.id}
             onClick={() => handleHover(i)}
             onMouseEnter={() => handleHover(i)}
