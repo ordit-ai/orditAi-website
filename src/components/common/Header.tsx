@@ -1,4 +1,4 @@
-import Logo from "@/assets/images/Logo.png";
+// import Logo from "@/assets/images/Logo.png";
 import PurpleLogo from "@/assets/images/PurpleLogo.png";
 import { APP_ROUTES } from "@/constants/app-routes";
 import React from "react";
@@ -13,16 +13,13 @@ const Header = () => {
 
   const locationArray = location.pathname.split("/");
   const links = [
-    {
-      name: "Home",
-      path: APP_ROUTES.HOME,
-    },
+   
     {
       name: "Features",
       path: APP_ROUTES.FEATURES,
     },
     {
-      name: "Pricing",
+      name: "Mission",
       path: APP_ROUTES.PRICING,
     },
     {
@@ -30,15 +27,24 @@ const Header = () => {
       path: APP_ROUTES.ABOUT_US,
     },
 
-    {
-      name: "Resources",
-      path: APP_ROUTES.ABOUT_US,
-    },
+    // {
+    //   name: "Pricing",
+    //   path: APP_ROUTES.PRICING,
+    // },
+    // {
+    //   name: "About Us",
+    //   path: APP_ROUTES.ABOUT_US,
+    // },
 
-    {
-      name: "Contact",
-      path: APP_ROUTES.CONTACT,
-    },
+    // {
+    //   name: "Resources",
+    //   path: APP_ROUTES.ABOUT_US,
+    // },
+
+    // {
+    //   name: "Contact",
+    //   path: APP_ROUTES.CONTACT,
+    // },
   ];
 
   const checkArray = (array: string[]) => {
@@ -52,19 +58,21 @@ const Header = () => {
   };
 
   return (
-    <div className="absolute h-[80px] flex items-center  w-[100vw] justify-center">
-      <div className="flex items-center justify-between w-[85vw] h-[60px] px-4 border-b-[1px]">
-        <div className="flex items-center space-x-6">
-          {checkArray(locationArray) ? (
+    <div className="h-[80px] flex items-center  w-[100vw] justify-center border-b-[1px]">
+      <div className="flex items-center justify-between w-[85vw] h-[70px] ">
+        <div className="flex items-center justify-between space-x-6 w-[60%]">
+          {/* {checkArray(locationArray) ? (
             <img src={PurpleLogo} alt="PurpleLogo" className="h-[25px]" />
           ) : (
             <img src={Logo} alt="Logo" className="h-[25px]" />
-          )}
+          )} */}
+
+          <img src={PurpleLogo} alt="PurpleLogo" className="h-[25px]" />
 
           <div className="hidden items-center gap-x-6 md:flex">
             {React.Children.toArray(
               links?.map((link) => (
-                <NavLink to={link.path} className={checkArray(locationArray) ? "text-black" : "text-white"}>
+                <NavLink to={link.path} className={ "text-black"}>
                   <Typography.SubText>{link.name}</Typography.SubText>
                 </NavLink>
               )),
@@ -79,7 +87,7 @@ const Header = () => {
             </Typography.SubText>
           </Link>
 
-          <Button variant={checkArray(locationArray) ? "default" : "quickAction"}>Get Started</Button>
+          <Button variant={ "default" }>Hire George Today</Button>
         </div>
 
         <HiMenu className="flex md:hidden text-white text-3xl cursor-pointer" />

@@ -38,7 +38,7 @@ Typography.Headers = function ({ ...props }: TypographyProps) {
 
 Typography.H1 = function ({ ...props }: TypographyProps) {
   return (
-    <p {...props} className={`md:text-5xl text-4xl font-primary font-semibold ${props.className}`}>
+    <p {...props} className={`md:text-5xl text-4xl font-primary font-normal leading-[4rem] ${props.className}`}>
       {props.children}
     </p>
   );
@@ -46,7 +46,7 @@ Typography.H1 = function ({ ...props }: TypographyProps) {
 
 Typography.H2 = function ({ ...props }: TypographyProps) {
   return (
-    <p {...props} className={`sm:text-3xl text-2xl font-primary font-semibold ${props.className}`}>
+    <p {...props} className={`sm:text-4xl text-2xl font-primary  ${props.className}`}>
       {props.children}
     </p>
   );
@@ -62,7 +62,7 @@ Typography.H3 = function ({ ...props }: TypographyProps) {
 
 Typography.H4 = function ({ ...props }: TypographyProps) {
   return (
-    <p {...props} className={`text-lg font-secondary font-semibold ${props.className}`}>
+    <p {...props} className={`text-lg font-secondary ${props.className}`}>
       {props.children}
     </p>
   );
