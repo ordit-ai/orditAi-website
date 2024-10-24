@@ -1,21 +1,29 @@
+
+
+
 import Effort from "@/assets/images/effort.png";
 import Intelligent from "@/assets/images/Intelligent.png";
 import Precison from "@/assets/images/precision.png";
 
-import Grow from "@/assets/images/auditProcess/grow.png";
-import GetMore from "@/assets/images/auditProcess/getMore.png";
-import Perform from "@/assets/images/auditProcess/perform.png";
-import Save from "@/assets/images/auditProcess/save.png";
+import Grow from "@/assets/images/auditProcess/grow.svg";
+import GetMore from "@/assets/images/auditProcess/getMore.svg";
+import Perform from "@/assets/images/auditProcess/perform.svg";
+import Save from "@/assets/images/auditProcess/save.svg";
 
-import Discover from "@/assets/images/auditProcess/discover.png";
-import Analyze from "@/assets/images/auditProcess/analyze.png";
-import Automate from "@/assets/images/auditProcess/automate.png";
-import Perform1 from "@/assets/images/auditProcess/perform1.png";
+import Discover from "@/assets/images/auditProcess/discover.svg";
+import Analyze from "@/assets/images/auditProcess/analyze.svg";
+import Automate from "@/assets/images/auditProcess/automate.svg";
+import Perform1 from "@/assets/images/auditProcess/perform1.svg";
+
+
 
 import Empower1 from "@/assets/images/auditProcess/empower1.svg";
 import Empower2 from "@/assets/images/auditProcess/empower2.svg";
-// import Automate from "@/assets/images/auditProcess/automate.png"
-// import Perform1 from "@/assets/images/auditProcess/perform1.png"
+
+import Onboard1 from "@/assets/images/auditProcess/onboard1.svg";
+import Onboard2 from "@/assets/images/auditProcess/onboard2.svg";
+import Onboard3 from "@/assets/images/auditProcess/onboard3.svg";
+
 
 export const whyChoose = [
   {
@@ -81,25 +89,25 @@ export const auditProcess = [
   {
     id: "audit1",
     title: "Grow your Revenue",
-    subtitle: "Accelerate your growth with a 24/7 AI employee that handles clients",
+    subtitle: "Automate audits with George, freeing your team to focus on top clients and growth.",
     image: Grow,
   },
   {
     id: "audit2",
     title: "Save Cost",
-    subtitle: "Accelerate your growth with a 24/7 AI employee that handles clients",
+    subtitle: "Let George  handle labor-intensive auditing tasks without the cost of hiring additional staff",
     image: Save,
   },
   {
     id: "audit3",
     title: "Performing Audit Task",
-    subtitle: "Accelerate your growth with a 24/7 AI employee that handles clients",
+    subtitle: "George automates audits, speeding up preparation, review, and finalization of financial documents",
     image: Perform,
   },
   {
     id: "audit4",
     title: "Get More Auditing Done",
-    subtitle: "Accelerate your growth with a 24/7 AI employee that handles clients",
+    subtitle: "George automates audits, helping you manage more clients without increasing staff.",
     image: GetMore,
   },
 ];
@@ -108,25 +116,25 @@ export const auditProcess1 = [
   {
     id: "audit5",
     title: "Discover",
-    subtitle: "Accelerate your growth with a 24/7 AI employee that handles clients",
+    subtitle: "George’s real-time monitoring flags compliance risks early, keeping your business compliant effortlessly.",
     image: Discover,
   },
   {
     id: "audit6",
     title: "Analyze",
-    subtitle: "Accelerate your growth with a 24/7 AI employee that handles clients",
+    subtitle: "Trust George to deliver accurate, comprehensive reports for every audit analysis.",
     image: Analyze,
   },
   {
     id: "audit7",
     title: "Automate",
-    subtitle: "Accelerate your growth with a 24/7 AI employee that handles clients",
+    subtitle: "With George, the entire audit lifecycle is automated, from report compilation to performance tracking.",
     image: Automate,
   },
   {
     id: "audit8",
     title: "Perform",
-    subtitle: "Accelerate your growth with a 24/7 AI employee that handles clients",
+    subtitle: "George evolves with your business, adapting his processes to meet your growing audit needs.",
     image: Perform1,
   },
 ];
@@ -163,5 +171,31 @@ export const empowerState = [
     subtitle:
       "Stay ahead of compliance requirements with George’s AI-powered auditing tools. With real-time data and automated auditing, you’ll minimize risks and ensure growth isn’t hampered by financial or regulatory surprises.",
     image: Empower2,
+  },
+];
+
+export const onboardState = [
+  {
+    id: "onboard1",
+    title: "Hire George",
+    subtitle:
+      "Sign up and plug George into your finance department. He’ll begin automating auditing tasks immediately while seamlessly integrating with your existing systems.",
+    image: Onboard1,
+    children: ["Save Time", "Ensure Compliance", "Full Automation"]
+  },
+  {
+    id: "onboard2",
+    title: "Train George",
+    subtitle:
+      "Tell George the specifics of your audit needs, and he’ll adapt to your company’s unique financial structure and compliance requirements.",
+    image: Onboard2,
+  },
+
+  {
+    id: "onboard3",
+    title: "Grow with George",
+    subtitle:
+      "George will prepare audit reports, perform compliance checks, and reduce errors, ensuring your business is always audit-ready, allowing your team to focus on strategic growth.",
+    image: Onboard3,
   },
 ];

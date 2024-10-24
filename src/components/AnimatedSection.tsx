@@ -33,25 +33,25 @@ const AnimatedSection = ({ data, position }: TProps) => {
   return (
     <div className="flex gap-[1.5em] items-center my-[2em]">
       {position === "left" && (
-        <div className="bg-[#030124] rounded-xl h-[570px] w-[65%] flex items-center justify-center relative">
+        <div className="bg-[#030124] rounded-xl w-[65%] flex items-center justify-center relative">
           {data.map((el, i) => (
             <motion.div
               key={i}
-              className="h-[85%] absolute w-[85%]" // Layer images on top of each other
+              className="bg-[#030124] p-[5em] absolute w-[100%] flex items-center justify-center rounded-xl " // Layer images on top of each other
               initial={{ opacity: 0 }} // Start with hidden
               animate={{ opacity: count === i ? 1 : 0 }} // Show current image, hide others
               transition={{ duration: 1, ease: "easeInOut" }} // Smooth transition
             >
-              <img src={el.image} alt={`image-${i}`} className="h-[100%] w-[100%] object-center rounded-xl" />
+              <img src={el.image} alt={`image-${i}`} className="h-auto w-[100%] object-center rounded-xl" />
             </motion.div>
           ))}
         </div>
       )}
-      <div className="w-[35%] space-y-4">
+      <div className="w-[35%] space-y-5">
         {data.map((el, i) => (
           <motion.div
             className={cn(
-              "border-[1px] rounded-xl p-6 space-y-3 transition-all duration-300 cursor-pointer bg-white ",
+              "border-[1px] rounded-xl p-7 space-y-3 transition-all duration-300 cursor-pointer bg-white ",
               count === i ? "" : "",
             )}
             key={el.id}
@@ -62,7 +62,7 @@ const AnimatedSection = ({ data, position }: TProps) => {
           >
             <AuditIcon />
 
-            <Typography className="font-semibold">{el.title}</Typography>
+            <Typography.H3>{el.title}</Typography.H3>
             {count === i ? (
               <motion.div
                 // initial={{ opacity: 0, height: 0 }}
@@ -71,7 +71,7 @@ const AnimatedSection = ({ data, position }: TProps) => {
                 // transition={{ duration: 0.6, ease: "easeInOut" }}
                 className="space-y-3"
               >
-                <Typography>{el.subtitle}</Typography>
+                <Typography.SubText>{el.subtitle}</Typography.SubText>
 
                 <Button>Hire George Today</Button>
               </motion.div>
@@ -81,16 +81,16 @@ const AnimatedSection = ({ data, position }: TProps) => {
       </div>
 
       {position === "right" && (
-        <div className="bg-[#030124] rounded-xl h-[570px] w-[65%] flex items-center justify-center relative">
+        <div className="bg-[#030124] rounded-xl  w-[65%] flex items-center justify-center relative">
           {data.map((el, i) => (
             <motion.div
               key={i}
-              className="h-[85%] absolute w-[85%]" // Layer images on top of each other
+              className="bg-[#030124] p-[5em] absolute w-[100%] flex items-center justify-center rounded-xl " // Layer images on top of each other
               initial={{ opacity: 0 }} // Start with hidden
               animate={{ opacity: count === i ? 1 : 0 }} // Show current image, hide others
               transition={{ duration: 1, ease: "easeInOut" }} // Smooth transition
             >
-              <img src={el.image} alt={`image-${i}`} className="h-[100%] w-[100%] object-center rounded-xl" />
+              <img src={el.image} alt={`image-${i}`} className="h-auto w-[100%] object-center rounded-xl" />
             </motion.div>
           ))}
         </div>

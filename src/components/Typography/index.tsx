@@ -10,7 +10,7 @@ Typography.Heading = function ({ ...props }: TypographyProps) {
   return (
     <p
       {...props}
-      className={`${props.className} md:text-[64px] md:leading-[64px] leading-11  text-4xl font-secondary font-semibold text-center sm:text-left`}
+      className={`${props.className} text-[64px] text-[#030124] leading-[72px] font-medium text-center sm:text-left `}
     >
       {props.children}
     </p>
@@ -46,7 +46,15 @@ Typography.H1 = function ({ ...props }: TypographyProps) {
 
 Typography.H2 = function ({ ...props }: TypographyProps) {
   return (
-    <p {...props} className={`sm:text-4xl text-2xl font-primary  ${props.className}`}>
+    <p {...props} className={`sm:text-[48px] text-3xl font-primary font-medium  ${props.className}`}>
+      {props.children}
+    </p>
+  );
+};
+
+Typography.H22 = function ({ ...props }: TypographyProps) {
+  return (
+    <p {...props} className={`sm:text-[40px] text-2xl font-primary font-medium  ${props.className}`}>
       {props.children}
     </p>
   );
@@ -70,7 +78,7 @@ Typography.H4 = function ({ ...props }: TypographyProps) {
 
 Typography.Text = function ({ ...props }: TypographyProps) {
   return (
-    <p {...props} className={`text-base font-primary ${props.className}`}>
+    <p {...props} className={`text-lg text-[#5E626A] font-primary font-normal ${props.className}`}>
       {props.children}
     </p>
   );
@@ -78,7 +86,7 @@ Typography.Text = function ({ ...props }: TypographyProps) {
 
 Typography.SubText = function ({ ...props }: TypographyProps) {
   return (
-    <p {...props} className={`text-sm font-primary ${props.className}`}>
+    <p {...props} className={`text-base text-[#5E626A] font-primary ${props.className}`}>
       {props.children}
     </p>
   );

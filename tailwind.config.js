@@ -7,7 +7,8 @@ export default {
         primary: "#4E2DBE",
       },
       fontFamily: {
-        primary: ["Onest", "sans-serif"],
+        primary: ["Inter", "sans-serif"],
+         secondary: ["Inter", "sans-serif"],
       },
       backgroundImage: {
         bg2: "url('assets/images/bg2.png')",
