@@ -1,6 +1,3 @@
-
-
-
 import Effort from "@/assets/images/effort.png";
 import Intelligent from "@/assets/images/Intelligent.png";
 import Precison from "@/assets/images/precision.png";
@@ -15,15 +12,12 @@ import Analyze from "@/assets/images/auditProcess/analyze.svg";
 import Automate from "@/assets/images/auditProcess/automate.svg";
 import Perform1 from "@/assets/images/auditProcess/perform1.svg";
 
-
-
 import Empower1 from "@/assets/images/auditProcess/empower1.svg";
 import Empower2 from "@/assets/images/auditProcess/empower2.svg";
 
 import Onboard1 from "@/assets/images/auditProcess/onboard1.svg";
 import Onboard2 from "@/assets/images/auditProcess/onboard2.svg";
 import Onboard3 from "@/assets/images/auditProcess/onboard3.svg";
-
 
 export const whyChoose = [
   {
@@ -116,7 +110,8 @@ export const auditProcess1 = [
   {
     id: "audit5",
     title: "Discover",
-    subtitle: "George’s real-time monitoring flags compliance risks early, keeping your business compliant effortlessly.",
+    subtitle:
+      "George’s real-time monitoring flags compliance risks early, keeping your business compliant effortlessly.",
     image: Discover,
   },
   {
@@ -181,7 +176,7 @@ export const onboardState = [
     subtitle:
       "Sign up and plug George into your finance department. He’ll begin automating auditing tasks immediately while seamlessly integrating with your existing systems.",
     image: Onboard1,
-    children: ["Save Time", "Ensure Compliance", "Full Automation"]
+    children: ["Save Time", "Ensure Compliance", "Full Automation"],
   },
   {
     id: "onboard2",

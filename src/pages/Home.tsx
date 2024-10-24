@@ -21,7 +21,7 @@ const Home = () => {
                 </span>{" "}
                 Auditing Partner
               </Typography.Heading>
-              <Typography.Text >
+              <Typography.Text>
                 I have been trained using the most updated standards and global standard process flow to handle your
                 auditing and accounting tasks.
               </Typography.Text>
@@ -56,10 +56,7 @@ const Home = () => {
 
       <div className="bg-gradient-to-b from-white via-purple-50 to-white">
         <div className="w-[80%] mx-auto py-[3em]">
-
-          <div className="space-y-[2em]">
-
-          </div>
+          <div className="space-y-[2em]"></div>
           <Typography.H2 className="text-[#030124] w-[95%] text-center ">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
               George
@@ -142,7 +139,7 @@ const Home = () => {
                       <Typography.SubText className="text-gray-700">{el}</Typography.SubText>
                     </div>
                   ))}
-                </div> 
+                </div>
               </div>
 
               <div className="pt-[3em] flex items-center justify-center ">

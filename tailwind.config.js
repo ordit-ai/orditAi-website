@@ -8,7 +8,7 @@ export default {
       },
       fontFamily: {
         primary: ["Inter", "sans-serif"],
-         secondary: ["Inter", "sans-serif"],
+        secondary: ["Inter", "sans-serif"],
       },
       backgroundImage: {
         bg2: "url('assets/images/bg2.png')",
