@@ -1,11 +1,12 @@
 import { Route, Routes } from "react-router-dom";
 import WebsiteLayout from "./Layouts/WebsiteLayout";
-import Home from "./pages/Home";
+// import Home from "./archives/Home";
 import { APP_ROUTES } from "./constants/app-routes";
 import { routes } from "./utils/routes";
 import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import Pricing from "./pages/Pricing";
+import Home from "./pages/Home";
 
 function App() {
   const Element = {
