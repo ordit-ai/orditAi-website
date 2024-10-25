@@ -12,12 +12,12 @@ import Analyze from "@/assets/images/auditProcess/analyze.png";
 import Automate from "@/assets/images/auditProcess/automate.png";
 import Perform1 from "@/assets/images/auditProcess/perform1.png";
 
-import Empower1 from "@/assets/images/auditProcess/empower1.svg";
-import Empower2 from "@/assets/images/auditProcess/empower2.svg";
+import Empower1 from "@/assets/images/auditProcess/empower1.png";
+import Empower2 from "@/assets/images/auditProcess/empower2.png";
 
-import Onboard1 from "@/assets/images/auditProcess/onboard1.svg";
-import Onboard2 from "@/assets/images/auditProcess/onboard2.svg";
-import Onboard3 from "@/assets/images/auditProcess/onboard3.svg";
+import Onboard1 from "@/assets/images/auditProcess/onboard1.png";
+import Onboard2 from "@/assets/images/auditProcess/onboard2.png";
+import Onboard3 from "@/assets/images/auditProcess/onboard3.png";
 
 export const whyChoose = [
   {
