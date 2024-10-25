@@ -2,15 +2,15 @@ import Effort from "@/assets/images/effort.png";
 import Intelligent from "@/assets/images/Intelligent.png";
 import Precison from "@/assets/images/precision.png";
 
-import Grow from "@/assets/images/auditProcess/grow.svg";
-import GetMore from "@/assets/images/auditProcess/getMore.svg";
-import Perform from "@/assets/images/auditProcess/perform.svg";
-import Save from "@/assets/images/auditProcess/save.svg";
+import Grow from "@/assets/images/auditProcess/grow.png";
+import GetMore from "@/assets/images/auditProcess/getMore.png";
+import Perform from "@/assets/images/auditProcess/perform.png";
+import Save from "@/assets/images/auditProcess/save.png";
 
-import Discover from "@/assets/images/auditProcess/discover.svg";
-import Analyze from "@/assets/images/auditProcess/analyze.svg";
-import Automate from "@/assets/images/auditProcess/automate.svg";
-import Perform1 from "@/assets/images/auditProcess/perform1.svg";
+import Discover from "@/assets/images/auditProcess/discover.png";
+import Analyze from "@/assets/images/auditProcess/analyze.png";
+import Automate from "@/assets/images/auditProcess/automate.png";
+import Perform1 from "@/assets/images/auditProcess/perform1.png";
 
 import Empower1 from "@/assets/images/auditProcess/empower1.svg";
 import Empower2 from "@/assets/images/auditProcess/empower2.svg";
@@ -18,6 +18,7 @@ import Empower2 from "@/assets/images/auditProcess/empower2.svg";
 import Onboard1 from "@/assets/images/auditProcess/onboard1.svg";
 import Onboard2 from "@/assets/images/auditProcess/onboard2.svg";
 import Onboard3 from "@/assets/images/auditProcess/onboard3.svg";
+
 
 export const whyChoose = [
   {
@@ -110,7 +111,7 @@ export type OnboardItem = {
   id: string;
   title: string;
   subtitle: string;
-  image: typeof Onboard1; // Type for imported image
+  image: string; // Type for imported image
 };
 export const auditProcess1 = [
   {
