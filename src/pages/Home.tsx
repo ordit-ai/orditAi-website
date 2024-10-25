@@ -3,6 +3,7 @@ import { Button } from "@/components/common/Button";
 import HeroImg from "@/assets/images/heroImg.png";
 // import Effortless from "@/assets/images/effortless.png";
 import {
+  HeroLogo,
   auditProcess,
   auditProcess1,
   empowerState,
@@ -35,13 +36,15 @@ const Home = () => {
               <Button variant={"default"}>Hire George Today</Button>
             </div>
 
-            <div className="">
+            <div className="py-[2em] space-y-4">
               <Typography.SubText className="text-gray-600">
                 Trusted by Business Committed to Accuracy and Compliance
               </Typography.SubText>
-              {/* <Typography.SubText className="text-gray-600">
-                Trusted by Business Committed to Accuracy and Compliance
-              </Typography.SubText> */}
+              <div className="flex items-center space-x-4 pt-[0.5em]">
+                {HeroLogo.map((el, i) => (
+                  <img src={el} alt={`missionImage-${i}`} key={`missionImage-${i}`} className="h-[20px]" />
+                ))}
+              </div>
             </div>
           </div>
 
@@ -51,7 +54,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex items-center justify-center flex-col py-[2em] space-y-4 border-t-[1px]  border-b-[1px] ">
+      <div className="flex items-center justify-center flex-col py-[3em] space-y-4 border-t-[1px]  border-b-[1px] ">
         <Typography.SubText className="text-gray-600">International Standards That We Adopt</Typography.SubText>
 
         <div className="flex items-center space-x-5">
