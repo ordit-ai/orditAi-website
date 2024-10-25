@@ -19,6 +19,15 @@ import Onboard1 from "@/assets/images/auditProcess/onboard1.png";
 import Onboard2 from "@/assets/images/auditProcess/onboard2.png";
 import Onboard3 from "@/assets/images/auditProcess/onboard3.png";
 
+import Logo1 from "@/assets/images/auditProcess/kpmg.png";
+import Logo2 from "@/assets/images/auditProcess/deel.png";
+import Logo3 from "@/assets/images/auditProcess/flw.png";
+import Logo4 from "@/assets/images/auditProcess/ey.png";
+import Logo5 from "@/assets/images/auditProcess/baba.png";
+import Logo6 from "@/assets/images/auditProcess/swipe.png";
+
+export const missonImages = [Logo1, Logo2, Logo3, Logo4, Logo5, Logo6];
+
 export const whyChoose = [
   {
     id: 1,

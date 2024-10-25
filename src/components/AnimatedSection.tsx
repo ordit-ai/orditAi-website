@@ -27,7 +27,7 @@ const AnimatedSection = ({ data, position }: TProps) => {
   };
 
   return (
-    <div className="flex gap-[1.5em] items-center my-[2em]">
+    <div className="flex gap-[1.5em] items-center my-[3em]">
       {position === "left" && (
         <div className="bg-[#030124] rounded-xl w-[65%] flex items-center justify-center relative">
           {data.map((el, i) => (
