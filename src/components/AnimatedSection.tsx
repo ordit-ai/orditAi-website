@@ -4,14 +4,10 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import Typography from "./Typography";
 import { Button } from "./common/Button";
+import { OnboardItem } from "@/constants/homedata";
 
 interface TProps {
-  data: {
-    id: string;
-    title: string;
-    subtitle: string;
-    image: string;
-  }[];
+  data: OnboardItem[];
   position: "left" | "right";
 }
 
@@ -42,7 +38,7 @@ const AnimatedSection = ({ data, position }: TProps) => {
               animate={{ opacity: count === i ? 1 : 0 }} // Show current image, hide others
               transition={{ duration: 1, ease: "easeInOut" }} // Smooth transition
             >
-              <img src={el.image} alt={`image-${i}`} className="h-auto w-[100%] object-center rounded-xl" />
+              <img src={el.image as string} alt={`image-${i}`} className="h-auto w-[100%] object-center rounded-xl" />
             </motion.div>
           ))}
         </div>
@@ -90,7 +86,7 @@ const AnimatedSection = ({ data, position }: TProps) => {
               animate={{ opacity: count === i ? 1 : 0 }} // Show current image, hide others
               transition={{ duration: 1, ease: "easeInOut" }} // Smooth transition
             >
-              <img src={el.image} alt={`image-${i}`} className="h-auto w-[100%] object-center rounded-xl" />
+              <img src={el.image as string} alt={`image-${i}`} className="h-auto w-[100%] object-center rounded-xl" />
             </motion.div>
           ))}
         </div>

@@ -182,7 +182,7 @@ const Home = () => {
           Financial auditing and accounting tasks
         </Typography.Text>
 
-        <div className="flex w-[80%] mx-auto gap-[1em] py-[2em]">
+        <div className="flex w-[80%] mx-auto gap-[1em] py-[3em]">
           {empowerState.map((el) => (
             <div className="border-[1px] p-8 rounded-xl w-[50%] space-y-2">
               <div className="flex items-center space-x-4">
@@ -199,6 +199,25 @@ const Home = () => {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="w-[50%] shadow-xl rounded-md border-[1px] my-[3em] mx-auto">
+        <div className="w-[70%] mx-auto text-center space-y-6  py-[3em]">
+          <Typography.H2>Our Mission</Typography.H2>
+
+          <Typography.Text>
+            We are on a mission to create and train digital workers that are capable of complementing humans at work in
+            ensuring growth, efficiency and increased output
+          </Typography.Text>
+          <Typography.Text>
+            We have a team of highly experienced professionals and our goal is continued improvement of the digital
+            workers for the benefit of organizations that hire them
+          </Typography.Text>
+
+          <Typography>BUILT BY PREVIOUS TECHNOLOGY, LEGAL, AND AUDIT TEAMS AT</Typography>
+        </div>
+
+        <div></div>
       </div>
 
       <div className=" bg-gradient-to-b from-[#565656] to-[#262626]  md:h-[400px] h-auto rounded-lg w-[85%] mx-auto flex items-center justify-between md:p-0 p-6 ">

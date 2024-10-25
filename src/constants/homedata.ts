@@ -106,6 +106,14 @@ export const auditProcess = [
   },
 ];
 
+
+export type OnboardItem = {
+  id: string;
+  title: string;
+  subtitle: string;
+  image: typeof Onboard1; // Type for imported image
+
+};
 export const auditProcess1 = [
   {
     id: "audit5",
