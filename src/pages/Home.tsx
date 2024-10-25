@@ -2,7 +2,14 @@ import Typography from "@/components/Typography";
 import { Button } from "@/components/common/Button";
 import HeroImg from "@/assets/images/heroImg.png";
 // import Effortless from "@/assets/images/effortless.png";
-import { auditProcess, auditProcess1, empowerState, missonImages, numberStats, onboardState } from "@/constants/homedata";
+import {
+  auditProcess,
+  auditProcess1,
+  empowerState,
+  missonImages,
+  numberStats,
+  onboardState,
+} from "@/constants/homedata";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AuditIcon } from "@/assets/images/auditProcess/auditIcon";
 import { LightingIcon } from "@/assets/images/auditProcess/LightingIcon";
@@ -218,7 +225,7 @@ const Home = () => {
 
             <div className="flex items-center space-x-4 pt-[0.5em]">
               {missonImages.map((el, i) => (
-                <img src={el}  alt={`missionImage-${i}`} key={`missionImage-${i}`} className="h-[20px]"/>
+                <img src={el} alt={`missionImage-${i}`} key={`missionImage-${i}`} className="h-[20px]" />
               ))}
             </div>
           </div>
