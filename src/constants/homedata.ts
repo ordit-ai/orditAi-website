@@ -34,7 +34,6 @@ import Hero4 from "@/assets/images/auditProcess/float.png";
 export const missonImages = [Logo1, Logo2, Logo3, Logo4, Logo5, Logo6];
 export const HeroLogo = [Hero1, Hero2, Hero3, Hero4];
 
-
 export const whyChoose = [
   {
     id: 1,

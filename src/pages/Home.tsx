@@ -41,10 +41,10 @@ const Home = () => {
                 Trusted by Business Committed to Accuracy and Compliance
               </Typography.SubText>
               <div className="flex items-center space-x-4 pt-[0.5em]">
-              {HeroLogo.map((el, i) => (
-                <img src={el} alt={`missionImage-${i}`} key={`missionImage-${i}`} className="h-[20px]" />
-              ))}
-            </div>
+                {HeroLogo.map((el, i) => (
+                  <img src={el} alt={`missionImage-${i}`} key={`missionImage-${i}`} className="h-[20px]" />
+                ))}
+              </div>
             </div>
           </div>
 
