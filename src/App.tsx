@@ -8,7 +8,6 @@ import ContactUs from "./pages/ContactUs";
 import Pricing from "./pages/Pricing";
 import Home from "./pages/Home";
 
-
 function App() {
   const Element = {
     [APP_ROUTES.HOME]: <Home />,
