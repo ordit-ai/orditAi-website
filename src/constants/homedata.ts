@@ -19,7 +19,6 @@ import Onboard1 from "@/assets/images/auditProcess/onboard1.svg";
 import Onboard2 from "@/assets/images/auditProcess/onboard2.svg";
 import Onboard3 from "@/assets/images/auditProcess/onboard3.svg";
 
-
 export const whyChoose = [
   {
     id: 1,

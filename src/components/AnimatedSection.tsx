@@ -39,9 +39,6 @@ const AnimatedSection = ({ data, position }: TProps) => {
               transition={{ duration: 1, ease: "easeInOut" }} // Smooth transition
             >
               <img src={el.image} alt={`image-${i}`} className="h-auto w-[100%] object-center rounded-xl" />
-
-         
-              
             </motion.div>
           ))}
         </div>
@@ -90,8 +87,6 @@ const AnimatedSection = ({ data, position }: TProps) => {
               transition={{ duration: 1, ease: "easeInOut" }} // Smooth transition
             >
               <img src={el.image} alt={`image-${i}`} className="h-auto w-[100%] object-center rounded-xl" />
-
-          
             </motion.div>
           ))}
         </div>
