@@ -1,8 +1,15 @@
 import Typography from "@/components/Typography";
 import { Button } from "@/components/common/Button";
 import HeroImg from "@/assets/images/heroImg.png";
-import Effortless from "@/assets/images/effortless.png";
-import { auditProcess, auditProcess1, empowerState, numberStats, onboardState } from "@/constants/homedata";
+// import Effortless from "@/assets/images/effortless.png";
+import {
+  auditProcess,
+  auditProcess1,
+  empowerState,
+  missonImages,
+  numberStats,
+  onboardState,
+} from "@/constants/homedata";
 import AnimatedSection from "@/components/AnimatedSection";
 import { AuditIcon } from "@/assets/images/auditProcess/auditIcon";
 import { LightingIcon } from "@/assets/images/auditProcess/LightingIcon";
@@ -170,7 +177,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="py-[3em]">
+      <div className="py-[3em] border-b-[1px] border-t-[1px]">
         <Typography.H2 className="text-[#030124] w-[95%] text-center ">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
             George
@@ -182,7 +189,7 @@ const Home = () => {
           Financial auditing and accounting tasks
         </Typography.Text>
 
-        <div className="flex w-[80%] mx-auto gap-[1em] py-[2em]">
+        <div className="flex w-[80%] mx-auto gap-[1em] py-[3em]">
           {empowerState.map((el) => (
             <div className="border-[1px] p-8 rounded-xl w-[50%] space-y-2">
               <div className="flex items-center space-x-4">
@@ -201,12 +208,36 @@ const Home = () => {
         </div>
       </div>
 
-      <div className=" bg-gradient-to-b from-[#565656] to-[#262626]  md:h-[400px] h-auto rounded-lg w-[85%] mx-auto flex items-center justify-between md:p-0 p-6 ">
+      <div className="py-[5em]">
+        <Typography.H2 className="text-center">Our Mission</Typography.H2>
+        <div className="w-[50%] shadow-xl rounded-lg border-[1px] my-[3em]  mx-auto">
+          <div className="w-[70%] mx-auto text-center space-y-6  py-[4em]">
+            <Typography.Text>
+              We are on a mission to create and train digital workers that are capable of complementing humans at work
+              in ensuring growth, efficiency and increased output
+            </Typography.Text>
+            <Typography.Text>
+              We have a team of highly experienced professionals and our goal is continued improvement of the digital
+              workers for the benefit of organizations that hire them
+            </Typography.Text>
+
+            <Typography className="pt-[2em]">BUILT BY PREVIOUS TECHNOLOGY, LEGAL, AND AUDIT TEAMS AT</Typography>
+
+            <div className="flex items-center space-x-4 pt-[0.5em]">
+              {missonImages.map((el, i) => (
+                <img src={el} alt={`missionImage-${i}`} key={`missionImage-${i}`} className="h-[20px]" />
+              ))}
+            </div>
+          </div>
+
+          <div></div>
+        </div>
+      </div>
+
+      {/* <div className=" bg-gradient-to-b from-[#565656] to-[#262626]  md:h-[400px] h-auto rounded-lg w-[85%] mx-auto flex items-center justify-between md:p-0 p-6 ">
         <div className="flex md:flex-row flex-col items-center justify-between w-[95%] mx-auto md:gap-y-0 gap-y-6 ">
           <div className="md:w-[40%] w-[100%] space-y-3">
-            {/* <Typography.SubText className="font-light text-white uppercase tracking-[3px]">
-              Get Started with OrditAI Today
-            </Typography.SubText> */}
+           
 
             <Typography.Headers className="text-white leading-[1.3em]">
               George Seamlessly Integrates with Your Financial auditing Tools
@@ -219,15 +250,11 @@ const Home = () => {
 
             <Button variant={"default"}>Hire George Today</Button>
 
-            {/* <Button variant="quickAction" className="">
-              Sign Up for a Free Trial
-              <LuMoveRight />
-            </Button> */}
           </div>
 
           <img src={Effortless} alt="Effortless" className="md:w-[50%] w-[100%] rounded-lg" />
         </div>
-      </div>
+      </div> */}
     </>
   );
 };
