@@ -35,7 +35,7 @@ const Home = () => {
               </Typography.Text>
               <Button variant={"default"}>Hire George Today</Button>
             </div>
-
+ 
             <div className="py-[2em] space-y-4">
               <Typography.SubText className="text-gray-600">
                 Trusted by Business Committed to Accuracy and Compliance
