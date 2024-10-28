@@ -18,26 +18,30 @@ import { LightingIcon } from "@/assets/images/auditProcess/LightingIcon";
 const Home = () => {
   return (
     <>
-      <div className=" h-[calc(100vh-80px)] flex items-end">
-        <div className="flex   pl-[7.5%] justify-between">
-          <div className="w-[47%] flex justify-between flex-col">
+      <div className=" h-[calc(100vh-80px)] flex sm:items-end items-center">
+        <div className="flex sm:flex-row  flex-col  pl-[7.5%] justify-between">
+          <div className="sm:w-[47%]  w-[90%] flex justify-between flex-col">
             <div className="space-y-6">
-              <Typography.Heading className=" w-[100%]">
+              <Typography.Heading className="w-[100%]">
                 Hi, I’m George.Your{" "}
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
                   AI Powered
                 </span>{" "}
                 Auditing Partner
               </Typography.Heading>
-              <Typography.Text>
+              <Typography.Text className="sm:text-left text-center">
                 I have been trained using the most updated standards and global standard process flow to handle your
                 auditing and accounting tasks.
               </Typography.Text>
-              <Button variant={"default"}>Hire George Today</Button>
+              <div className="flex sm:justify-start justify-center w-[100%]">
+                <Button variant={"default"} className="m">
+                  Hire George Today
+                </Button>
+              </div>
             </div>
 
             <div className="py-[2em] space-y-4">
-              <Typography.SubText className="text-gray-600">
+              <Typography.SubText className="text-gray-600 sm:text-left text-center">
                 Trusted by Business Committed to Accuracy and Compliance
               </Typography.SubText>
               <div className="flex items-center space-x-4 pt-[0.5em]">
@@ -57,7 +61,7 @@ const Home = () => {
       <div className="flex items-center justify-center flex-col py-[3em] space-y-4 border-t-[1px]  border-b-[1px] ">
         <Typography.SubText className="text-gray-600">International Standards That We Adopt</Typography.SubText>
 
-        <div className="flex items-center space-x-5">
+        <div className="flex flex-wrap items-center justify-center space-x-5">
           {["GAAP", "CAS", "JGAAP", "ISA", "SEC", "GDPR", "SOX"].map((el) => (
             <Typography.H4 className="text-gray-600 font-normal tracking-[5px]">{el}</Typography.H4>
           ))}
@@ -65,8 +69,7 @@ const Home = () => {
       </div>
 
       <div className="bg-gradient-to-b from-white via-purple-50 to-white">
-        <div className="w-[80%] mx-auto py-[3em]">
-          <div className="space-y-[2em]"></div>
+        <div className="w-[80%] mx-auto py-[3em] space-y-4">
           <Typography.H2 className="text-[#030124] w-[95%] text-center ">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
               George
@@ -78,15 +81,19 @@ const Home = () => {
             Automate your auditing without increasing headcount.{" "}
           </Typography.Text>
 
-          <AnimatedSection data={auditProcess} position="right" />
+          <div>
+            <AnimatedSection data={auditProcess} position="right" />
+          </div>
         </div>
       </div>
 
-      <div className="flex items-center w-[80%] mx-auto  py-[2em] justify-between">
-        <Typography.H22 className="leading-[1.2em] w-[35%]">The numbers speak for themselves</Typography.H22>
-        <div className="flex w-[60%]">
+      <div className="flex items-center sm:flex-row flex-col w-[80%] mx-auto  py-[2em] justify-between">
+        <Typography.H22 className="leading-[1.2em] sm:w-[35%] w-[100%]">
+          The numbers speak for themselves
+        </Typography.H22>
+        <div className="flex sm:flex-row flex-col sm:space-y-0 space-y-2 mt-[2em] sm:mt-0 sm:w-[60%] w-[100%]">
           {numberStats.map((el) => (
-            <div className="space-y-2 border-l-[1px] w-[33%] p-4" key={el.id}>
+            <div className="space-y-2 border-l-[1px] sm:w-[33%] w-[100%] p-4" key={el.id}>
               <AuditIcon />
 
               <Typography.Text className="text-[#1D1A1C] font-medium">{el.title}</Typography.Text>
@@ -97,40 +104,44 @@ const Home = () => {
       </div>
 
       <div className="bg-gradient-to-b from-white via-purple-50 to-white">
-        <div className="w-[80%] mx-auto py-[3em]">
-          <Typography.H2 className="text-[#030124] w-[95%] text-center ">
+        <div className="w-[80%] mx-auto py-[3em] space-y-4">
+          <Typography.H2 className="text-[#030124] sm:w-[95%] text-center ">
             Automate Auditing & Accounting with{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
               George
             </span>
           </Typography.H2>
 
-          <Typography.Text className="text-gray-600 text-center w-[65%] mx-auto">
+          <Typography.Text className="text-gray-600 text-center sm:w-[65%] w-[100%] mx-auto">
             From real-time auditing to continuous compliance monitoring, George takes care of your financial auditing
             and accounting tasks effortlessly.
           </Typography.Text>
 
-          <AnimatedSection data={auditProcess1} position="left" />
+          <div className="">
+            <AnimatedSection data={auditProcess1} position="left" />
+          </div>
         </div>
       </div>
 
       <div>
-        <Typography.H2 className="text-[#030124] w-[95%] text-center ">
-          Onboard{" "}
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
-            George
-          </span>{" "}
-          in 3 Steps
-        </Typography.H2>
+        <div className="space-y-2">
+          <Typography.H2 className="text-[#030124] sm:w-[95%] w-[90%] mx-auto text-center ">
+            Onboard{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
+              George
+            </span>{" "}
+            in 3 Steps
+          </Typography.H2>
 
-        <Typography.Text className="text-gray-600 text-center w-[65%] mx-auto">
-          From real-time auditing to continuous compliance monitoring, George takes care of your financial auditing and
-          accounting tasks effortlessly.
-        </Typography.Text>
+          <Typography.Text className="text-gray-600 text-center sm:w-[65%] w-[80%] mx-auto">
+            From real-time auditing to continuous compliance monitoring, George takes care of your financial auditing
+            and accounting tasks effortlessly.
+          </Typography.Text>
+        </div>
 
         <div>
-          <div className="flex gap-[1.5em] mx-auto w-[80%] py-[4em]">
-            <div className="border-[1px] p-8 rounded-xl w-[50%] flex flex-col justify-between space-y-2">
+          <div className="flex sm:flex-row flex-col gap-[1.5em] mx-auto w-[80%] py-[4em]">
+            <div className="border-[1px] p-8 rounded-xl sm:w-[50%] w-[100%] flex flex-col justify-between space-y-2">
               <div className="space-y-3">
                 <div className="flex items-center space-x-4">
                   <div className="w-[30px] h-[30px] flex items-center justify-center rounded-full bg-primary">
@@ -157,7 +168,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="w-[50%] flex flex-col gap-[1.5em]">
+            <div className="sm:w-[50%] w-[100%] flex flex-col gap-[1.5em]">
               {onboardState.slice(1).map((el, i) => (
                 <div className="border-[1px] w-[100%] p-8 rounded-xl space-y-3">
                   <div className="flex items-center space-x-4">
@@ -181,20 +192,22 @@ const Home = () => {
       </div>
 
       <div className="py-[3em] border-b-[1px] border-t-[1px]">
-        <Typography.H2 className="text-[#030124] w-[95%] text-center ">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
-            George
-          </span>{" "}
-          Empowers Your Entire Finance Team
-        </Typography.H2>
+        <div className="space-y-2">
+          <Typography.H2 className="text-[#030124] sm:w-[95%] w-[90%] mx-auto text-center ">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
+              George
+            </span>{" "}
+            Empowers Your Entire Finance Team
+          </Typography.H2>
 
-        <Typography.Text className="text-gray-600 text-center w-[65%] mx-auto">
-          Financial auditing and accounting tasks
-        </Typography.Text>
+          <Typography.Text className="text-gray-600 text-center sm:w-[65%] w-[80%] mx-auto">
+            Financial auditing and accounting tasks
+          </Typography.Text>
+        </div>
 
-        <div className="flex w-[80%] mx-auto gap-[1em] py-[3em]">
+        <div className="flex sm:flex-row flex-col w-[80%] mx-auto gap-[1em] py-[3em]">
           {empowerState.map((el) => (
-            <div className="border-[1px] p-8 rounded-xl w-[50%] space-y-2">
+            <div className="border-[1px] p-8 rounded-xl sm:w-[50%] w-[100%] space-y-2">
               <div className="flex items-center space-x-4">
                 <LightingIcon />
 
@@ -213,8 +226,8 @@ const Home = () => {
 
       <div className="py-[5em]">
         <Typography.H2 className="text-center">Our Mission</Typography.H2>
-        <div className="w-[50%] shadow-xl rounded-lg border-[1px] my-[3em]  mx-auto">
-          <div className="w-[70%] mx-auto text-center space-y-6  py-[4em]">
+        <div className="sm:w-[50%] w-[80%] shadow-xl rounded-lg border-[1px] my-[3em]  mx-auto">
+          <div className="sm:w-[70%] w-[80%] mx-auto text-center space-y-6  sm:py-[4em] py-[2em]">
             <Typography.Text>
               We are on a mission to create and train digital workers that are capable of complementing humans at work
               in ensuring growth, efficiency and increased output
@@ -226,7 +239,7 @@ const Home = () => {
 
             <Typography className="pt-[2em]">BUILT BY PREVIOUS TECHNOLOGY, LEGAL, AND AUDIT TEAMS AT</Typography>
 
-            <div className="flex items-center space-x-4 pt-[0.5em]">
+            <div className="flex flex-wrap items-center space-x-4 pt-[0.5em] gap-3">
               {missonImages.map((el, i) => (
                 <img src={el} alt={`missionImage-${i}`} key={`missionImage-${i}`} className="h-[20px]" />
               ))}
