@@ -1,16 +1,16 @@
-import Logo from "@/assets/images/Logo.png";
+import Logo from "@/assets/images/PurpleLogo.png";
 import Typography from "../Typography";
 import { footerCol, footerRow } from "@/constants/footer-routes";
 
 const Footer = () => {
   return (
     <div className="p-4">
-      <div className="bg-[#040126] w-[100%]  mx-auto rounded-t-md p-10">
+      <div className="w-[100%]  mx-auto rounded-t-md p-10">
         <div className="border-b-[1px] border-gray-500 py-6 flex md:flex-row flex-col items-start justify-between">
           <div className="md:w-[20%] w-[100%] space-y-6">
             <img src={Logo} alt="Logo" className="h-[25px]" />
 
-            <Typography.SubText className="text-white">
+            <Typography.SubText className="">
               OrditAI automates tasks, minimizes errors, and delivers deeper financial understanding
             </Typography.SubText>
           </div>
@@ -21,10 +21,10 @@ const Footer = () => {
                 <Typography.MicroText className="text-gray-300">{el.name}</Typography.MicroText>
 
                 {el.colArray.map((elm) => (
-                  <Typography.SubText key={elm.id} className="text-white cursor-pointer">
+                  <Typography.SubText key={elm.id} className=" cursor-pointer">
                     {elm.value}{" "}
                     {elm.tag !== "" ? (
-                      <span className="text-[9px] bg-white bg-opacity-[0.2] px-2 py-1 rounded-2xl">{elm.tag}</span>
+                      <span className="text-[9px] bg-opacity-[0.2] bg-primary px-2 py-1 rounded-2xl">{elm.tag}</span>
                     ) : null}
                   </Typography.SubText>
                 ))}
