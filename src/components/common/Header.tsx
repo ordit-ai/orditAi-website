@@ -2,7 +2,7 @@
 import PurpleLogo from "@/assets/images/PurpleLogo.png";
 import { APP_ROUTES } from "@/constants/app-routes";
 import React from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Typography from "../Typography";
 import { Button } from "./Button";
 import { HiMenu } from "react-icons/hi";
@@ -19,7 +19,7 @@ const Header = () => {
     },
     {
       name: "Mission",
-      path: APP_ROUTES.PRICING,
+      path: APP_ROUTES.MISSON,
     },
     {
       name: "About Us",
@@ -71,9 +71,9 @@ const Header = () => {
           <div className="hidden items-center gap-x-6 md:flex">
             {React.Children.toArray(
               links?.map((link) => (
-                <NavLink to={link.path} className={"text-black"}>
+                <a href={link.path} className={"text-black"}>
                   <Typography.SubText>{link.name}</Typography.SubText>
-                </NavLink>
+                </a>
               )),
             )}
           </div>
