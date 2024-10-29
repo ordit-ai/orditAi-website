@@ -18,9 +18,9 @@ import { LightingIcon } from "@/assets/images/auditProcess/LightingIcon";
 const Home = () => {
   return (
     <>
-      <div className=" h-[calc(100vh-80px)] flex sm:items-end items-center">
+      <div className=" min-h-[calc(100vh-80px)] flex sm:items-end items-center">
         <div className="flex sm:flex-row  flex-col  pl-[7.5%] justify-between">
-          <div className="sm:w-[47%]  w-[90%] flex justify-between flex-col">
+          <div className="sm:w-[47%] pt-[3em] w-[90%] flex justify-between flex-col">
             <div className="space-y-6">
               <Typography.Heading className="w-[100%]">
                 Hi, I’m George.Your{" "}
@@ -42,7 +42,7 @@ const Home = () => {
 
             <div className="py-[2em] space-y-4">
               <Typography.SubText className="text-gray-600 sm:text-left text-center">
-                Trusted by Business Committed to Accuracy and Compliance
+                Trusted by Audit and accounting firms committed to accuracy and compliance
               </Typography.SubText>
               <div className="flex items-center space-x-4 pt-[0.5em]">
                 {HeroLogo.map((el, i) => (
@@ -52,14 +52,14 @@ const Home = () => {
             </div>
           </div>
 
-          <img src={HeroImg} className="w-[53%] place-self-end hidden md:flex" alt="HeroImg" />
+          <img src={HeroImg} className="w-[53%] place-self-end hidden md:flex " alt="HeroImg" />
 
           {/* <div className="w-[50%]"></div> */}
         </div>
       </div>
 
       <div className="flex items-center justify-center flex-col py-[3em] space-y-4 border-t-[1px]  border-b-[1px] ">
-        <Typography.SubText className="text-gray-600">International Standards That We Adopt</Typography.SubText>
+        <Typography.SubText className="text-gray-600">International Standards that George Adopts</Typography.SubText>
 
         <div className="flex flex-wrap items-center justify-center space-x-5">
           {["GAAP", "CAS", "JGAAP", "ISA", "SEC", "GDPR", "SOX"].map((el) => (
@@ -78,7 +78,7 @@ const Home = () => {
           </Typography.H2>
 
           <Typography.Text className="text-gray-600 text-center">
-            Automate your auditing without increasing headcount.{" "}
+            Increase by infinite number of manpower without increasing headcount
           </Typography.Text>
 
           <div>
@@ -253,7 +253,7 @@ const Home = () => {
       {/* <div className=" bg-gradient-to-b from-[#565656] to-[#262626]  md:h-[400px] h-auto rounded-lg w-[85%] mx-auto flex items-center justify-between md:p-0 p-6 ">
         <div className="flex md:flex-row flex-col items-center justify-between w-[95%] mx-auto md:gap-y-0 gap-y-6 ">
           <div className="md:w-[40%] w-[100%] space-y-3">
-           
+
 
             <Typography.Headers className="text-white leading-[1.3em]">
               George Seamlessly Integrates with Your Financial auditing Tools

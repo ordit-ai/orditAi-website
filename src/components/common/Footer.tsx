@@ -11,7 +11,7 @@ const Footer = () => {
             <img src={Logo} alt="Logo" className="h-[25px]" />
 
             <Typography.SubText className="">
-              OrditAI automates tasks, minimizes errors, and delivers deeper financial understanding
+              Revolutionize your auditing processes with George—your dedicated AI-powered digital employee.
             </Typography.SubText>
           </div>
 
