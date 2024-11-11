@@ -25,13 +25,14 @@ import Logo3 from "@/assets/images/auditProcess/flw.png";
 import Logo4 from "@/assets/images/auditProcess/ey.png";
 import Logo5 from "@/assets/images/auditProcess/baba.png";
 import Logo6 from "@/assets/images/auditProcess/swipe.png";
+import Logo7 from "@/assets/images/auditProcess/google.png";
 
 import Hero1 from "@/assets/images/auditProcess/ship.png";
 import Hero2 from "@/assets/images/auditProcess/topship.png";
 import Hero3 from "@/assets/images/auditProcess/send.png";
 import Hero4 from "@/assets/images/auditProcess/float.png";
 
-export const missonImages = [Logo1, Logo2, Logo3, Logo4, Logo5, Logo6];
+export const missonImages = [Logo1, Logo2, Logo3, Logo4, Logo5, Logo6, Logo7];
 export const HeroLogo = [Hero1, Hero2, Hero3, Hero4];
 
 export const whyChoose = [

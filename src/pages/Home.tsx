@@ -22,7 +22,7 @@ const Home = () => {
         <div className="flex sm:flex-row  flex-col  pl-[7.5%] justify-between">
           <div className="sm:w-[47%] pt-[3em] w-[90%] flex justify-between flex-col">
             <div className="space-y-6">
-              <Typography.Heading className="w-[100%]">
+              <Typography.Heading className="w-[100%] text-center sm:text-left ">
                 Hi, I’m George.Your{" "}
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
                   AI Powered
@@ -224,7 +224,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="py-[5em]">
+      <div className="py-[5em]" id="our-mission">
         <Typography.H2 className="text-center">Our Mission</Typography.H2>
         <div className="sm:w-[50%] w-[80%] shadow-xl rounded-lg border-[1px] my-[3em]  mx-auto">
           <div className="sm:w-[70%] w-[80%] mx-auto text-center space-y-6  sm:py-[4em] py-[2em]">
@@ -239,7 +239,7 @@ const Home = () => {
 
             <Typography className="pt-[2em]">BUILT BY PREVIOUS TECHNOLOGY, LEGAL, AND AUDIT TEAMS AT</Typography>
 
-            <div className="flex flex-wrap items-center space-x-4 pt-[0.5em] gap-3">
+            <div className="flex flex-wrap justify-center items-center space-x-4 pt-[0.5em] gap-5">
               {missonImages.map((el, i) => (
                 <img src={el} alt={`missionImage-${i}`} key={`missionImage-${i}`} className="h-[20px]" />
               ))}
