@@ -68,7 +68,6 @@ Typography.H33 = function ({ ...props }: TypographyProps) {
   );
 };
 
-
 Typography.H3 = function ({ ...props }: TypographyProps) {
   return (
     <p {...props} className={`sm:text-xl text-lg font-secondary font-semibold ${props.className}`}>

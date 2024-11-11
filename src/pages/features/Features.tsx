@@ -14,7 +14,12 @@ interface TProps {
 }
 const Features: FC<TProps> = ({ elm }) => {
   return (
-    <div className={cn("flex items-center sm:flex-row  justify-between sm:gap-0 gap-[2em]" ,elm.position === "left"? "flex-col" :  "flex-col-reverse")}>
+    <div
+      className={cn(
+        "flex items-center sm:flex-row  justify-between sm:gap-0 gap-[2em]",
+        elm.position === "left" ? "flex-col" : "flex-col-reverse",
+      )}
+    >
       {elm.position === "left" && <img src={elm.image} alt={elm.name} className="sm:w-[45%] w-[100%]" />}
 
       <div className="sm:w-[45%] w-[100%] space-y-3">

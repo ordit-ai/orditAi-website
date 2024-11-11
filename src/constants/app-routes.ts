@@ -7,4 +7,3 @@ export const APP_ROUTES = {
   RESOURCES: "/",
   CONTACT: "/contact-us",
 };
-
