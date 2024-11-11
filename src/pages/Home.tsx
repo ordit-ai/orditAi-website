@@ -1,7 +1,7 @@
 import Typography from "@/components/Typography";
 import { Button } from "@/components/common/Button";
 import HeroImg from "@/assets/images/heroImg.png";
-// import Effortless from "@/assets/images/effortless.png";
+import Effortless from "@/assets/images/effortless.png";
 import {
   HeroLogo,
   auditProcess,
@@ -250,7 +250,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* <div className=" bg-gradient-to-b from-[#565656] to-[#262626]  md:h-[400px] h-auto rounded-lg w-[85%] mx-auto flex items-center justify-between md:p-0 p-6 ">
+      <div className=" bg-gradient-to-b from-[#565656] to-[#262626]  md:h-[400px] h-auto rounded-lg w-[85%] mx-auto flex items-center justify-between md:p-0 p-6 ">
         <div className="flex md:flex-row flex-col items-center justify-between w-[95%] mx-auto md:gap-y-0 gap-y-6 ">
           <div className="md:w-[40%] w-[100%] space-y-3">
 
@@ -270,7 +270,7 @@ const Home = () => {
 
           <img src={Effortless} alt="Effortless" className="md:w-[50%] w-[100%] rounded-lg" />
         </div>
-      </div> */}
+      </div>
     </>
   );
 };

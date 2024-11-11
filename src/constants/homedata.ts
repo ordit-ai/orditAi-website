@@ -7,12 +7,22 @@ import GetMore from "@/assets/images/auditProcess/getMore.png";
 import Perform from "@/assets/images/auditProcess/perform.png";
 import Save from "@/assets/images/auditProcess/save.png";
 
-import Discover from "@/assets/images/auditProcess/discover.png";
-import Analyze from "@/assets/images/auditProcess/analyze.png";
-import Automate from "@/assets/images/auditProcess/automate.png";
-import Perform1 from "@/assets/images/auditProcess/perform1.png";
+// import Discover from "@/assets/images/auditProcess/discover.png";
+// import Analyze from "@/assets/images/auditProcess/analyze.png";
+// import Automate from "@/assets/images/auditProcess/automate.png";
+// import Perform1 from "@/assets/images/auditProcess/perform1.png";
+
+
+
+import ai1 from "@/assets/images/ai/ai1.png";
+import ai2 from "@/assets/images/ai/ai2.png";
+import ai3 from "@/assets/images/ai/ai3.png";
+import ai4 from "@/assets/images/ai/ai4.png";
+
 
 import Empower1 from "@/assets/images/auditProcess/empower1.png";
+
+
 import Empower2 from "@/assets/images/auditProcess/empower2.png";
 
 import Onboard1 from "@/assets/images/auditProcess/onboard1.png";
@@ -128,31 +138,32 @@ export type OnboardItem = {
   subtitle: string;
   image: string; // Type for imported image
 };
+
 export const auditProcess1 = [
   {
     id: "audit5",
     title: "Discover",
     subtitle:
       "George’s real-time monitoring flags compliance risks early, keeping your business compliant effortlessly.",
-    image: Discover,
+    image: ai1,
   },
   {
     id: "audit6",
     title: "Analyze",
     subtitle: "Trust George to deliver accurate, comprehensive reports for every audit analysis.",
-    image: Analyze,
+    image: ai2,
   },
   {
     id: "audit7",
     title: "Automate",
     subtitle: "With George, the entire audit lifecycle is automated, from report compilation to performance tracking.",
-    image: Automate,
+    image: ai3,
   },
   {
     id: "audit8",
     title: "Perform",
     subtitle: "George evolves with your business, adapting his processes to meet your growing audit needs.",
-    image: Perform1,
+    image: ai4,
   },
 ];
 

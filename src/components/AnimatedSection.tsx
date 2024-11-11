@@ -29,11 +29,11 @@ const AnimatedSection = ({ data, position }: TProps) => {
   return (
     <div className="flex sm:flex-row flex-col gap-[1.5em] items-center my-[3em]">
       {position === "left" && (
-        <div className="bg-[#030124] rounded-xl sm:w-[65%] sm:h-[80vh] h-[300px] w-[100%] flex items-center justify-center relative">
+        <div className="bg-[#030124] rounded-xl  sm:h-[75vh] h-[300px] w-[80%] mx-auto flex items-center justify-center relative">
           {data.map((el, i) => (
             <motion.div
               key={i}
-              className="bg-[#030124] sm:p-[5em] p-[2em] absolute w-[100%] flex items-center justify-center rounded-xl " // Layer images on top of each other
+              className="bg-[#030124] sm:p-[4em] p-[2em] absolute w-[100%] flex items-center justify-center rounded-xl " // Layer images on top of each other
               initial={{ opacity: 0 }} // Start with hidden
               animate={{ opacity: count === i ? 1 : 0 }} // Show current image, hide others
               transition={{ duration: 1, ease: "easeInOut" }} // Smooth transition
@@ -43,38 +43,41 @@ const AnimatedSection = ({ data, position }: TProps) => {
           ))}
         </div>
       )}
-      <div className="sm:w-[35%] w-[100%] space-y-5">
-        {data.map((el, i) => (
-          <motion.div
-            className={cn(
-              "border-[1px] rounded-xl p-7 space-y-3 transition-all duration-300 cursor-pointer bg-white ",
-              count === i ? "" : "",
-            )}
-            key={el.id}
-            onClick={() => handleHover(i)}
-            onMouseEnter={() => handleHover(i)}
-            onMouseLeave={() => handleHover(count)}
-            transition={{ duration: 0.8, ease: "easeIn" }}
-          >
-            <AuditIcon />
 
-            <Typography.H3>{el.title}</Typography.H3>
-            {count === i ? (
-              <motion.div
-                // initial={{ opacity: 0, height: 0 }}
-                // animate={{ opacity: 1, height: "auto" }}
-                // exit={{ opacity: 0, height: 0 }}
-                // transition={{ duration: 0.6, ease: "easeInOut" }}
-                className="space-y-3"
-              >
-                <Typography.SubText>{el.subtitle}</Typography.SubText>
+      {position === "left" ? null : (
+        <div className="sm:w-[35%] w-[100%] space-y-5">
+          {data.map((el, i) => (
+            <motion.div
+              className={cn(
+                "border-[1px] rounded-xl p-7 space-y-3 transition-all duration-300 cursor-pointer bg-white ",
+                count === i ? "" : "",
+              )}
+              key={el.id}
+              onClick={() => handleHover(i)}
+              onMouseEnter={() => handleHover(i)}
+              onMouseLeave={() => handleHover(count)}
+              transition={{ duration: 0.8, ease: "easeIn" }}
+            >
+              <AuditIcon />
 
-                <Button>Hire George Today</Button>
-              </motion.div>
-            ) : null}
-          </motion.div>
-        ))}
-      </div>
+              <Typography.H3>{el.title}</Typography.H3>
+              {count === i ? (
+                <motion.div
+                  // initial={{ opacity: 0, height: 0 }}
+                  // animate={{ opacity: 1, height: "auto" }}
+                  // exit={{ opacity: 0, height: 0 }}
+                  // transition={{ duration: 0.6, ease: "easeInOut" }}
+                  className="space-y-3"
+                >
+                  <Typography.SubText>{el.subtitle}</Typography.SubText>
+
+                  <Button>Hire George Today</Button>
+                </motion.div>
+              ) : null}
+            </motion.div>
+          ))}
+        </div>
+      )}
 
       {position === "right" && (
         <div className="bg-[#030124] rounded-xl sm:w-[65%] w-[100%] sm:h-[80vh] h-[300px] flex items-center justify-center relative">
