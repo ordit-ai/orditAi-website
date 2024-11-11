@@ -7,10 +7,12 @@ import AboutUs from "./pages/AboutUs";
 import ContactUs from "./pages/ContactUs";
 import Pricing from "./pages/Pricing";
 import Home from "./pages/Home";
+import FeaturesPage from "./pages/features";
 
 function App() {
   const Element = {
     [APP_ROUTES.HOME]: <Home />,
+    [APP_ROUTES.FEATURES]: <FeaturesPage />,
     [APP_ROUTES.ABOUT_US]: <AboutUs />,
     [APP_ROUTES.CONTACT]: <ContactUs />,
     [APP_ROUTES.PRICING]: <Pricing />,

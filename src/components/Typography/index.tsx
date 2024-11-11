@@ -10,7 +10,7 @@ Typography.Heading = function ({ ...props }: TypographyProps) {
   return (
     <p
       {...props}
-      className={`${props.className} sm:text-[64px] text-[42px] text-[#030124] sm:leading-[72px] leading-[50px] font-medium text-center sm:text-left `}
+      className={`${props.className} sm:text-[64px] text-[42px] text-[#030124] sm:leading-[72px] leading-[50px] font-medium `}
     >
       {props.children}
     </p>
@@ -59,6 +59,15 @@ Typography.H22 = function ({ ...props }: TypographyProps) {
     </p>
   );
 };
+
+Typography.H33 = function ({ ...props }: TypographyProps) {
+  return (
+    <p {...props} className={`sm:text-2xl text-lg font-secondary font-semibold ${props.className}`}>
+      {props.children}
+    </p>
+  );
+};
+
 
 Typography.H3 = function ({ ...props }: TypographyProps) {
   return (

@@ -5,6 +5,9 @@ export const routes = [
     path: APP_ROUTES.HOME,
   },
   {
+    path: APP_ROUTES.FEATURES,
+  },
+  {
     path: APP_ROUTES.ABOUT_US,
   },
   {

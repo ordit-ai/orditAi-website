@@ -22,7 +22,7 @@ const Home = () => {
         <div className="flex sm:flex-row  flex-col  pl-[7.5%] justify-between">
           <div className="sm:w-[47%] pt-[3em] w-[90%] flex justify-between flex-col">
             <div className="space-y-6">
-              <Typography.Heading className="w-[100%]">
+              <Typography.Heading className="w-[100%] text-center sm:text-left ">
                 Hi, I’m George.Your{" "}
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
                   AI Powered
