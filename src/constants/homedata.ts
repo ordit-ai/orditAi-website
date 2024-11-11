@@ -12,16 +12,12 @@ import Save from "@/assets/images/auditProcess/save.png";
 // import Automate from "@/assets/images/auditProcess/automate.png";
 // import Perform1 from "@/assets/images/auditProcess/perform1.png";
 
-
-
 import ai1 from "@/assets/images/ai/ai1.png";
 import ai2 from "@/assets/images/ai/ai2.png";
 import ai3 from "@/assets/images/ai/ai3.png";
 import ai4 from "@/assets/images/ai/ai4.png";
 
-
 import Empower1 from "@/assets/images/auditProcess/empower1.png";
-
 
 import Empower2 from "@/assets/images/auditProcess/empower2.png";
 

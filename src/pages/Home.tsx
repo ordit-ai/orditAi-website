@@ -253,8 +253,6 @@ const Home = () => {
       <div className=" bg-gradient-to-b from-[#565656] to-[#262626]  md:h-[400px] h-auto rounded-lg w-[85%] mx-auto flex items-center justify-between md:p-0 p-6 ">
         <div className="flex md:flex-row flex-col items-center justify-between w-[95%] mx-auto md:gap-y-0 gap-y-6 ">
           <div className="md:w-[40%] w-[100%] space-y-3">
-
-
             <Typography.Headers className="text-white leading-[1.3em]">
               George Seamlessly Integrates with Your Financial auditing Tools
             </Typography.Headers>
@@ -265,7 +263,6 @@ const Home = () => {
             </Typography.SubText>
 
             <Button variant={"default"}>Hire George Today</Button>
-
           </div>
 
           <img src={Effortless} alt="Effortless" className="md:w-[50%] w-[100%] rounded-lg" />
