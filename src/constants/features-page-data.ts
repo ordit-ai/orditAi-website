@@ -1,3 +1,4 @@
+import { ChartBreakOutIcon, DataFlowIcon, ScanIcon, UsersIcon } from "@/assets/icons";
 import George from "@/assets/images/features/george.png";
 import George2 from "@/assets/images/features/george2.png";
 import George3 from "@/assets/images/features/george3.png";
@@ -5,7 +6,7 @@ import George4 from "@/assets/images/features/george4.png";
 
 export const featuresPages: {
   id: number;
-  icon: string;
+  icon: () => JSX.Element;
   name: string;
   subHeading: string;
   image: string;
@@ -15,7 +16,7 @@ export const featuresPages: {
   {
     id: 1,
     name: "Smart Automation",
-    icon: "",
+    icon: DataFlowIcon,
     subHeading: "George Automates Leadsheets",
     description:
       "Generate leadsheets instantly with George's automation. Simplify financial data summaries and minimize manual input, so your team can prioritize strategic analysis.",
@@ -25,7 +26,7 @@ export const featuresPages: {
   {
     id: 2,
     name: "Intelligent Automation",
-    icon: "",
+    icon: ScanIcon,
     subHeading: "Seamless Audits with Computer Vision",
     description:
       "Automate document review during audits with George’s computer vision. Improve accuracy and speed while reducing human error.",
@@ -35,7 +36,7 @@ export const featuresPages: {
   {
     id: 3,
     name: "Add Team Member",
-    icon: "",
+    icon: UsersIcon,
     subHeading: "Collaborate on Audits Effortlessly",
     description:
       "Invite team members to join your audit workspace with controlled access. Collaborate securely while maintaining focus on specific tasks",
@@ -45,7 +46,7 @@ export const featuresPages: {
   {
     id: 4,
     name: "Create Sessions",
-    icon: "",
+    icon: ChartBreakOutIcon,
     subHeading: "Structured Auditing with Real-Time Insights",
     description:
       "Create audit sessions for real-time collaboration and data review. Track progress, verify entries, and ensure timely, accurate audits.",
