@@ -6,6 +6,7 @@ import { FC } from "react";
 interface TProps {
   elm: {
     name: string;
+    icon: () => JSX.Element;
     subHeading: string;
     image: string;
     description: string;
@@ -23,6 +24,7 @@ const Features: FC<TProps> = ({ elm }) => {
       {elm.position === "left" && <img src={elm.image} alt={elm.name} className="sm:w-[45%] w-[100%]" />}
 
       <div className="sm:w-[45%] w-[100%] space-y-3">
+        <elm.icon />
         <Typography.SubText className="uppercase">{elm.name}</Typography.SubText>
 
         <Typography.H33>{elm.subHeading}</Typography.H33>
