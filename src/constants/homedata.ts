@@ -37,6 +37,10 @@ import Hero1 from "@/assets/images/auditProcess/ship.png";
 import Hero2 from "@/assets/images/auditProcess/topship.png";
 import Hero3 from "@/assets/images/auditProcess/send.png";
 import Hero4 from "@/assets/images/auditProcess/float.png";
+import { ChipIcon, ScaleIcon, TrendIcon } from "@/assets/icons";
+// import { TrendIcon } from "@/assets/icons/TrendIcon";
+// import { ChipIcon } from "@/assets/icons/ChipIcon";
+// import { ScaleIcon } from "@/assets/icons/ScaleIcon";
 
 export const missonImages = [Logo1, Logo2, Logo3, Logo4, Logo5, Logo6, Logo7];
 export const HeroLogo = [Hero1, Hero2, Hero3, Hero4];
@@ -168,32 +172,35 @@ export const numberStats = [
     id: "number1",
     title: "10x",
     subtitle: "The cost savings compared to a traditional auditing team.",
+    icon: TrendIcon,
   },
   {
     id: "number2",
     title: "Save 60%",
     subtitle: "On hiring personnel by deploying AI-powered solutions.",
+    icon: ChipIcon,
   },
   {
     id: "number3",
     title: "Unlimited",
     subtitle: "Capacity to handle audits and accounting tasks 24/7 at scale, with zero downtime.",
+    icon: ScaleIcon,
   },
 ];
 
 export const empowerState = [
   {
     id: "empower1",
-    title: "Auditing Teams",
+    title: "Accounting and audit firms",
     subtitle:
-      "George automates the tedious parts of auditing—like tracking transactions and verifying compliance—allowing your team to focus on providing higher-level financial insights.",
+      "George enhances auditing with computer vision inventory counting, allowing your team to focus on strategy while ensuring fast, accurate data verification.",
     image: Empower1,
   },
   {
     id: "empower2",
-    title: "Management & Growth",
+    title: "Compliance & Growth",
     subtitle:
-      "Stay ahead of compliance requirements with George’s AI-powered auditing tools. With real-time data and automated auditing, you’ll minimize risks and ensure growth isn’t hampered by financial or regulatory surprises.",
+      "Keep compliance and growth aligned with George's AI-driven control testing and transaction verification, minimizing risks and enabling seamless business scaling.",
     image: Empower2,
   },
 ];
@@ -201,7 +208,7 @@ export const empowerState = [
 export const onboardState = [
   {
     id: "onboard1",
-    title: "Hire George",
+    title: "Create an Account",
     subtitle:
       "Sign up and plug George into your finance department. He’ll begin automating auditing tasks immediately while seamlessly integrating with your existing systems.",
     image: Onboard1,
@@ -209,17 +216,54 @@ export const onboardState = [
   },
   {
     id: "onboard2",
-    title: "Train George",
-    subtitle:
-      "Tell George the specifics of your audit needs, and he’ll adapt to your company’s unique financial structure and compliance requirements.",
+    title: "Initiate George",
+    subtitle: "Create a session to start an audit process",
     image: Onboard2,
   },
 
   {
     id: "onboard3",
-    title: "Grow with George",
-    subtitle:
-      "George will prepare audit reports, perform compliance checks, and reduce errors, ensuring your business is always audit-ready, allowing your team to focus on strategic growth.",
+    title: "Engage George",
+    subtitle: "On the session, send messages to George and follow George’s direction through the audit process.",
     image: Onboard3,
   },
+];
+
+export const testimonialData = [
+  {
+    noOfStars: 5,
+    title: "George has completely transformed how we handle our audits",
+    subTitle:
+      "Before George, audits took days of preparation and effort. Now, George automates it all, providing real-time reports and ensuring compliance every step of the way",
+    office: "CFO",
+    name: "Sarah Davis",
+  },
+  {
+    noOfStars: 5,
+    title: "George guarantees accuracy while reducing our audit preparation time",
+    subTitle:
+      "With George, we no longer worry about missing data or discrepancies. His automation allows us to focus on scaling our business while ensuring financial compliance",
+    office: "Finance Manager",
+    name: "David Lee",
+  },
+  {
+    noOfStars: 5,
+    title: "George has completely transformed how we handle our audits",
+    subTitle:
+      "Before George, audits took days of preparation and effort. Now, George automates it all, providing real-time reports and ensuring compliance every step of the way",
+    office: "CFO",
+    name: "Sarah Davis",
+  },
+  {
+    noOfStars: 5,
+    title: "George guarantees accuracy while reducing our audit preparation time",
+    subTitle:
+      "With George, we no longer worry about missing data or discrepancies. His automation allows us to focus on scaling our business while ensuring financial compliance",
+    office: "Finance Manager",
+    name: "David Lee",
+  },
+
+  // {noOfStars: 5, title: "", subTitle:"", office: "", name: ""},
+  // {noOfStars: 5, title: "", subTitle:"", office: "", name: ""},
+  // {noOfStars: 5, title: "", subTitle:"", office: "", name: ""}
 ];

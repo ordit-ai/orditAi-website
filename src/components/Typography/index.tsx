@@ -86,7 +86,7 @@ Typography.H4 = function ({ ...props }: TypographyProps) {
 
 Typography.Text = function ({ ...props }: TypographyProps) {
   return (
-    <p {...props} className={`sm:text-lg text-base text-[#5E626A] font-primary font-normal ${props.className}`}>
+    <p {...props} className={`sm:text-lg text-base text-[#5E626A] font-primary  ${props.className}`}>
       {props.children}
     </p>
   );
