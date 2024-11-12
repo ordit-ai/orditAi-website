@@ -1,7 +1,8 @@
 import Typography from "@/components/Typography";
 import { Button } from "@/components/common/Button";
 import HeroImg from "@/assets/images/heroImg.png";
-import Effortless from "@/assets/images/effortless.png";
+
+import ai1 from "@/assets/images/ai/ai1.png";
 import {
   HeroLogo,
   auditProcess,
@@ -251,21 +252,22 @@ const Home = () => {
       </div>
 
       <div className=" bg-gradient-to-b from-[#565656] to-[#262626]  md:h-[400px] h-auto rounded-lg w-[85%] mx-auto flex items-center justify-between md:p-0 p-6 ">
-        <div className="flex md:flex-row flex-col items-center justify-between w-[95%] mx-auto md:gap-y-0 gap-y-6 ">
+        <div className="flex md:flex-row flex-col items-center justify-between w-[95%] h-[85%] mx-auto md:gap-y-0 gap-y-6 ">
           <div className="md:w-[40%] w-[100%] space-y-3">
             <Typography.Headers className="text-white leading-[1.3em]">
-              George Seamlessly Integrates with Your Financial auditing Tools
+              Delegate audit tasks to George while you focus on business growth
             </Typography.Headers>
 
             <Typography.SubText className="font-light text-white leading-6 w-[95%] pb-5">
-              George works with all major financial platforms to ensure your financial records are accurate, compliant,
-              and always audit-ready.
+              Perform risk assessment, analyze control methods and perform substantive audit using George
             </Typography.SubText>
 
             <Button variant={"default"}>Hire George Today</Button>
           </div>
 
-          <img src={Effortless} alt="Effortless" className="md:w-[50%] w-[100%] rounded-lg" />
+          <div className="md:w-[50%] w-[100%] h-[100%] overflow-hidden">
+            <img src={ai1} alt="Effortless" className="rounded-lg w-[100%] h-[100%]  object-cover" />
+          </div>
         </div>
       </div>
     </>
