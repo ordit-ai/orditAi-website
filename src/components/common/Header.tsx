@@ -21,10 +21,10 @@ const Header = () => {
       name: "Mission",
       path: APP_ROUTES.MISSON,
     },
-    {
-      name: "About Us",
-      path: APP_ROUTES.ABOUT_US,
-    },
+    // {
+    //   name: "About Us",
+    //   path: APP_ROUTES.ABOUT_US,
+    // },
 
     // {
     //   name: "Pricing",

@@ -9,10 +9,9 @@ const Footer = () => {
         <div className="border-b-[1px] border-gray-500 py-6 flex md:flex-row flex-col items-start justify-between">
           <div className="md:w-[20%] w-[100%] space-y-6">
             <img src={Logo} alt="Logo" className="h-[25px]" />
+            <Typography.Text className="text-gray-800">George Powers Your Financial Success 24/7</Typography.Text>
 
-            <Typography.SubText className="">
-              Revolutionize your auditing processes with George—your dedicated AI-powered digital employee.
-            </Typography.SubText>
+            <Typography.SubText className="">Your dedicated AI-powered digital employee for audit.</Typography.SubText>
           </div>
 
           <div className="md:flex grid grid-cols-2 items-start justify-around md:w-[65%] w-[100%] md:gap-0 gap-6 md:py-0 py-[2em]">
