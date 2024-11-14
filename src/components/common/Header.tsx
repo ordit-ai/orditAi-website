@@ -21,29 +21,7 @@ const Header = () => {
       name: "Mission",
       path: APP_ROUTES.MISSON,
     },
-    // {
-    //   name: "About Us",
-    //   path: APP_ROUTES.ABOUT_US,
-    // },
-
-    // {
-    //   name: "Pricing",
-    //   path: APP_ROUTES.PRICING,
-    // },
-    // {
-    //   name: "About Us",
-    //   path: APP_ROUTES.ABOUT_US,
-    // },
-
-    // {
-    //   name: "Resources",
-    //   path: APP_ROUTES.ABOUT_US,
-    // },
-
-    // {
-    //   name: "Contact",
-    //   path: APP_ROUTES.CONTACT,
-    // },
+   
   ];
 
   const checkArray = (array: string[]) => {
@@ -66,7 +44,10 @@ const Header = () => {
             <img src={Logo} alt="Logo" className="h-[25px]" />
           )} */}
 
-          <img src={PurpleLogo} alt="PurpleLogo" className="h-[25px]" />
+          <Link to={"/"}>
+            <img src={PurpleLogo} alt="PurpleLogo" className="h-[25px]" />
+          </Link>
+
 
           <div className="hidden items-center gap-x-6 md:flex">
             {React.Children.toArray(
