@@ -21,7 +21,6 @@ const Header = () => {
       name: "Mission",
       path: APP_ROUTES.MISSON,
     },
-   
   ];
 
   const checkArray = (array: string[]) => {
@@ -47,7 +46,6 @@ const Header = () => {
           <Link to={"/"}>
             <img src={PurpleLogo} alt="PurpleLogo" className="h-[25px]" />
           </Link>
-
 
           <div className="hidden items-center gap-x-6 md:flex">
             {React.Children.toArray(
