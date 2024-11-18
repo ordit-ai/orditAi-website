@@ -62,10 +62,7 @@ const AnimatedSection = ({ data, position }: TProps) => {
 
               <Typography.H3>{el.title}</Typography.H3>
               {count === i ? (
-                <motion.div
-                 
-                  className="space-y-3"
-                >
+                <motion.div className="space-y-3">
                   <Typography.SubText>{el.subtitle}</Typography.SubText>
 
                   <Button>Hire George Today</Button>
