@@ -176,13 +176,13 @@ export const numberStats = [
   },
   {
     id: "number2",
-    title: "Save 60%",
+    title: "Save 90%",
     subtitle: "On hiring personnel by deploying AI-powered solutions.",
     icon: ChipIcon,
   },
   {
     id: "number3",
-    title: "Unlimited",
+    title: "1000x",
     subtitle: "Capacity to handle audits and accounting tasks 24/7 at scale, with zero downtime.",
     icon: ScaleIcon,
   },
