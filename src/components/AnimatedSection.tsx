@@ -27,16 +27,16 @@ const AnimatedSection = ({ data, position }: TProps) => {
   };
 
   return (
-    <div className="flex sm:flex-row flex-col gap-[1.5em] items-center my-[3em]">
+    <div className="flex md:flex-row flex-col gap-[1.5em] items-center my-[3em]">
       {position === "left" && (
-        <div className="bg-[#030124] rounded-xl  sm:h-[75vh] h-[300px] w-[80%] mx-auto flex items-center justify-center relative">
+        <div className="bg-[#030124] rounded-xl md:h-[75vh]  h-[250px] md:w-[80%] w-[100%] mx-auto flex items-center justify-center relative">
           {data.map((el, i) => (
             <motion.div
               key={i}
-              className="bg-[#030124] sm:p-[4em] p-[2em] absolute w-[100%] flex items-center justify-center rounded-xl " // Layer images on top of each other
+              className="bg-[#030124] md:p-[4em] p-[1em] absolute w-[100%] flex items-center justify-center rounded-xl " // Layer images on top of each other
               initial={{ opacity: 0 }} // Start with hidden
               animate={{ opacity: count === i ? 1 : 0 }} // Show current image, hide others
-              transition={{ duration: 1, ease: "easeInOut" }} // Smooth transition
+              transition={{ duration: 1, ease: "easeInOut" }} // mdooth transition
             >
               <img src={el.image} alt={`image-${i}`} className="h-auto w-[100%] object-center rounded-xl" />
             </motion.div>
@@ -45,7 +45,7 @@ const AnimatedSection = ({ data, position }: TProps) => {
       )}
 
       {position === "left" ? null : (
-        <div className="sm:w-[35%] w-[100%] space-y-5">
+        <div className="md:w-[35%] w-[100%] space-y-5">
           {data.map((el, i) => (
             <motion.div
               className={cn(
@@ -80,14 +80,14 @@ const AnimatedSection = ({ data, position }: TProps) => {
       )}
 
       {position === "right" && (
-        <div className="bg-[#030124] rounded-xl sm:w-[65%] w-[100%] sm:h-[80vh] h-[300px] flex items-center justify-center relative">
+        <div className="bg-[#030124] rounded-xl md:w-[65%] w-[100%] md:h-[80vh] sm:h-[500px] h-[300px]  mt-[3em] md:mt-0  flex items-center justify-center relative">
           {data.map((el, i) => (
             <motion.div
               key={i}
-              className="bg-[#030124] sm:p-[5em] p-[2em]  absolute w-[100%] flex items-center justify-center rounded-xl " // Layer images on top of each other
+              className="bg-[#030124] md:p-[5em] p-[2em]  absolute w-[100%] flex items-center justify-center rounded-xl " // Layer images on top of each other
               initial={{ opacity: 0 }} // Start with hidden
               animate={{ opacity: count === i ? 1 : 0 }} // Show current image, hide others
-              transition={{ duration: 1, ease: "easeInOut" }} // Smooth transition
+              transition={{ duration: 1, ease: "easeInOut" }} // mdooth transition
             >
               <img src={el.image} alt={`image-${i}`} className="h-auto w-[100%] object-center rounded-xl" />
             </motion.div>
