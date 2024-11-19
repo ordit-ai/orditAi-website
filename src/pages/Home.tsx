@@ -73,7 +73,11 @@ const Home = () => {
             </div>
           </div>
 
-          <img src={HeroImg} className="sm:w-[53%] w-[100%] sm:place-self-end place-self-center flex mx-auto" alt="HeroImg" />
+          <img
+            src={HeroImg}
+            className="sm:w-[53%] w-[100%] sm:place-self-end place-self-center flex mx-auto"
+            alt="HeroImg"
+          />
 
           {/* <div className="w-[50%]"></div> */}
         </div>
