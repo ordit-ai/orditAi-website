@@ -7,7 +7,6 @@ import GetMore from "@/assets/images/auditProcess/getMore.png";
 import Perform from "@/assets/images/auditProcess/perform.png";
 import Save from "@/assets/images/auditProcess/save.png";
 
-
 import ai1 from "@/assets/images/ai/ai1.png";
 import ai2 from "@/assets/images/ai/ai2.png";
 import ai3 from "@/assets/images/ai/ai3.png";

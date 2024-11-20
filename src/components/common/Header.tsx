@@ -70,14 +70,10 @@ const Header = () => {
           <Button variant={"default"}>Hire George Today</Button>
         </div>
 
-        <HiMenu
-          onClick={() => setOpen(true)}
-          className="sm:hidden flex text-black text-2xl cursor-pointer"
-        />
+        <HiMenu onClick={() => setOpen(true)} className="sm:hidden flex text-black text-2xl cursor-pointer" />
       </div>
 
       <Navbar open={open} setOpen={setOpen} />
-     
     </div>
   );
 };

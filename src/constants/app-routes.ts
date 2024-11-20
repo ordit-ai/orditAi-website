@@ -6,11 +6,8 @@ export const APP_ROUTES = {
   MISSON: "/#our-mission",
   RESOURCES: "/",
   CONTACT: "/contact-us",
-
-
 };
 
-
 export const URLS = {
-  ORDIT_AI: "https://sandbox.orditai.com/"
-}
+  ORDIT_AI: "https://sandbox.orditai.com/",
+};
