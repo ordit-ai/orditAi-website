@@ -1,15 +1,17 @@
 // import Logo from "@/assets/images/Logo.png";
 import PurpleLogo from "@/assets/images/PurpleLogo.png";
 import { APP_ROUTES } from "@/constants/app-routes";
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Typography from "../Typography";
 import { Button } from "./Button";
 import { HiMenu } from "react-icons/hi";
 import { cn } from "@/helpers/classHelpers";
+import Navbar from "./Navbar";
 
 const Header = () => {
   const location = useLocation();
+  const [open, setOpen] = useState(false);
 
   const locationArray = location.pathname.split("/");
   const links = [
@@ -68,8 +70,14 @@ const Header = () => {
           <Button variant={"default"}>Hire George Today</Button>
         </div>
 
-        <HiMenu className="flex md:hidden text-white text-3xl cursor-pointer" />
+        <HiMenu
+          onClick={() => setOpen(true)}
+          className="sm:hidden flex text-black text-2xl cursor-pointer"
+        />
       </div>
+
+      <Navbar open={open} setOpen={setOpen} />
+     
     </div>
   );
 };

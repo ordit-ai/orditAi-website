@@ -7,10 +7,6 @@ import GetMore from "@/assets/images/auditProcess/getMore.png";
 import Perform from "@/assets/images/auditProcess/perform.png";
 import Save from "@/assets/images/auditProcess/save.png";
 
-// import Discover from "@/assets/images/auditProcess/discover.png";
-// import Analyze from "@/assets/images/auditProcess/analyze.png";
-// import Automate from "@/assets/images/auditProcess/automate.png";
-// import Perform1 from "@/assets/images/auditProcess/perform1.png";
 
 import ai1 from "@/assets/images/ai/ai1.png";
 import ai2 from "@/assets/images/ai/ai2.png";
@@ -28,9 +24,9 @@ import Onboard3 from "@/assets/images/auditProcess/onboard3.png";
 import Logo1 from "@/assets/images/auditProcess/kpmg.png";
 import Logo2 from "@/assets/images/auditProcess/deel.png";
 import Logo3 from "@/assets/images/auditProcess/flw.png";
-import Logo4 from "@/assets/images/auditProcess/ey.png";
-import Logo5 from "@/assets/images/auditProcess/baba.png";
-import Logo6 from "@/assets/images/auditProcess/swipe.png";
+// import Logo4 from "@/assets/images/auditProcess/ey.png";
+// import Logo5 from "@/assets/images/auditProcess/baba.png";
+// import Logo6 from "@/assets/images/auditProcess/swipe.png";
 import Logo7 from "@/assets/images/auditProcess/google.png";
 
 import Hero1 from "@/assets/images/auditProcess/ship.png";
@@ -42,7 +38,7 @@ import { ChipIcon, ScaleIcon, TrendIcon } from "@/assets/icons";
 // import { ChipIcon } from "@/assets/icons/ChipIcon";
 // import { ScaleIcon } from "@/assets/icons/ScaleIcon";
 
-export const missonImages = [Logo1, Logo2, Logo3, Logo4, Logo5, Logo6, Logo7];
+export const missonImages = [Logo1, Logo2, Logo3, Logo7];
 export const HeroLogo = [Hero1, Hero2, Hero3, Hero4];
 
 export const whyChoose = [
