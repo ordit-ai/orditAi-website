@@ -76,7 +76,7 @@ const listy = {
 };
 
 const Navbar = ({ open, setOpen }: TProps) => {
-  // const location = useLocation();
+
 
   return (
     <AnimatePresence mode="wait" onExitComplete={() => setOpen(false)}>
