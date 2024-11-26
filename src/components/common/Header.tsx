@@ -39,12 +39,6 @@ const Header = () => {
     <div className="h-[80px] flex items-center  w-[100vw] justify-center border-b-[1px]">
       <div className="flex items-center justify-between w-[85vw] h-[70px] ">
         <div className="flex items-center justify-between space-x-6 w-[60%]">
-          {/* {checkArray(locationArray) ? (
-            <img src={PurpleLogo} alt="PurpleLogo" className="h-[25px]" />
-          ) : (
-            <img src={Logo} alt="Logo" className="h-[25px]" />
-          )} */}
-
           <Link to={"/"}>
             <img src={PurpleLogo} alt="PurpleLogo" className="h-[25px]" />
           </Link>
