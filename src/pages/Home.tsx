@@ -5,7 +5,7 @@ import FIRS from "@/assets/images/logos/Frame.png";
 
 import ai1 from "@/assets/images/ai/ai1.png";
 import {
-  HeroLogo,
+  // HeroLogo,
   auditProcess,
   auditProcess1,
   empowerState,
@@ -61,7 +61,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="py-[2em] space-y-4">
+            {/* <div className="py-[2em] space-y-4">
               <Typography.SubText className="text-gray-600 sm:text-left text-center">
                 Trusted by Audit and accounting firms committed to accuracy and compliance
               </Typography.SubText>
@@ -70,7 +70,7 @@ const Home = () => {
                   <img src={el} alt={`missionImage-${i}`} key={`missionImage-${i}`} className="h-[20px]" />
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
 
           <img

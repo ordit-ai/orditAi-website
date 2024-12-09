@@ -227,38 +227,45 @@ export const onboardState = [
 export const testimonialData = [
   {
     noOfStars: 5,
-    title: "George has completely transformed how we handle our audits",
+    title: "OrditAI Has Revolutionized Our Auditing Process",
     subTitle:
-      "Before George, audits took days of preparation and effort. Now, George automates it all, providing real-time reports and ensuring compliance every step of the way",
+      "With OrditAI, our auditing workflow has transformed entirely. What used to take several days is now handled within hours. The platform’s automation features provide us with real-time data and ensure we’re always compliant.",
+    office: "Finance Director",
+    name: "Aisha Bassey",
+  },
+  {
+    noOfStars: 5,
+    title: "Efficient, Accurate, and Time-Saving!",
+    subTitle:
+      "Before OrditAI, our audits required extensive manual preparation. Now, we rely on OrditAI to manage everything smoothly, delivering instant reports and helping us catch errors early. It’s a game-changer for our team.",
+    office: "Senior Financial Analyst",
+    name: "Daniel Okonkwo",
+  },
+  {
+    noOfStars: 5,
+    title: "Compliance Made Easy with OrditAI",
+    subTitle:
+      "OrditAI has drastically cut down our audit preparation time. From data uploads to generating insights, everything is seamless. Their compliance checks keep us confident in our reporting accuracy.",
     office: "CFO",
-    name: "Sarah Davis",
+    name: "Jessica Wong",
   },
   {
     noOfStars: 5,
-    title: "George guarantees accuracy while reducing our audit preparation time",
+    title: "OrditAI Saves Us Valuable Time and Resources",
     subTitle:
-      "With George, we no longer worry about missing data or discrepancies. His automation allows us to focus on scaling our business while ensuring financial compliance",
-    office: "Finance Manager",
-    name: "David Lee",
-  },
-  {
-    noOfStars: 5,
-    title: "George has completely transformed how we handle our audits",
-    subTitle:
-      "Before George, audits took days of preparation and effort. Now, George automates it all, providing real-time reports and ensuring compliance every step of the way",
-    office: "CFO",
-    name: "Sarah Davis",
-  },
-  {
-    noOfStars: 5,
-    title: "George guarantees accuracy while reducing our audit preparation time",
-    subTitle:
-      "With George, we no longer worry about missing data or discrepancies. His automation allows us to focus on scaling our business while ensuring financial compliance",
-    office: "Finance Manager",
-    name: "David Lee",
+      "OrditAI’s automated reporting has transformed our monthly audit routine. We save hours, and the accuracy is unmatched. Our team now focuses on strategy, knowing OrditAI handles the heavy lifting.",
+    office: "Financial Controller",
+    name: "Kemi Olatunji",
   },
 
-  // {noOfStars: 5, title: "", subTitle:"", office: "", name: ""},
+  {
+    noOfStars: 5,
+    title: "A Reliable Partner in Financial Auditing",
+    subTitle:
+      "OrditAI has been instrumental in simplifying our audit processes. The software is intuitive, fast, and helps us stay compliant effortlessly. We now get real-time updates, and it’s been an absolute asset.",
+    office: "Chief Accountant",
+    name: "Mohammed Adamu",
+  },
   // {noOfStars: 5, title: "", subTitle:"", office: "", name: ""},
   // {noOfStars: 5, title: "", subTitle:"", office: "", name: ""}
 ];
