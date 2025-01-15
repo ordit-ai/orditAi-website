@@ -46,9 +46,9 @@ const Home = () => {
               <Typography.Heading className="w-[100%] text-center sm:text-left ">
                 Hi, I’m George.Your{" "}
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
-                  AI Powered
+                  AI Agent
                 </span>{" "}
-                Auditing Partner
+                for Auditing and Accounting
               </Typography.Heading>
               <Typography.Text className="sm:text-left text-center">
                 I have been trained using the most updated standards and global standard process flow to handle your
