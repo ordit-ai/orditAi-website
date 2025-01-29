@@ -144,12 +144,10 @@ const Home = () => {
           </Typography.Text>
 
           <div className="flex items-center justify-center">
-          <div className=" bg-[#030124] rounded-lg flex items-center justify-center sm:h-[70vh] h-auto sm:p-[4em] p-[2em]">
-            <img src={GeorgeGif} alt="GeorgeGif" className="h-[100%]" />
+            <div className=" bg-[#030124] rounded-lg flex items-center justify-center sm:h-[70vh] h-auto sm:p-[4em] p-[2em]">
+              <img src={GeorgeGif} alt="GeorgeGif" className="h-[100%]" />
+            </div>
           </div>
-          </div>
-
-        
         </div>
       </div>
 
