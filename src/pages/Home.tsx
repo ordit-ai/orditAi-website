@@ -2,7 +2,7 @@ import Typography from "@/components/Typography";
 import { Button } from "@/components/common/Button";
 import HeroImg from "@/assets/images/heroImg.png";
 import FIRS from "@/assets/images/logos/Frame.png";
-
+import GeorgeGif from "@/assets/images/george.gif";
 import ai1 from "@/assets/images/ai/ai1.png";
 import {
   // HeroLogo,
@@ -143,9 +143,13 @@ const Home = () => {
             and accounting tasks effortlessly.
           </Typography.Text>
 
-          <div className="">
-            <AnimatedSection data={auditProcess1} position="left" />
+          <div className="flex items-center justify-center">
+          <div className=" bg-[#030124] rounded-lg flex items-center justify-center sm:h-[70vh] h-auto sm:p-[4em] p-[2em]">
+            <img src={GeorgeGif} alt="GeorgeGif" className="h-[100%]" />
           </div>
+          </div>
+
+        
         </div>
       </div>
 
