@@ -7,7 +7,6 @@ import ai1 from "@/assets/images/ai/ai1.png";
 import {
   // HeroLogo,
   auditProcess,
-  auditProcess1,
   empowerState,
   missonImages,
   numberStats,
