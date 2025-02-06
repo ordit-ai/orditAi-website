@@ -103,26 +103,26 @@ export const featuresData = [
 export const auditProcess = [
   {
     id: "audit1",
-    title: "Grow your Revenue",
-    subtitle: "Automate audits with George, freeing your team to focus on top clients and growth.",
+    title: "Seamless Integration.",
+    subtitle: "Whether you're a global audit and accounting firm or a solo practitioner, George integrates seamlessly into your workflow, transforming how you handle audits and financial processes.",
     image: Grow,
   },
   {
     id: "audit2",
-    title: "Save Cost",
-    subtitle: "Let George  handle labor-intensive auditing tasks without the cost of hiring additional staff",
+    title: "Always On, Always Accurate.",
+    subtitle: "With George, the days of late nights during audit season are over. George never misses a detail, offering round-the-clock service to ensure that your books are balanced.",
     image: Save,
   },
   {
     id: "audit3",
-    title: "Performing Audit Task",
-    subtitle: "George automates audits, speeding up preparation, review, and finalization of financial documents",
+    title: "Independent Expertise.",
+    subtitle: "George works autonomously, taking care of everything from the planning phase to conclusive phase, without needing human intervention. He’s not just a helper, he’s your dedicated team member.",
     image: Perform,
   },
   {
     id: "audit4",
-    title: "Get More Auditing Done",
-    subtitle: "George automates audits, helping you manage more clients without increasing staff.",
+    title: "Built for the Global Stage.",
+    subtitle: "George understands the complexities of local and international accounting standards, adapting to meet the unique needs of your business, wherever you are in the world.",
     image: GetMore,
   },
 ];
@@ -205,21 +205,21 @@ export const onboardState = [
     id: "onboard1",
     title: "Create an Account",
     subtitle:
-      "Sign up and plug George into your finance department. He’ll begin automating auditing tasks immediately while seamlessly integrating with your existing systems.",
+      "Sign up to bring George into your finance department. He’ll seamlessly integrate with your existing systems and immediately start carrying out your audit tasks.",
     image: Onboard1,
     children: ["Save Time", "Ensure Compliance", "Full Automation"],
   },
   {
     id: "onboard2",
     title: "Initiate George",
-    subtitle: "Create a session to start an audit process",
+    subtitle: "Create a session to start an audit process. You can create multiple sessions for multiple audits or clients.",
     image: Onboard2,
   },
 
   {
     id: "onboard3",
     title: "Engage George",
-    subtitle: "On the session, send messages to George and follow George’s direction through the audit process.",
+    subtitle: "During the session, communicate with George and follow his direction throughout the audit process.",
     image: Onboard3,
   },
 ];

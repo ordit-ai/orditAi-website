@@ -19,7 +19,7 @@ export const featuresPages: {
     icon: DataFlowIcon,
     subHeading: "George Automates Leadsheets",
     description:
-      "Generate leadsheets instantly with George's automation. Simplify financial data summaries and minimize manual input, so your team can prioritize strategic analysis.",
+      "Take advantage of George's cognitive reasoning that extend beyond human capabilities. ",
     image: George,
     position: "left",
   },
@@ -27,9 +27,9 @@ export const featuresPages: {
     id: 2,
     name: "Intelligent Automation",
     icon: ScanIcon,
-    subHeading: "Seamless Audits with Computer Vision",
+    subHeading: "Independent Auditing",
     description:
-      "Automate document review during audits with George’s computer vision. Improve accuracy and speed while reducing human error.",
+      "Perform end-to-end audits without any human supervision",
     image: George2,
     position: "right",
   },
@@ -39,7 +39,7 @@ export const featuresPages: {
     icon: UsersIcon,
     subHeading: "Collaborate on Audits Effortlessly",
     description:
-      "Invite team members to join your audit workspace with controlled access. Collaborate securely while maintaining focus on specific tasks",
+      "Invite team members to join your audit workspace with controlled access",
     image: George3,
     position: "left",
   },
@@ -49,7 +49,7 @@ export const featuresPages: {
     icon: ChartBreakOutIcon,
     subHeading: "Structured Auditing with Real-Time Insights",
     description:
-      "Create audit sessions for real-time collaboration and data review. Track progress, verify entries, and ensure timely, accurate audits.",
+      "Track progress, verify entries, and ensure timely, accurate audits",
     image: George4,
     position: "right",
   },

@@ -2,7 +2,7 @@ import Typography from "@/components/Typography";
 import Features from "./Features";
 import { featuresPages } from "@/constants/features-page-data";
 import { Button } from "@/components/common/Button";
-import ai1 from "@/assets/images/ai/ai1.png";
+// import ai1 from "@/assets/images/ai/ai1.png";
 import HeroImg from "@/assets/images/heroImg.png";
 
 const FeaturesPage = () => {
@@ -10,26 +10,26 @@ const FeaturesPage = () => {
     <div>
       <div className="space-y-6 flex items-center flex-col justify-center sm:pt-[5em] pt-[3em] border-b-[1px]">
         <Typography.Heading className="w-[100%] text-center">
-          Product Feature <br />
+          George, Your Trusted
+          <br />
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
-            AI Powered
+            AI Auditor and Accountant
           </span>
         </Typography.Heading>
         <Typography.Text className=" text-center sm:w-[50%] w-[80%]">
-          I have been trained using the most updated standards and global standard process flow to handle your auditing
-          and accounting tasks.
+          Trained with global standards to handle your auditing and accounting tasks.
         </Typography.Text>
         <Button variant={"default"} className="m">
           Hire George Today
         </Button>
 
-        <img src={HeroImg} className="sm:w-[40%]  w-[100%]  " alt="HeroImg" />
+        <img src={HeroImg} className="sm:w-[40%]  w-[100%]" alt="HeroImg" />
       </div>
 
       <div className="w-[80%] mx-auto space-y-[3em] py-[4em]">
         <div className="space-y-4">
-          <Typography.H2 className="text-[#030124] w-[95%] text-center ">
-            Powerful Features to Transform Your Accounting
+          <Typography.H2 className="text-[#030124] w-[95%] text-center leading-[1em] ">
+            Explore how George can revolutionize your financial operations.{" "}
           </Typography.H2>
 
           <Typography.Text className="text-gray-600 text-center">
@@ -44,7 +44,7 @@ const FeaturesPage = () => {
         </div>
       </div>
 
-      <div className=" bg-gradient-to-b from-[#565656] to-[#262626]  md:h-[400px] h-auto rounded-lg w-[85%] mx-auto flex items-center justify-between md:p-0 p-6 ">
+      {/* <div className=" bg-gradient-to-b from-[#565656] to-[#262626]  md:h-[400px] h-auto rounded-lg w-[85%] mx-auto flex items-center justify-between md:p-0 p-6 ">
         <div className="flex md:flex-row flex-col items-center justify-between w-[95%] h-[85%] mx-auto md:gap-y-0 gap-y-6 ">
           <div className="md:w-[40%] w-[100%] space-y-3">
             <Typography.Headers className="text-white leading-[1.3em]">
@@ -62,7 +62,7 @@ const FeaturesPage = () => {
             <img src={ai1} alt="Effortless" className="rounded-lg w-[100%] h-[100%]  object-cover" />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

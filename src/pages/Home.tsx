@@ -43,15 +43,17 @@ const Home = () => {
           <div className="sm:w-[47%] pt-[3em] w-[90%] flex justify-between flex-col">
             <div className="space-y-6">
               <Typography.Heading className="w-[100%] text-center sm:text-left ">
-                Hi, I’m George.Your{" "}
+                Precise Numbers, <br />
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
-                  AI Agent
+                  {/* AI Agent */}
+                  Extraordinary Results,
                 </span>{" "}
-                for Auditing and Accounting
+                {/* for Auditing and Accounting  */}
+                Zero Supervision.
               </Typography.Heading>
               <Typography.Text className="sm:text-left text-center">
-                I have been trained using the most updated standards and global standard process flow to handle your
-                auditing and accounting tasks.
+                Meet George, your AI Auditor and Accountant! ...and he is here to redefine the way you approach auditing
+                and accounting.
               </Typography.Text>
               <div className="flex sm:justify-start justify-center w-[100%]">
                 <Button variant={"default"} className="m">
@@ -83,7 +85,10 @@ const Home = () => {
       </div>
 
       <div className="flex items-center justify-center flex-col py-[3em] space-y-4 border-t-[1px]  border-b-[1px] ">
-        <Typography.SubText className="text-gray-600">International Standards that George Adopts</Typography.SubText>
+        <Typography.SubText className="text-gray-600 sm:w-[70%] w-[100%] text-center">
+          George is an autonomous auditing and accounting professional,trained using global standards. He is capable of
+          doing everything a human auditor can do without oversight.
+        </Typography.SubText>
 
         <div className="flex flex-wrap items-center justify-center gap-[1em] w-[85%] mx-auto">
           {["GAAP", "CAS", "JGAAP", "ISA", "SEC", "GDPR", "SOX"].map((el) => (
@@ -99,12 +104,27 @@ const Home = () => {
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
               George
             </span>{" "}
-            Powers Your Auditing Process 24/7
+            is the engine that powers your Audit and Accounting business.
           </Typography.H2>
 
           <Typography.Text className="text-gray-600 text-center">
-            Increase by infinite number of manpower without increasing headcount
+            Uncover insights, ensure compliance, and achieve unmatched accuracy!{" "}
           </Typography.Text>
+        </div>
+      </div>
+
+      <div className="bg-gradient-to-b from-white via-purple-50 to-white">
+        <div className="w-[80%] mx-auto py-[3em] space-y-4">
+          <Typography.H2 className="text-[#030124] w-[95%] text-center ">
+            Why?{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
+              George
+            </span>{" "}
+          </Typography.H2>
+
+          {/* <Typography.Text className="text-gray-600 text-center">
+            Uncover insights, ensure compliance, and achieve unmatched accuracy!{" "}
+          </Typography.Text> */}
 
           <div>
             <AnimatedSection data={auditProcess} position="right" />
@@ -131,15 +151,16 @@ const Home = () => {
       <div className="bg-gradient-to-b from-white via-purple-50 to-white">
         <div className="w-[80%] mx-auto py-[3em] space-y-4">
           <Typography.H2 className="text-[#030124] sm:w-[95%] text-center ">
-            Automate Auditing & Accounting with{" "}
+            What can{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
-              George
+              George{" "}
             </span>
+            do for you?
           </Typography.H2>
 
           <Typography.Text className="text-gray-600 text-center sm:w-[65%] w-[100%] mx-auto">
             From real-time auditing to continuous compliance monitoring, George takes care of your financial auditing
-            and accounting tasks effortlessly.
+            and accounting tasks effortlessly
           </Typography.Text>
 
           <div className="flex items-center justify-center">
@@ -159,13 +180,11 @@ const Home = () => {
             </span>{" "}
             Create for You?
           </Typography.H2>
-          <Typography.Text>
-            Discover the potential revenue George can generate by automating your auditing processes.
-          </Typography.Text>
+          <Typography.Text>Discover the potential revenue George can generate for you.</Typography.Text>
 
           <div>
             <div className="flex items-baseline space-x-3">
-              <p className="text-[48px] font-light">$1,800,000</p>
+              <p className="text-[48px] font-light"> $25,500,000</p>
               <p className="text-primary mt-[-1em]">PER YEAR</p>
             </div>
             <hr className="h-[3px] bg-primary" />
@@ -176,7 +195,8 @@ const Home = () => {
           <div className="space-y-[2em]">
             <div className="flex items-baseline space-x-3">
               <Typography.Text className="font-light">
-                Audits initiated by George : <span className="font-bold text-gray-800">36,000</span>
+                255,000 AUDIT SESSIONS
+                {/* <span className="font-bold text-gray-800"></span> */}
               </Typography.Text>
             </div>
 
@@ -189,7 +209,7 @@ const Home = () => {
           <div className="space-y-[2em]">
             <div className="flex items-baseline space-x-3">
               <Typography.Text className="font-light">
-                Conversion Rate: <span className="font-bold text-gray-800">1.0% </span>
+                AVERAGE AUDIT FEE - <span className="font-bold text-gray-800">$100,000 </span>
               </Typography.Text>
             </div>
 
@@ -199,7 +219,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="space-y-[2em]">
+          {/* <div className="space-y-[2em]">
             <div className="flex items-baseline space-x-3">
               <Typography.Text className="font-light">
                 Average Audit Fee : <span className="font-bold text-gray-800">$5,000</span>
@@ -210,6 +230,30 @@ const Home = () => {
               <div className="w-[20px] h-[20px] rounded-full border-black border-[2px] bg-white absolute top-[-10px] right-[70%]"></div>
               <hr className="h-[3px] bg-primary  " />
             </div>
+          </div> */}
+        </div>
+      </div>
+
+      <div className=" bg-gradient-to-b from-[#565656] to-[#262626]  md:h-[400px] h-auto rounded-lg w-[85%] mx-auto flex items-center justify-between md:p-0 p-6 ">
+        <div className="flex md:flex-row flex-col items-center justify-between w-[95%] h-[85%] mx-auto md:gap-y-0 gap-y-6 ">
+          <div className="md:w-[40%] w-[100%] space-y-3">
+            <Typography.Headers className="text-white leading-[1.3em]">A Partner you can trust.</Typography.Headers>
+
+            <Typography.SubText className="font-light text-white leading-6 w-[95%] pb-5">
+              George is more than technology. He’s the partner you’ve been waiting for. With his help, you can focus on
+              building relationships with your clients, expanding your business, increasing your revenue,and delivering
+              immense value to your clients.
+            </Typography.SubText>
+
+            <Typography.SubText className="font-light text-white leading-6 w-[95%] pb-5">
+              Let George take care of the details while you focus on the big picture.
+            </Typography.SubText>
+
+            <Button variant={"default"}>Hire George Today</Button>
+          </div>
+
+          <div className="md:w-[50%] w-[100%] h-[100%] overflow-hidden">
+            <img src={ai1} alt="Effortless" className="rounded-lg w-[100%] h-[100%]  object-cover" />
           </div>
         </div>
       </div>
@@ -217,10 +261,11 @@ const Home = () => {
       <div className="py-[3em]">
         <div className="space-y-2">
           <Typography.H2 className="text-[#030124] sm:w-[95%] w-[90%] mx-auto text-center ">
-            How to Hire{" "}
+            Ready to meet
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
-              George
-            </span>
+              {" "}
+              George{" "}
+            </span>?
           </Typography.H2>
 
           <Typography.Text className="text-gray-600 text-center sm:w-[65%] w-[80%] mx-auto">
