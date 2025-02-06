@@ -265,7 +265,8 @@ const Home = () => {
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
               {" "}
               George{" "}
-            </span>?
+            </span>
+            ?
           </Typography.H2>
 
           <Typography.Text className="text-gray-600 text-center sm:w-[65%] w-[80%] mx-auto">

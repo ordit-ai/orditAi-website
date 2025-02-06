@@ -104,25 +104,29 @@ export const auditProcess = [
   {
     id: "audit1",
     title: "Seamless Integration.",
-    subtitle: "Whether you're a global audit and accounting firm or a solo practitioner, George integrates seamlessly into your workflow, transforming how you handle audits and financial processes.",
+    subtitle:
+      "Whether you're a global audit and accounting firm or a solo practitioner, George integrates seamlessly into your workflow, transforming how you handle audits and financial processes.",
     image: Grow,
   },
   {
     id: "audit2",
     title: "Always On, Always Accurate.",
-    subtitle: "With George, the days of late nights during audit season are over. George never misses a detail, offering round-the-clock service to ensure that your books are balanced.",
+    subtitle:
+      "With George, the days of late nights during audit season are over. George never misses a detail, offering round-the-clock service to ensure that your books are balanced.",
     image: Save,
   },
   {
     id: "audit3",
     title: "Independent Expertise.",
-    subtitle: "George works autonomously, taking care of everything from the planning phase to conclusive phase, without needing human intervention. He’s not just a helper, he’s your dedicated team member.",
+    subtitle:
+      "George works autonomously, taking care of everything from the planning phase to conclusive phase, without needing human intervention. He’s not just a helper, he’s your dedicated team member.",
     image: Perform,
   },
   {
     id: "audit4",
     title: "Built for the Global Stage.",
-    subtitle: "George understands the complexities of local and international accounting standards, adapting to meet the unique needs of your business, wherever you are in the world.",
+    subtitle:
+      "George understands the complexities of local and international accounting standards, adapting to meet the unique needs of your business, wherever you are in the world.",
     image: GetMore,
   },
 ];
@@ -212,7 +216,8 @@ export const onboardState = [
   {
     id: "onboard2",
     title: "Initiate George",
-    subtitle: "Create a session to start an audit process. You can create multiple sessions for multiple audits or clients.",
+    subtitle:
+      "Create a session to start an audit process. You can create multiple sessions for multiple audits or clients.",
     image: Onboard2,
   },
 

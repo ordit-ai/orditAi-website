@@ -18,8 +18,7 @@ export const featuresPages: {
     name: "Smart Automation",
     icon: DataFlowIcon,
     subHeading: "George Automates Leadsheets",
-    description:
-      "Take advantage of George's cognitive reasoning that extend beyond human capabilities. ",
+    description: "Take advantage of George's cognitive reasoning that extend beyond human capabilities. ",
     image: George,
     position: "left",
   },
@@ -28,8 +27,7 @@ export const featuresPages: {
     name: "Intelligent Automation",
     icon: ScanIcon,
     subHeading: "Independent Auditing",
-    description:
-      "Perform end-to-end audits without any human supervision",
+    description: "Perform end-to-end audits without any human supervision",
     image: George2,
     position: "right",
   },
@@ -38,8 +36,7 @@ export const featuresPages: {
     name: "Add Team Member",
     icon: UsersIcon,
     subHeading: "Collaborate on Audits Effortlessly",
-    description:
-      "Invite team members to join your audit workspace with controlled access",
+    description: "Invite team members to join your audit workspace with controlled access",
     image: George3,
     position: "left",
   },
@@ -48,8 +45,7 @@ export const featuresPages: {
     name: "Create Sessions",
     icon: ChartBreakOutIcon,
     subHeading: "Structured Auditing with Real-Time Insights",
-    description:
-      "Track progress, verify entries, and ensure timely, accurate audits",
+    description: "Track progress, verify entries, and ensure timely, accurate audits",
     image: George4,
     position: "right",
   },
