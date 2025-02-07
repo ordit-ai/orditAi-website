@@ -5,6 +5,7 @@ import FIRS from "@/assets/images/logos/Frame.png";
 import GeorgeGif from "@/assets/images/george.gif";
 import ai1 from "@/assets/images/ai/ai1.png";
 import {
+  WhatGeorgeCanDo,
   // HeroLogo,
   auditProcess,
   empowerState,
@@ -104,7 +105,7 @@ const Home = () => {
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
               George
             </span>{" "}
-            is the engine that powers your Audit and Accounting business.
+            Drives your accounting and auditing business
           </Typography.H2>
 
           <Typography.Text className="text-gray-600 text-center">
@@ -148,37 +149,14 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="bg-gradient-to-b from-white via-purple-50 to-white">
-        <div className="w-[80%] mx-auto py-[3em] space-y-4">
-          <Typography.H2 className="text-[#030124] sm:w-[95%] text-center ">
-            What can{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
-              George{" "}
-            </span>
-            do for you?
-          </Typography.H2>
-
-          <Typography.Text className="text-gray-600 text-center sm:w-[65%] w-[100%] mx-auto">
-            From real-time auditing to continuous compliance monitoring, George takes care of your financial auditing
-            and accounting tasks effortlessly
-          </Typography.Text>
-
-          <div className="flex items-center justify-center">
-            <div className=" bg-[#030124] rounded-lg flex items-center justify-center sm:h-[70vh] h-auto sm:p-[4em] p-[2em]">
-              <img src={GeorgeGif} alt="GeorgeGif" className="h-[100%]" />
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div className="w-[80%] mx-auto flex sm:flex-row flex-col items-center justify-between py-[5em] border-t-[1px] border-b-[1px] sm:gap-0 gap-[3em]">
         <div className="sm:w-[40%] w-[100%] space-y-4">
           <Typography.H2 className="leading-[60px]">
-            How Many Revenue Opportunities Can{" "}
+            Discover the potential revenue{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
               George
             </span>{" "}
-            Create for You?
+            can generate for
           </Typography.H2>
           <Typography.Text>Discover the potential revenue George can generate for you.</Typography.Text>
 
@@ -254,6 +232,40 @@ const Home = () => {
 
           <div className="md:w-[50%] w-[100%] h-[100%] overflow-hidden">
             <img src={ai1} alt="Effortless" className="rounded-lg w-[100%] h-[100%]  object-cover" />
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-gradient-to-b from-white via-purple-50 to-white">
+        <div className="w-[80%] mx-auto py-[3em] space-y-4">
+          <Typography.H2 className="text-[#030124] sm:w-[95%] text-center ">
+            What can{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
+              George{" "}
+            </span>
+            do for you?
+          </Typography.H2>
+
+          <Typography.Text className="text-gray-600 text-center sm:w-[65%] w-[100%] mx-auto">
+            From real-time auditing to continuous compliance monitoring, George takes care of your financial auditing
+            and accounting tasks effortlessly
+          </Typography.Text>
+
+          <div className="flex sm:flex-row flex-col items-center justify-center py-8">
+            <div className="space-y-7 sm:w-[50%] w-[80%]">
+              {WhatGeorgeCanDo.map((el, i) => (
+                <div className="" key={el.id}>
+                  <Typography.H3>
+                    {i + 1}. {el.title}
+                  </Typography.H3>
+                  <Typography.Text>{el.subtitle}</Typography.Text>
+                </div>
+              ))}
+            </div>
+
+            <div className=" bg-[#030124] rounded-lg flex items-center justify-center sm:h-[70vh] h-auto  ">
+              <img src={GeorgeGif} alt="GeorgeGif" className="h-[100%]" />
+            </div>
           </div>
         </div>
       </div>

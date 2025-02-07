@@ -131,6 +131,31 @@ export const auditProcess = [
   },
 ];
 
+export const WhatGeorgeCanDo = [
+  {
+    id: "george1",
+    title: "Complex Audit Tasks",
+    subtitle: "George performs full-cycle audits, from planning to reporting. ",
+  },
+  {
+    id: "george2",
+    title: "Compliance",
+    subtitle: "George ensures compliance with local and global accounting standards.",
+  },
+  {
+    id: "george3",
+    title: "Growth",
+    subtitle:
+      "George's AI-driven control testing and transaction verification minimizes risks and enables seamless business scaling",
+  },
+  {
+    id: "george4",
+    title: "Accurate data analysis",
+    subtitle:
+      "George analyzes vast amounts of financial data in record time, allowing your team to focus on strategy while ensuring fast, accurate data verification.",
+  },
+];
+
 export type OnboardItem = {
   id: string;
   title: string;
