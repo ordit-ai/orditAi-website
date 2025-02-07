@@ -28,7 +28,7 @@ const FeaturesPage = () => {
 
       <div className="w-[80%] mx-auto space-y-[3em] py-[4em]">
         <div className="space-y-4">
-          <Typography.H2 className="text-[#030124] w-[95%] text-center leading-[1em] ">
+          <Typography.H2 className="text-[#030124] w-[95%] text-center leading-[1.3em] ">
             Explore how George can revolutionize your financial operations.{" "}
           </Typography.H2>
 
