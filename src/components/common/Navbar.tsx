@@ -27,7 +27,27 @@ const socialData = [
 
 const links = [
   { id: 1, name: "Home", path: APP_ROUTES.HOME },
-  { id: 2, name: "Features", path: APP_ROUTES.FEATURES },
+  {
+    id: 2,
+    name: "About Us",
+    path: APP_ROUTES.ABOUT_US,
+  },
+  { id: 3, name: "Features", path: APP_ROUTES.FEATURES },
+  {
+    id: 4,
+    name: "Careers",
+    path: APP_ROUTES.CAREERS,
+  },
+  {
+    id: 4,
+    name: "Mission",
+    path: APP_ROUTES.MISSON,
+  },
+  {
+    id: 6,
+    name: "Contact Us",
+    path: APP_ROUTES.CONTACT,
+  },
 ];
 
 const backdrop = {

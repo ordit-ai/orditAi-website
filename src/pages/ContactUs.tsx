@@ -11,11 +11,11 @@ const ContactUs = () => {
 
         <Typography.H1 className="">Happy to help.</Typography.H1>
 
-        <Typography.Text className=" w-[30%]">Our friendly team is always here to chat.</Typography.Text>
+        <Typography.Text className="sm:w-[30%] w-[50%]">Our friendly team is always here to chat.</Typography.Text>
       </div>
 
       <div className="bg-white p-6 mt-[4em] py-[4em] w-[85%] mx-auto rounded my-4">
-        <div className="w-[40%] mx-auto">
+        <div className="sm:w-[40%] w-[90%] mx-auto">
           {/* <div className="space-y-2 text-center ">
             <Typography.SubText className={`font-light text-primary tracking-[3px] `}>Contact us</Typography.SubText>
 
@@ -86,7 +86,7 @@ const ContactUs = () => {
                 name=""
                 id=""
                 placeholder="Leave us a message..."
-                className="w-[100%] p-2  border-[1px] border-borderGrey rounded-lg h-[120px] text-xs placeholder:text-xs pl-4 outline-none focus:border-[#C8BEEB] focus:border-2 transition-all w-[100%] duration-300 resize-none "
+                className=" p-2  border-[1px] border-borderGrey rounded-lg h-[120px] text-xs placeholder:text-xs pl-4 outline-none focus:border-[#C8BEEB] focus:border-2 transition-all w-[100%] duration-300 resize-none "
               ></textarea>
             </div>
           </div>

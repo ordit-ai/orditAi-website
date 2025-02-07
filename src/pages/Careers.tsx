@@ -25,7 +25,7 @@ const Careers = () => {
           </ul>
         </div>
 
-        <div className="grid grid-cols-2 gap-[1.5em] gap-x-[3em] py-[2em]">
+        <div className="grid sm:grid-cols-2 grid-cols-1 gap-[1.5em] gap-x-[3em] py-[2em]">
           {[1, 2, 3, 4, 5, 6, 7].map((el) => (
             <JobCard key={`${el}-JobCard`} />
           ))}
