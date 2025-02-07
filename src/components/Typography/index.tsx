@@ -3,7 +3,7 @@ import React from "react";
 interface TypographyProps extends React.HTMLProps<HTMLParagraphElement> {}
 
 function Typography({ ...props }: TypographyProps) {
-  return <p {...props} className={`${props.className} text-sm`} />;
+  return <p {...props} className={`${props.className} text-sm font-primary`} />;
 }
 
 Typography.Heading = function ({ ...props }: TypographyProps) {

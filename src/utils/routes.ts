@@ -16,4 +16,7 @@ export const routes = [
   {
     path: APP_ROUTES.PRICING,
   },
+  {
+    path: APP_ROUTES.CAREERS,
+  },
 ];

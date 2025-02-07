@@ -8,6 +8,7 @@ import ContactUs from "./pages/ContactUs";
 import Pricing from "./pages/Pricing";
 import Home from "./pages/Home";
 import FeaturesPage from "./pages/features";
+import Careers from "./pages/Careers";
 
 function App() {
   const Element = {
@@ -16,6 +17,7 @@ function App() {
     [APP_ROUTES.ABOUT_US]: <AboutUs />,
     [APP_ROUTES.CONTACT]: <ContactUs />,
     [APP_ROUTES.PRICING]: <Pricing />,
+    [APP_ROUTES.CAREERS]: <Careers />,
   };
 
   return (

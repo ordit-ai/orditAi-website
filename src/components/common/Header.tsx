@@ -16,12 +16,24 @@ const Header = () => {
   const locationArray = location.pathname.split("/");
   const links = [
     {
+      name: "About Us",
+      path: APP_ROUTES.ABOUT_US,
+    },
+    {
       name: "Features",
       path: APP_ROUTES.FEATURES,
     },
     {
+      name: "Careers",
+      path: APP_ROUTES.CAREERS,
+    },
+    {
       name: "Mission",
       path: APP_ROUTES.MISSON,
+    },
+    {
+      name: "Contact Us",
+      path: APP_ROUTES.CONTACT,
     },
   ];
 
