@@ -217,14 +217,13 @@ export const empowerState = [
     id: "empower1",
     title: "Accounting and audit firms",
     subtitle:
-      "George enhances auditing with computer vision inventory counting, allowing your team to focus on strategy while ensuring fast, accurate data verification.",
+      "Your Audit Firm needs a reliable force behind the scenes, running your audit tasks seamlessly and efficiently.",
     image: Empower1,
   },
   {
     id: "empower2",
     title: "Compliance & Growth",
-    subtitle:
-      "Keep compliance and growth aligned with George's AI-driven control testing and transaction verification, minimizing risks and enabling seamless business scaling.",
+    subtitle:"Whether it is managing intricate financial statements or ensuring strict compliance and meeting deadlines, George is trusted and reliable. He is committed to taking care of the details so that you can concentrate on making the strategic decisions.",
     image: Empower2,
   },
 ];

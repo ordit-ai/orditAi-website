@@ -9,15 +9,15 @@ import {
   // HeroLogo,
   auditProcess,
   empowerState,
-  missonImages,
+  // missonImages,
   numberStats,
   onboardState,
   testimonialData,
 } from "@/constants/homedata";
 import AnimatedSection from "@/components/AnimatedSection";
 import { LightingIcon } from "@/assets/images/auditProcess/LightingIcon";
-import Sticker1 from "@/assets/images/logos/sticker1.png";
-import Sticker2 from "@/assets/images/logos/sticker2.png";
+// import Sticker1 from "@/assets/images/logos/sticker1.png";
+// import Sticker2 from "@/assets/images/logos/sticker2.png";
 import { FaStar } from "react-icons/fa";
 import { LuMoveLeft, LuMoveRight } from "react-icons/lu";
 import { useRef } from "react";
@@ -339,13 +339,13 @@ const Home = () => {
       </div>
 
       <div className="py-[3em] border-b-[1px] border-t-[1px]">
-        <div className="space-y-2">
+        <div className="space-y-4">
           <Typography.H2 className="text-[#030124] sm:w-[95%] w-[90%] mx-auto text-center ">
-            George handles your complex audit tasks
+          George Keeps Your Audit Firm Running Smoothly!
           </Typography.H2>
 
           <Typography.Text className="text-gray-600 text-center sm:w-[65%] w-[80%] mx-auto">
-            George is available to be hired by all
+          That's why you should hire him now.
           </Typography.Text>
         </div>
 
@@ -368,7 +368,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="py-[5em]" id="our-mission">
+      {/* <div className="py-[5em]" id="our-mission">
         <Typography.H2 className="text-center">Our Mission</Typography.H2>
         <div className="sm:w-[50%] w-[80%] shadow-xl rounded-lg border-[1px] my-[3em]  mx-auto">
           <div className="sm:w-[70%] w-[80%] mx-auto text-center space-y-6  sm:py-[4em] py-[2em]">
@@ -396,7 +396,7 @@ const Home = () => {
 
           <div></div>
         </div>
-      </div>
+      </div> */}
 
       <div className="bg-gradient-to-b from-white via-purple-50 to-white py-[1em]">
         <div className="w-[85%] mx-auto flex sm:flex-row flex-col items-center justify-between  sm:gap-0 gap-[2em]">
