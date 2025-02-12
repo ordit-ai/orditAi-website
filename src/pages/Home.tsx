@@ -341,11 +341,11 @@ const Home = () => {
       <div className="py-[3em] border-b-[1px] border-t-[1px]">
         <div className="space-y-4">
           <Typography.H2 className="text-[#030124] sm:w-[95%] w-[90%] mx-auto text-center ">
-          George Keeps Your Audit Firm Running Smoothly!
+            George Keeps Your Audit Firm Running Smoothly!
           </Typography.H2>
 
           <Typography.Text className="text-gray-600 text-center sm:w-[65%] w-[80%] mx-auto">
-          That's why you should hire him now.
+            That's why you should hire him now.
           </Typography.Text>
         </div>
 

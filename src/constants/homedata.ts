@@ -223,7 +223,8 @@ export const empowerState = [
   {
     id: "empower2",
     title: "Compliance & Growth",
-    subtitle:"Whether it is managing intricate financial statements or ensuring strict compliance and meeting deadlines, George is trusted and reliable. He is committed to taking care of the details so that you can concentrate on making the strategic decisions.",
+    subtitle:
+      "Whether it is managing intricate financial statements or ensuring strict compliance and meeting deadlines, George is trusted and reliable. He is committed to taking care of the details so that you can concentrate on making the strategic decisions.",
     image: Empower2,
   },
 ];
