@@ -1,8 +1,6 @@
 import { OUIChatBoxMessageEntry } from "@/components/chatbot/types";
 import { create } from "zustand";
 
-
-
 interface ChatState {
   conversation: OUIChatBoxMessageEntry[];
   addMessage: (message: OUIChatBoxMessageEntry) => void;

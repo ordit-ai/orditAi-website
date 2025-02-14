@@ -7,8 +7,6 @@ import UserMessage from "./components/UserMessage";
 export function ChatHistoryWidgetMini() {
   const conversation: OUIChatBoxMessageEntry[] = [];
 
-
-
   return (
     <div className={`flex flex-col   `}>
       {conversation.map((instance, index) => {

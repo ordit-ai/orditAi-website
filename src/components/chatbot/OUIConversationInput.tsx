@@ -24,7 +24,7 @@ export default function OUIConversationInput() {
         onChange={(e) => setQuery(e.target.value)}
         disabled={disabled}
       />
-      
+
       <button
         disabled={query === "" || disabled}
         className={`h-[40px] w-[40px] border-[1px] border-[#EAECF0] disabled:bg-[#F2F4F7] ${

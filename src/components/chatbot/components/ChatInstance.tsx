@@ -9,8 +9,6 @@ import { ChatHistoryWidgetMini } from "../ChatHistoryWidget";
 import { UIConstants } from "@/constants/uiConstants";
 import OUIConversationInput from "../OUIConversationInput";
 
-
-
 export default function ChatInstance() {
   const { fetchingAnswer, conversation, registerScrollToBottomFun } = useChatContext();
   const [params] = useSearchParams();
