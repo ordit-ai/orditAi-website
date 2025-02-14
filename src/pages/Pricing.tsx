@@ -45,21 +45,21 @@ const planHeader = [
     name: "Basic",
     tag: "",
 
-    price: "$10",
+    price: "$29.99",
     description: "Basic features for up to 10 employees with everything you",
   },
   {
     name: "Professional",
     tag: "Popular",
 
-    price: "$20",
+    price: "$199.99",
     description: "Advanced features and reporting, better workflows and automation.",
   },
   {
     name: "Enterprise",
     tag: "",
 
-    price: "$40",
+    price: "$299.99",
     description: "Personalised service and enterprise security for large ",
   },
 ];
