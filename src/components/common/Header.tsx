@@ -32,6 +32,10 @@ const Header = () => {
       path: APP_ROUTES.MISSON,
     },
     {
+      name: "Pricing",
+      path: APP_ROUTES.PRICING,
+    },
+    {
       name: "Contact Us",
       path: APP_ROUTES.CONTACT,
     },

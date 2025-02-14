@@ -6,21 +6,20 @@ import GeorgeGif from "@/assets/images/george.gif";
 import ai1 from "@/assets/images/ai/ai1.png";
 import {
   WhatGeorgeCanDo,
-  // HeroLogo,
   auditProcess,
   empowerState,
-  // missonImages,
   numberStats,
   onboardState,
   testimonialData,
 } from "@/constants/homedata";
 import AnimatedSection from "@/components/AnimatedSection";
 import { LightingIcon } from "@/assets/images/auditProcess/LightingIcon";
-// import Sticker1 from "@/assets/images/logos/sticker1.png";
-// import Sticker2 from "@/assets/images/logos/sticker2.png";
+import { v4 as uuidv4 } from "uuid";
 import { FaStar } from "react-icons/fa";
 import { LuMoveLeft, LuMoveRight } from "react-icons/lu";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import ChatBot from "@/components/chatbot";
+import { getToken, setToken } from "@/helpers/authHelpers";
 
 interface THandleScroll {
   direction: "forward" | "backward";
@@ -28,6 +27,14 @@ interface THandleScroll {
 
 const Home = () => {
   const cardRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const token = getToken();
+
+    if (!token) {
+      setToken(uuidv4() as string);
+    }
+  }, []);
 
   const handleScroll = ({ direction }: THandleScroll) => {
     if (cardRef.current) {
@@ -162,7 +169,7 @@ const Home = () => {
 
           <div>
             <div className="flex items-baseline space-x-3">
-              <p className="text-[48px] font-light"> $25,500,000</p>
+              <p className="text-[36px] font-light"> $25,500,000,000</p>
               <p className="text-primary mt-[-1em]">PER YEAR</p>
             </div>
             <hr className="h-[3px] bg-primary" />
@@ -397,6 +404,19 @@ const Home = () => {
           <div></div>
         </div>
       </div> */}
+
+      <div className="space-y-4 py-[4em]">
+        <Typography.H2 className="text-[#030124] sm:w-[95%] w-[90%] mx-auto text-center ">
+          Interact with
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
+            {" "}
+            George{" "}
+          </span>
+          ?
+        </Typography.H2>
+
+        <ChatBot />
+      </div>
 
       <div className="bg-gradient-to-b from-white via-purple-50 to-white py-[1em]">
         <div className="w-[85%] mx-auto flex sm:flex-row flex-col items-center justify-between  sm:gap-0 gap-[2em]">

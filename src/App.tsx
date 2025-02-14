@@ -18,6 +18,7 @@ function App() {
     [APP_ROUTES.CONTACT]: <ContactUs />,
     [APP_ROUTES.PRICING]: <Pricing />,
     [APP_ROUTES.CAREERS]: <Careers />,
+
   };
 
   return (

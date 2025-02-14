@@ -125,7 +125,7 @@ const Pricing = () => {
                 )}
                 key={`plans-${i}`}
               >
-                <Typography.SubText className="w-[25%]">{el.name}</Typography.SubText>
+                <Typography.MicroText className="w-[25%]">{el.name}</Typography.MicroText>
                 <div className={cn("w-[25%]", FLEX)}>
                   {typeof el.basic === "boolean" && el.basic ? (
                     <IoIosCheckmarkCircleOutline className="text-green-600 text-xl " />
