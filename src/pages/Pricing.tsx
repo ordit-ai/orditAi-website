@@ -147,7 +147,7 @@ const Pricing = () => {
 
           <div className="flex items-center gap-[2em] w-[100%] justify-center py-4">
             <div className={cn("w-[25%]")}></div>
-{/* 
+            {/* 
             <div className={cn("w-[25%]")}>
               <Button variant="default" className="w-[100%] h-[40px]">
                 Get Started

@@ -413,7 +413,6 @@ const Home = () => {
             {" "}
             George.
           </span>
-          
         </Typography.H2>
 
         <ChatBot />
