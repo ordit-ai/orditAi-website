@@ -44,11 +44,10 @@ export default function ChatInstance() {
 
             <div className="w-[90%]">
               <p className="text-sm w-[100%] text-gray-700 truncate ...">
-                Need to generate a quick report on our current cash flow and liquidity position. Can Ordit AI help me
-                pull the necessary data?
+                Chat with George your AI Accountant and Auditor
               </p>
 
-              <p className="text-xs text-gray-500 font-light">Your Accountius Assistant</p>
+              <p className="text-xs text-gray-500 font-light">Your Accounting Assistant</p>
             </div>
           </div>
         </div>

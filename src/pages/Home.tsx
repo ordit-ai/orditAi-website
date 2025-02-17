@@ -20,6 +20,7 @@ import { LuMoveLeft, LuMoveRight } from "react-icons/lu";
 import { useEffect, useRef } from "react";
 import ChatBot from "@/components/chatbot";
 import { getToken, setToken } from "@/helpers/authHelpers";
+import { URLS } from "@/constants/app-routes";
 
 interface THandleScroll {
   direction: "forward" | "backward";
@@ -64,9 +65,9 @@ const Home = () => {
                 and accounting.
               </Typography.Text>
               <div className="flex sm:justify-start justify-center w-[100%]">
-                <Button variant={"default"} className="m">
-                  Hire George Today
-                </Button>
+                <a href={URLS.ORDIT_AI} target="_blank">
+                  <Button variant={"default"}>Hire George Today</Button>
+                </a>
               </div>
             </div>
 
@@ -407,12 +408,12 @@ const Home = () => {
 
       <div className="space-y-4 py-[4em]">
         <Typography.H2 className="text-[#030124] sm:w-[95%] w-[90%] mx-auto text-center ">
-          Interact with
+          Chat with
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
             {" "}
-            George{" "}
+            George.
           </span>
-          ?
+          
         </Typography.H2>
 
         <ChatBot />
@@ -493,7 +494,9 @@ const Home = () => {
               Perform risk assessment, analyze control methods and perform substantive audit using George
             </Typography.SubText>
 
-            <Button variant={"default"}>Hire George Today</Button>
+            <a href={URLS.ORDIT_AI} target="_blank">
+              <Button variant={"default"}>Hire George Today</Button>
+            </a>
           </div>
 
           <div className="md:w-[50%] w-[100%] h-[100%] overflow-hidden">

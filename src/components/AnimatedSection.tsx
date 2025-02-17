@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Typography from "./Typography";
 import { Button } from "./common/Button";
 import { OnboardItem } from "@/constants/homedata";
+import { URLS } from "@/constants/app-routes";
 
 interface TProps {
   data: OnboardItem[];
@@ -65,7 +66,9 @@ const AnimatedSection = ({ data, position }: TProps) => {
                 <motion.div className="space-y-3">
                   <Typography.SubText>{el.subtitle}</Typography.SubText>
 
-                  <Button>Hire George Today</Button>
+                  <a href={URLS.ORDIT_AI} target="_blank">
+                    <Button className="mt-5">Hire George Today</Button>
+                  </a>
                 </motion.div>
               ) : null}
             </motion.div>
@@ -74,11 +77,11 @@ const AnimatedSection = ({ data, position }: TProps) => {
       )}
 
       {position === "right" && (
-        <div className="bg-[#030124] rounded-xl md:w-[65%] w-[100%] md:h-[80vh] sm:h-[500px] h-[300px]  mt-[3em] md:mt-0  flex items-center justify-center relative">
+        <div className=" rounded-xl md:w-[65%] w-[100%] md:h-[80vh] sm:h-[500px] h-[300px]  mt-[3em] md:mt-0  flex items-center justify-center relative">
           {data.map((el, i) => (
             <motion.div
               key={i}
-              className="bg-[#030124] md:p-[5em] p-[2em]  absolute w-[100%] flex items-center justify-center rounded-xl " // Layer images on top of each other
+              className="  absolute w-[100%] flex items-center justify-center rounded-xl " // Layer images on top of each other
               initial={{ opacity: 0 }} // Start with hidden
               animate={{ opacity: count === i ? 1 : 0 }} // Show current image, hide others
               transition={{ duration: 1, ease: "easeInOut" }} // mdooth transition

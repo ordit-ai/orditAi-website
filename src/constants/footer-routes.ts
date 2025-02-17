@@ -1,17 +1,19 @@
+import { APP_ROUTES } from "./app-routes";
+
 const footerCol1 = {
   name: "Company",
   colArray: [
-    { id: "about-us", value: "About Us", link: "", tag: "" },
-    { id: "careers", value: "Careers", link: "", tag: "New" },
-    { id: "contact", value: "Contact", link: "", tag: "" },
+    { id: "about-us", value: "About Us", link: APP_ROUTES.ABOUT_US, tag: "" },
+    { id: "careers", value: "Careers", link: APP_ROUTES.CAREERS, tag: "New" },
+    { id: "contact", value: "Contact", link: APP_ROUTES.CONTACT, tag: "" },
   ],
 };
 
 const footerCol2 = {
   name: "Product",
   colArray: [
-    { id: "features", value: "Features", link: "", tag: "" },
-    { id: "pricing", value: "Pricing", link: "", tag: "" },
+    { id: "features", value: "Features", link: APP_ROUTES.FEATURES, tag: "" },
+    { id: "pricing", value: "Pricing", link: APP_ROUTES.PRICING, tag: "" },
     { id: "blog", value: "Blog", link: "", tag: "" },
   ],
 };

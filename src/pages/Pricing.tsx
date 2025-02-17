@@ -41,13 +41,13 @@ const plans = [
 
 const planHeader = [
   {},
-  {
-    name: "Basic",
-    tag: "",
+  // {
+  //   name: "Basic",
+  //   tag: "",
 
-    price: "$29.99",
-    description: "Basic features for up to 10 employees with everything you",
-  },
+  //   price: "$29.99",
+  //   description: "Basic features for up to 10 employees with everything you",
+  // },
   {
     name: "Professional",
     tag: "Popular",
@@ -126,7 +126,7 @@ const Pricing = () => {
                 key={`plans-${i}`}
               >
                 <Typography.MicroText className="w-[25%]">{el.name}</Typography.MicroText>
-                <div className={cn("w-[25%]", FLEX)}>
+                {/* <div className={cn("w-[25%]", FLEX)}>
                   {typeof el.basic === "boolean" && el.basic ? (
                     <IoIosCheckmarkCircleOutline className="text-green-600 text-xl " />
                   ) : typeof el.basic === "string" ? (
@@ -134,9 +134,7 @@ const Pricing = () => {
                   ) : (
                     "-"
                   )}
-
-                  {/* {typeof el.basic === "string" ? el.basic : null} */}
-                </div>
+                </div> */}
                 <div className={cn("w-[25%]", FLEX)}>
                   {el.pro ? <IoIosCheckmarkCircleOutline className="text-green-600 text-xl text-center" /> : "-"}
                 </div>
@@ -149,12 +147,12 @@ const Pricing = () => {
 
           <div className="flex items-center gap-[2em] w-[100%] justify-center py-4">
             <div className={cn("w-[25%]")}></div>
-
+{/* 
             <div className={cn("w-[25%]")}>
               <Button variant="default" className="w-[100%] h-[40px]">
                 Get Started
               </Button>
-            </div>
+            </div> */}
 
             <div className={cn("w-[25%]")}>
               <Button variant="default" className="w-[100%] h-[40px]">

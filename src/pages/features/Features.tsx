@@ -1,5 +1,6 @@
 import Typography from "@/components/Typography";
 import { Button } from "@/components/common/Button";
+import { URLS } from "@/constants/app-routes";
 import { cn } from "@/helpers/classHelpers";
 import { FC } from "react";
 
@@ -31,7 +32,9 @@ const Features: FC<TProps> = ({ elm }) => {
 
         <Typography.SubText className="font-light">{elm.description}</Typography.SubText>
 
-        <Button>Hire George Today</Button>
+        <a href={URLS.ORDIT_AI} target="_blank">
+          <Button variant={"default"}>Hire George Today</Button>
+        </a>
       </div>
 
       {elm.position === "right" && <img src={elm.image} alt={elm.name} className="sm:w-[45%] w-[100%]" />}

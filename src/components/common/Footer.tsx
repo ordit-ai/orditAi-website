@@ -1,6 +1,7 @@
 import Logo from "@/assets/images/PurpleLogo.png";
 import Typography from "../Typography";
 import { footerCol, footerRow } from "@/constants/footer-routes";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -21,10 +22,12 @@ const Footer = () => {
 
                 {el.colArray.map((elm) => (
                   <Typography.SubText key={elm.id} className=" cursor-pointer">
-                    {elm.value}{" "}
-                    {elm.tag !== "" ? (
-                      <span className="text-[9px] bg-opacity-[0.2] bg-primary px-2 py-1 rounded-2xl">{elm.tag}</span>
-                    ) : null}
+                    <Link to={elm.link}>
+                      {elm.value}{" "}
+                      {elm.tag !== "" ? (
+                        <span className="text-[9px] bg-opacity-[0.2] bg-primary px-2 py-1 rounded-2xl">{elm.tag}</span>
+                      ) : null}
+                    </Link>
                   </Typography.SubText>
                 ))}
               </div>

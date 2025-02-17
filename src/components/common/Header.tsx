@@ -1,6 +1,6 @@
 // import Logo from "@/assets/images/Logo.png";
 import PurpleLogo from "@/assets/images/PurpleLogo.png";
-import { APP_ROUTES } from "@/constants/app-routes";
+import { APP_ROUTES, URLS } from "@/constants/app-routes";
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Typography from "../Typography";
@@ -27,10 +27,10 @@ const Header = () => {
       name: "Careers",
       path: APP_ROUTES.CAREERS,
     },
-    {
-      name: "Mission",
-      path: APP_ROUTES.MISSON,
-    },
+    // {
+    //   name: "Mission",
+    //   path: APP_ROUTES.MISSON,
+    // },
     {
       name: "Pricing",
       path: APP_ROUTES.PRICING,
@@ -77,7 +77,9 @@ const Header = () => {
             </Typography.SubText>
           </Link>
 
-          <Button variant={"default"}>Hire George Today</Button>
+          <a href={URLS.ORDIT_AI} target="_blank">
+            <Button variant={"default"}>Hire George Today</Button>
+          </a>
         </div>
 
         <HiMenu onClick={() => setOpen(true)} className="sm:hidden flex text-black text-2xl cursor-pointer" />
