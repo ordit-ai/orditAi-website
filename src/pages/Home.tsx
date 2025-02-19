@@ -45,6 +45,7 @@ const Home = () => {
       });
     }
   };
+
   return (
     <>
       <div className=" min-h-[calc(100vh-80px)] flex sm:items-end items-center">
@@ -126,6 +127,25 @@ const Home = () => {
 
       <div className="bg-gradient-to-b from-white via-purple-50 to-white">
         <div className="w-[80%] mx-auto py-[3em] space-y-4">
+          <Typography.H2 className="text-[#030124] w-[95%] text-center ">
+            Why?{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
+              George
+            </span>{" "}
+          </Typography.H2>
+
+          {/* <Typography.Text className="text-gray-600 text-center">
+            Uncover insights, ensure compliance, and achieve unmatched accuracy!{" "}
+          </Typography.Text> */}
+
+          <div>
+            <AnimatedSection data={auditProcess} position="right" />
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-gradient-to-b from-white via-purple-50 to-white">
+        <div className="w-[80%] mx-auto py-[3em] space-y-4">
           <Typography.H2 className="text-[#030124] sm:w-[95%] text-center ">
             What can{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
@@ -154,25 +174,6 @@ const Home = () => {
             <div className=" bg-[#030124] rounded-lg flex items-center justify-center sm:h-[70vh] h-auto  ">
               <img src={GeorgeGif} alt="GeorgeGif" className="h-[100%]" />
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="bg-gradient-to-b from-white via-purple-50 to-white">
-        <div className="w-[80%] mx-auto py-[3em] space-y-4">
-          <Typography.H2 className="text-[#030124] w-[95%] text-center ">
-            Why?{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
-              George
-            </span>{" "}
-          </Typography.H2>
-
-          {/* <Typography.Text className="text-gray-600 text-center">
-            Uncover insights, ensure compliance, and achieve unmatched accuracy!{" "}
-          </Typography.Text> */}
-
-          <div>
-            <AnimatedSection data={auditProcess} position="right" />
           </div>
         </div>
       </div>
