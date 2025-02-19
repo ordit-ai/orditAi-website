@@ -101,7 +101,9 @@ const Home = () => {
 
         <div className="flex flex-wrap items-center justify-center gap-[1em] w-[85%] mx-auto">
           {["GAAP", "CAS", "JGAAP", "ISA", "SEC", "GDPR", "SOX"].map((el) => (
-            <Typography.H4 className="text-gray-600 font-normal tracking-[5px]" key={el}>{el}</Typography.H4>
+            <Typography.H4 className="text-gray-600 font-normal tracking-[5px]" key={el}>
+              {el}
+            </Typography.H4>
           ))}
           <img src={FIRS} alt="FIRS" className="h-[20px]" />
         </div>
@@ -121,7 +123,6 @@ const Home = () => {
           </Typography.Text>
         </div>
       </div>
-
 
       <div className="bg-gradient-to-b from-white via-purple-50 to-white">
         <div className="w-[80%] mx-auto py-[3em] space-y-4">
@@ -157,10 +158,6 @@ const Home = () => {
         </div>
       </div>
 
-
-
-  
-
       <div className="bg-gradient-to-b from-white via-purple-50 to-white">
         <div className="w-[80%] mx-auto py-[3em] space-y-4">
           <Typography.H2 className="text-[#030124] w-[95%] text-center ">
@@ -191,7 +188,6 @@ const Home = () => {
 
         <ChatBot />
       </div>
-
 
       <div className="py-[3em]">
         <div className="space-y-2">
@@ -261,9 +257,6 @@ const Home = () => {
         </div>
       </div>
 
-     
-
-      
       <div className="flex items-center sm:flex-row flex-col w-[80%] mx-auto  py-[2em] justify-between">
         <Typography.H22 className="leading-[1.2em] sm:w-[35%] w-[100%]">
           The numbers speak for themselves
@@ -366,8 +359,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-  
 
       <div className="py-[5em] border-b-[1px] border-t-[1px]">
         <div className="space-y-4">
