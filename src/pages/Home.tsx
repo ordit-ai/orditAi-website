@@ -101,7 +101,7 @@ const Home = () => {
 
         <div className="flex flex-wrap items-center justify-center gap-[1em] w-[85%] mx-auto">
           {["GAAP", "CAS", "JGAAP", "ISA", "SEC", "GDPR", "SOX"].map((el) => (
-            <Typography.H4 className="text-gray-600 font-normal tracking-[5px]">{el}</Typography.H4>
+            <Typography.H4 className="text-gray-600 font-normal tracking-[5px]" key={el}>{el}</Typography.H4>
           ))}
           <img src={FIRS} alt="FIRS" className="h-[20px]" />
         </div>
@@ -121,6 +121,77 @@ const Home = () => {
           </Typography.Text>
         </div>
       </div>
+
+
+      <div className="bg-gradient-to-b from-white via-purple-50 to-white">
+        <div className="w-[80%] mx-auto py-[3em] space-y-4">
+          <Typography.H2 className="text-[#030124] sm:w-[95%] text-center ">
+            What can{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
+              George{" "}
+            </span>
+            do for you?
+          </Typography.H2>
+
+          <Typography.Text className="text-gray-600 text-center sm:w-[65%] w-[100%] mx-auto">
+            From real-time auditing to continuous compliance monitoring, George takes care of your financial auditing
+            and accounting tasks effortlessly
+          </Typography.Text>
+
+          <div className="flex sm:flex-row flex-col items-center justify-center py-8">
+            <div className="space-y-7 sm:w-[50%] w-[80%]">
+              {WhatGeorgeCanDo.map((el, i) => (
+                <div className="" key={el.id}>
+                  <Typography.H3>
+                    {i + 1}. {el.title}
+                  </Typography.H3>
+                  <Typography.Text>{el.subtitle}</Typography.Text>
+                </div>
+              ))}
+            </div>
+
+            <div className=" bg-[#030124] rounded-lg flex items-center justify-center sm:h-[70vh] h-auto  ">
+              <img src={GeorgeGif} alt="GeorgeGif" className="h-[100%]" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+  
+
+      <div className="bg-gradient-to-b from-white via-purple-50 to-white">
+        <div className="w-[80%] mx-auto py-[3em] space-y-4">
+          <Typography.H2 className="text-[#030124] w-[95%] text-center ">
+            Why?{" "}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
+              George
+            </span>{" "}
+          </Typography.H2>
+
+          {/* <Typography.Text className="text-gray-600 text-center">
+            Uncover insights, ensure compliance, and achieve unmatched accuracy!{" "}
+          </Typography.Text> */}
+
+          <div>
+            <AnimatedSection data={auditProcess} position="right" />
+          </div>
+        </div>
+      </div>
+
+      <div className="space-y-4 py-[4em]">
+        <Typography.H2 className="text-[#030124] sm:w-[95%] w-[90%] mx-auto text-center ">
+          Chat with
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
+            {" "}
+            George.
+          </span>
+        </Typography.H2>
+
+        <ChatBot />
+      </div>
+
 
       <div className="py-[3em]">
         <div className="space-y-2">
@@ -190,37 +261,9 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="space-y-4 py-[4em]">
-        <Typography.H2 className="text-[#030124] sm:w-[95%] w-[90%] mx-auto text-center ">
-          Chat with
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
-            {" "}
-            George.
-          </span>
-        </Typography.H2>
+     
 
-        <ChatBot />
-      </div>
-
-      <div className="bg-gradient-to-b from-white via-purple-50 to-white">
-        <div className="w-[80%] mx-auto py-[3em] space-y-4">
-          <Typography.H2 className="text-[#030124] w-[95%] text-center ">
-            Why?{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
-              George
-            </span>{" "}
-          </Typography.H2>
-
-          {/* <Typography.Text className="text-gray-600 text-center">
-            Uncover insights, ensure compliance, and achieve unmatched accuracy!{" "}
-          </Typography.Text> */}
-
-          <div>
-            <AnimatedSection data={auditProcess} position="right" />
-          </div>
-        </div>
-      </div>
-
+      
       <div className="flex items-center sm:flex-row flex-col w-[80%] mx-auto  py-[2em] justify-between">
         <Typography.H22 className="leading-[1.2em] sm:w-[35%] w-[100%]">
           The numbers speak for themselves
@@ -324,41 +367,9 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="bg-gradient-to-b from-white via-purple-50 to-white">
-        <div className="w-[80%] mx-auto py-[3em] space-y-4">
-          <Typography.H2 className="text-[#030124] sm:w-[95%] text-center ">
-            What can{" "}
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
-              George{" "}
-            </span>
-            do for you?
-          </Typography.H2>
+  
 
-          <Typography.Text className="text-gray-600 text-center sm:w-[65%] w-[100%] mx-auto">
-            From real-time auditing to continuous compliance monitoring, George takes care of your financial auditing
-            and accounting tasks effortlessly
-          </Typography.Text>
-
-          <div className="flex sm:flex-row flex-col items-center justify-center py-8">
-            <div className="space-y-7 sm:w-[50%] w-[80%]">
-              {WhatGeorgeCanDo.map((el, i) => (
-                <div className="" key={el.id}>
-                  <Typography.H3>
-                    {i + 1}. {el.title}
-                  </Typography.H3>
-                  <Typography.Text>{el.subtitle}</Typography.Text>
-                </div>
-              ))}
-            </div>
-
-            <div className=" bg-[#030124] rounded-lg flex items-center justify-center sm:h-[70vh] h-auto  ">
-              <img src={GeorgeGif} alt="GeorgeGif" className="h-[100%]" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="py-[3em] border-b-[1px] border-t-[1px]">
+      <div className="py-[5em] border-b-[1px] border-t-[1px]">
         <div className="space-y-4">
           <Typography.H2 className="text-[#030124] sm:w-[95%] w-[90%] mx-auto text-center ">
             George Keeps Your Audit Firm Running Smoothly!
