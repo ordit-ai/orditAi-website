@@ -1,4 +1,4 @@
-import { ChatBotIcon } from "@/assets/icons/ChatIcon";
+import HeroImg from "@/assets/images/heroImg.png";
 import { FC, ReactNode } from "react";
 import LinkIcon from "@/assets/raw-svgs/link-icon.svg";
 import { cn } from "@/helpers/classHelpers";
@@ -18,9 +18,11 @@ const ChatBotMessage: FC<ChatBotMessageProps> = ({ isTyping, message, children, 
   return (
     <div className={cn("flex flex-col  ", className)}>
       <div className=" flex gap-2 w-11/12">
-        <ChatBotIcon />
+        <div className="w-[40px] h-[40px] border-[1px] rounded-full overflow-hidden">
+          <img src={HeroImg} alt="Avatar" className="h-[100%] w-[100%] " />
+        </div>
         <div className="flex justify-between w-full -mt-[1px]">
-          <p className="font-[500] text-sm leading-5 text-[#344054]">Ordit AI</p>
+          <p className="font-[500] text-sm leading-5 text-[#344054]">George</p>
           {/* <p className="mr-6 font-[500] text-xs f leading-5 text-[#475467]">Just Now</p> */}
         </div>
       </div>

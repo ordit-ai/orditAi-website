@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import Avatar from "@/assets/images/avatar.png";
 import { useSearchParams } from "react-router-dom";
 import UserMessage from "./UserMessage";
 import ChatBotMessage from "./ChatBotMessage";
@@ -8,6 +7,7 @@ import { useChatContext } from "../hook";
 import { ChatHistoryWidgetMini } from "../ChatHistoryWidget";
 import { UIConstants } from "@/constants/uiConstants";
 import OUIConversationInput from "../OUIConversationInput";
+import HeroImg from "@/assets/images/heroImg.png";
 
 export default function ChatInstance() {
   const { fetchingAnswer, conversation, registerScrollToBottomFun } = useChatContext();
@@ -40,14 +40,16 @@ export default function ChatInstance() {
       <div className={cn(" p-4 bg-white border-b-[1px] border-gray-300 space-y-4 h-[70px]")}>
         <div className="flex justify-between">
           <div className={cn("flex items-start space-x-4 w-[75%]")}>
-            <img src={Avatar} alt="Avatar" className="w-[30px]" />
+            <div className="w-[40px] h-[40px] border-[1px] rounded-full overflow-hidden">
+              <img src={HeroImg} alt="Avatar" className="h-[100%] w-[100%] " />
+            </div>
 
             <div className="w-[90%]">
               <p className="text-sm w-[100%] text-gray-700 truncate ...">
-                Chat with George your AI Accountant and Auditor
+                Chat with George - Your AI Auditor and Accountant
               </p>
 
-              <p className="text-xs text-gray-500 font-light">Your Accounting Assistant</p>
+              <p className="text-xs text-gray-500 font-light">Your Accountant and Auditor</p>
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ import { Button } from "../common/Button";
 import { useChatStore } from "@/store";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
-import { APP_ROUTES } from "@/constants/app-routes";
+import { URLS } from "@/constants/app-routes";
 
 const ChatBot = () => {
   const { conversation } = useChatStore();
@@ -33,7 +33,7 @@ const ChatBot = () => {
             >
               <Typography.Text>Kindly subscribe to have complete access</Typography.Text>
 
-              <Link to={APP_ROUTES.PRICING}>
+              <Link to={URLS.ORDIT_AI}>
                 <Button className="">Go to Pricing</Button>
               </Link>
             </motion.div>

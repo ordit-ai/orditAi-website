@@ -122,6 +122,86 @@ const Home = () => {
         </div>
       </div>
 
+      <div className="py-[3em]">
+        <div className="space-y-2">
+          <Typography.H2 className="text-[#030124] sm:w-[95%] w-[90%] mx-auto text-center ">
+            Ready to meet
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
+              {" "}
+              George{" "}
+            </span>
+            ?
+          </Typography.H2>
+
+          <Typography.Text className="text-gray-600 text-center sm:w-[65%] w-[80%] mx-auto">
+            Prompt George anytime to handle your complex audit tasks
+          </Typography.Text>
+        </div>
+
+        <div>
+          <div className="flex sm:flex-row flex-col gap-[1.5em] mx-auto w-[80%] py-[4em]">
+            <div className="border-[1px] p-8 rounded-xl sm:w-[50%] w-[100%] flex flex-col justify-between space-y-2 hover:shadow-lg cursor-pointer transition-all duration-300">
+              <div className="space-y-3">
+                <div className="flex items-center space-x-4">
+                  <div className="w-[30px] h-[30px] flex items-center justify-center rounded-full bg-primary">
+                    <Typography className="text-white">1</Typography>
+                  </div>
+
+                  <Typography.H4 className="font-semibold">{onboardState[0].title}</Typography.H4>
+                </div>
+
+                <Typography.Text>{onboardState[0].subtitle}</Typography.Text>
+
+                <div className="flex flex-col items-start space-y-2">
+                  {onboardState[0].children?.map((el) => (
+                    <div key={el} className="border-[1px] rounded-2xl px-3 py-1 flex space-x-2 items-center ">
+                      <div className="bg-green-600 w-[15px] h-[15px] rounded-full"></div>
+                      <Typography.SubText className="text-gray-700">{el}</Typography.SubText>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="pt-[3em] flex items-center justify-center ">
+                <img src={onboardState[0].image} alt={onboardState[0].image} />
+              </div>
+            </div>
+
+            <div className="sm:w-[50%] w-[100%] flex flex-col gap-[1.5em]">
+              {onboardState.slice(1).map((el, i) => (
+                <div className="border-[1px] w-[100%] p-8 rounded-xl space-y-3 hover:shadow-lg cursor-pointer transition-all duration-300">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-[30px] h-[30px] flex items-center justify-center rounded-full bg-primary">
+                      <Typography className="text-white">{i + 2}</Typography>
+                    </div>
+
+                    <Typography.H4 className="font-semibold">{el.title}</Typography.H4>
+                  </div>
+
+                  <Typography.Text>{el.subtitle}</Typography.Text>
+
+                  <div className="pt-[3em] flex items-center justify-center">
+                    <img src={el.image} alt={el.image} />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="space-y-4 py-[4em]">
+        <Typography.H2 className="text-[#030124] sm:w-[95%] w-[90%] mx-auto text-center ">
+          Chat with
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
+            {" "}
+            George.
+          </span>
+        </Typography.H2>
+
+        <ChatBot />
+      </div>
+
       <div className="bg-gradient-to-b from-white via-purple-50 to-white">
         <div className="w-[80%] mx-auto py-[3em] space-y-4">
           <Typography.H2 className="text-[#030124] w-[95%] text-center ">
@@ -278,74 +358,6 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="py-[3em]">
-        <div className="space-y-2">
-          <Typography.H2 className="text-[#030124] sm:w-[95%] w-[90%] mx-auto text-center ">
-            Ready to meet
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
-              {" "}
-              George{" "}
-            </span>
-            ?
-          </Typography.H2>
-
-          <Typography.Text className="text-gray-600 text-center sm:w-[65%] w-[80%] mx-auto">
-            Prompt George anytime to handle your complex audit tasks
-          </Typography.Text>
-        </div>
-
-        <div>
-          <div className="flex sm:flex-row flex-col gap-[1.5em] mx-auto w-[80%] py-[4em]">
-            <div className="border-[1px] p-8 rounded-xl sm:w-[50%] w-[100%] flex flex-col justify-between space-y-2 hover:shadow-lg cursor-pointer transition-all duration-300">
-              <div className="space-y-3">
-                <div className="flex items-center space-x-4">
-                  <div className="w-[30px] h-[30px] flex items-center justify-center rounded-full bg-primary">
-                    <Typography className="text-white">1</Typography>
-                  </div>
-
-                  <Typography.H4 className="font-semibold">{onboardState[0].title}</Typography.H4>
-                </div>
-
-                <Typography.Text>{onboardState[0].subtitle}</Typography.Text>
-
-                <div className="flex flex-col items-start space-y-2">
-                  {onboardState[0].children?.map((el) => (
-                    <div key={el} className="border-[1px] rounded-2xl px-3 py-1 flex space-x-2 items-center ">
-                      <div className="bg-green-600 w-[15px] h-[15px] rounded-full"></div>
-                      <Typography.SubText className="text-gray-700">{el}</Typography.SubText>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="pt-[3em] flex items-center justify-center ">
-                <img src={onboardState[0].image} alt={onboardState[0].image} />
-              </div>
-            </div>
-
-            <div className="sm:w-[50%] w-[100%] flex flex-col gap-[1.5em]">
-              {onboardState.slice(1).map((el, i) => (
-                <div className="border-[1px] w-[100%] p-8 rounded-xl space-y-3 hover:shadow-lg cursor-pointer transition-all duration-300">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-[30px] h-[30px] flex items-center justify-center rounded-full bg-primary">
-                      <Typography className="text-white">{i + 2}</Typography>
-                    </div>
-
-                    <Typography.H4 className="font-semibold">{el.title}</Typography.H4>
-                  </div>
-
-                  <Typography.Text>{el.subtitle}</Typography.Text>
-
-                  <div className="pt-[3em] flex items-center justify-center">
-                    <img src={el.image} alt={el.image} />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div className="py-[3em] border-b-[1px] border-t-[1px]">
         <div className="space-y-4">
           <Typography.H2 className="text-[#030124] sm:w-[95%] w-[90%] mx-auto text-center ">
@@ -405,18 +417,6 @@ const Home = () => {
           <div></div>
         </div>
       </div> */}
-
-      <div className="space-y-4 py-[4em]">
-        <Typography.H2 className="text-[#030124] sm:w-[95%] w-[90%] mx-auto text-center ">
-          Chat with
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
-            {" "}
-            George.
-          </span>
-        </Typography.H2>
-
-        <ChatBot />
-      </div>
 
       <div className="bg-gradient-to-b from-white via-purple-50 to-white py-[1em]">
         <div className="w-[85%] mx-auto flex sm:flex-row flex-col items-center justify-between  sm:gap-0 gap-[2em]">
