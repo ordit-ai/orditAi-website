@@ -38,7 +38,6 @@ const footerCol4 = {
   ],
 };
 
-
 export const footerRow = {
   name: `© ${new Date().getFullYear()} Ordit AI. All rights reserved.`,
   rowArray: [
