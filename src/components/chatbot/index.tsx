@@ -34,7 +34,7 @@ const ChatBot = () => {
               <Typography.Text>Kindly subscribe to have complete access</Typography.Text>
 
               <Link to={URLS.ORDIT_AI}>
-                <Button className="">Go to Pricing</Button>
+                <Button className="">Create Account</Button>
               </Link>
             </motion.div>
           </motion.div>
