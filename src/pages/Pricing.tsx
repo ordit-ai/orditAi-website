@@ -1,5 +1,6 @@
 import Typography from "@/components/Typography";
 import { Button } from "@/components/common/Button";
+import { URLS } from "@/constants/app-routes";
 import { cn } from "@/helpers/classHelpers";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 
@@ -109,7 +110,9 @@ const Pricing = () => {
                     </div>
                     <Typography.MicroText>{el.description}</Typography.MicroText>
                     <Button variant="default" className="w-[100%] h-[40px]">
-                      Get Started
+                      <a href={URLS.ORDIT_AI} target="_blank">
+                        Get Started
+                      </a>
                     </Button>
                   </div>
                 )}
@@ -156,12 +159,16 @@ const Pricing = () => {
 
             <div className={cn("w-[25%]")}>
               <Button variant="default" className="w-[100%] h-[40px]">
-                Get Started
+                <a href={URLS.ORDIT_AI} target="_blank">
+                  Get Started
+                </a>
               </Button>
             </div>
             <div className={cn("w-[25%]")}>
               <Button variant="default" className="w-[100%] h-[40px]">
-                Get Started
+                <a href={URLS.ORDIT_AI} target="_blank">
+                  Get Started
+                </a>
               </Button>
             </div>
           </div>
