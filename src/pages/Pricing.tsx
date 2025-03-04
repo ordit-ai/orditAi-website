@@ -81,8 +81,8 @@ const Pricing = () => {
         </Typography.Text>
       </div>
 
-      <div className="bg-white w-[85%] mx-auto rounded-lg border-[1px]">
-        <div className="w-[90%] mx-auto">
+      <div className="bg-white sm:w-[85%] w-[95%] overflow-x-auto  mx-auto rounded-lg border-[1px]">
+        <div className="sm:w-[90%] w-[700px] mx-auto">
           <div className="flex items-center gap-[2em] w-[100%] justify-center py-4 border-b-[1px]">
             {planHeader.map((el, i) => (
               <div className={cn("w-[25%]")} key={`planHeader-${i}`}>
