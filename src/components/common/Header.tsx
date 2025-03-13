@@ -23,22 +23,18 @@ const Header = () => {
       name: "Features",
       path: APP_ROUTES.FEATURES,
     },
-    {
-      name: "Careers",
-      path: APP_ROUTES.CAREERS,
-    },
     // {
-    //   name: "Mission",
-    //   path: APP_ROUTES.MISSON,
+    //   name: "Careers",
+    //   path: APP_ROUTES.CAREERS,
     // },
     {
       name: "Pricing",
       path: APP_ROUTES.PRICING,
     },
-    {
-      name: "Contact Us",
-      path: APP_ROUTES.CONTACT,
-    },
+    // {
+    //   name: "Contact Us",
+    //   path: APP_ROUTES.CONTACT,
+    // },
   ];
 
   const checkArray = (array: string[]) => {

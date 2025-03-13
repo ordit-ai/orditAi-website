@@ -4,8 +4,8 @@ const footerCol1 = {
   name: "Company",
   colArray: [
     { id: "about-us", value: "About Us", link: APP_ROUTES.ABOUT_US, tag: "" },
-    { id: "careers", value: "Careers", link: APP_ROUTES.CAREERS, tag: "New" },
-    { id: "contact", value: "Contact", link: APP_ROUTES.CONTACT, tag: "" },
+    // { id: "careers", value: "Careers", link: APP_ROUTES.CAREERS, tag: "New" },
+    // { id: "contact", value: "Contact", link: APP_ROUTES.CONTACT, tag: "" },
   ],
 };
 
