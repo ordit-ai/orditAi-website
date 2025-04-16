@@ -1,22 +1,22 @@
 // import JobCard from "@/components/TeamCards/JobCard";
-import TeamCard1 from "@/components/TeamCards/TeamCard1";
+// import TeamCard1 from "@/components/TeamCards/TeamCard1";
 import Typography from "@/components/Typography";
 import SectionHeaders from "@/components/common/SectionHeaders";
-import { useRef } from "react";
-import { GoArrowLeft, GoArrowRight } from "react-icons/go";
+// import { useRef } from "react";
+// import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 
 const AboutUs = () => {
-  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  // const scrollContainerRef = useRef<HTMLDivElement>(null);
 
-  const scroll = (direction: "left" | "right"): void => {
-    const scrollAmount = 300;
+  // const scroll = (direction: "left" | "right"): void => {
+  //   const scrollAmount = 300;
 
-    if (direction == "left") {
-      scrollContainerRef.current?.scrollBy({ left: -scrollAmount });
-    } else if (direction == "right") {
-      scrollContainerRef.current?.scrollBy({ left: scrollAmount });
-    }
-  };
+  //   if (direction == "left") {
+  //     scrollContainerRef.current?.scrollBy({ left: -scrollAmount });
+  //   } else if (direction == "right") {
+  //     scrollContainerRef.current?.scrollBy({ left: scrollAmount });
+  //   }
+  // };
 
   return (
     <div>
@@ -55,7 +55,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      <div className="bg-[#F9FAFB]">
+      {/* <div className="bg-[#F9FAFB]">
         <div className="w-[85%] mx-auto py-[4em]">
           <SectionHeaders
             introText=""
@@ -87,7 +87,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* <div className="w-[85%] mx-auto py-[4em]">
         <SectionHeaders
