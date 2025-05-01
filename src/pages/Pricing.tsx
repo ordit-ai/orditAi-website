@@ -3,8 +3,6 @@ import { Button } from "@/components/common/Button";
 import { URLS } from "@/constants/app-routes";
 import { PlanTiers } from "./features.config";
 
-
-
 const Pricing = () => {
   return (
     <div className=" bg-[#EFF4FF] pt-[8%] pb-[2em]">
