@@ -13,7 +13,7 @@ const ChatBot = () => {
   const disabled = conversation.length === 6;
 
   return (
-    <div className="sm:w-[60%] w-[90%] mx-auto h-[80vh] py-[3em] relative">
+    <div className="sm:w-[50%] w-[90%] mx-auto h-[80vh] py-[3em] relative">
       <AnimatePresence>
         {disabled && (
           <motion.div

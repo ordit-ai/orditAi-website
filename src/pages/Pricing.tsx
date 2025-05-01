@@ -3,6 +3,7 @@ import { Button } from "@/components/common/Button";
 import { URLS } from "@/constants/app-routes";
 import { cn } from "@/helpers/classHelpers";
 import { IoIosCheckmarkCircleOutline } from "react-icons/io";
+import { PlanTiers } from "./features.config";
 
 const plans = [
   { name: "User Profile/Organization", basic: true, pro: true, enterprise: true },
@@ -82,97 +83,47 @@ const Pricing = () => {
         </Typography.Text>
       </div>
 
-      <div className="bg-white sm:w-[85%] w-[95%] overflow-x-auto  mx-auto rounded-lg border-[1px]">
-        <div className="sm:w-[90%] w-[700px] mx-auto">
-          <div className="flex items-center gap-[2em] w-[100%] justify-center py-4 border-b-[1px]">
-            {planHeader.map((el, i) => (
-              <div className={cn("w-[25%]")} key={`planHeader-${i}`}>
-                {el.name !== undefined && (
-                  <div className="space-x-2 flex items-center">
-                    <Typography.SubText className="text-gray-700 font-bold">{el.name}</Typography.SubText>
-                    {el.tag !== "" && (
-                      <p className="bg-purple-100 px-2 py-1 text-xs rounded-2xl text-primary font-semibold">{el.tag}</p>
-                    )}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-          <div className="flex items-center gap-[2em] w-[100%] justify-center py-4">
-            {planHeader.map((el, i) => (
-              <div className={cn("w-[25%]")} key={`planHeader-${i}`}>
-                {el.name !== undefined && (
-                  <div className="space-y-2">
-                    <div className="flex items-center py-2 space-x-1">
-                      <Typography.H2 className="text-gray-700">{el.price}</Typography.H2>
-
-                      <Typography.MicroText className="mt-[6px]">per month</Typography.MicroText>
-                    </div>
-                    <Typography.MicroText>{el.description}</Typography.MicroText>
-                    <Button variant="default" className="w-[100%] h-[40px]">
-                      <a href={URLS.ORDIT_AI} target="_blank">
-                        Get Started
-                      </a>
-                    </Button>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-          {plans.map((el, i) => {
-            return (
-              <div
-                className={cn(
-                  "flex items-center justify-between h-[45px] px-4",
-                  i % 2 === 0 ? "bg-white" : "bg-gray-100",
-                )}
-                key={`plans-${i}`}
-              >
-                <Typography.MicroText className="w-[25%]">{el.name}</Typography.MicroText>
-                {/* <div className={cn("w-[25%]", FLEX)}>
-                  {typeof el.basic === "boolean" && el.basic ? (
-                    <IoIosCheckmarkCircleOutline className="text-green-600 text-xl " />
-                  ) : typeof el.basic === "string" ? (
-                    <Typography.MicroText className="">{el.basic}</Typography.MicroText>
-                  ) : (
-                    "-"
-                  )}
-                </div> */}
-                <div className={cn("w-[25%]", FLEX)}>
-                  {el.pro ? <IoIosCheckmarkCircleOutline className="text-green-600 text-xl text-center" /> : "-"}
-                </div>
-                <div className={cn("w-[25%]", FLEX)}>
-                  {el.enterprise ? <IoIosCheckmarkCircleOutline className="text-green-600 text-xl text-center" /> : "-"}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[2em] w-[85%] mx-auto my-[3em]">
+        {PlanTiers.map((el, i) => {
+          return (
+            <div
+              key={`plan-${i}`}
+              className="w-[100%] group mx-auto my-4 border-[2px] border-gray-200 hover:border-primary rounded-lg bg-white p-4 cursor-pointer hover:shadow-lg transition-all ease-in-out duration-300"
+            >
+              <div>
+                <div className=" py-2">
+                  <Typography.H4 className="text-gray-800 font-semibold">{el.name}</Typography.H4>
                 </div>
               </div>
-            );
-          })}
 
-          <div className="flex items-center gap-[2em] w-[100%] justify-center py-4">
-            <div className={cn("w-[25%]")}></div>
-            {/* 
-            <div className={cn("w-[25%]")}>
-              <Button variant="default" className="w-[100%] h-[40px]">
-                Get Started
-              </Button>
-            </div> */}
+              <div className="flex items-center py-4 space-x-1 group-hover:border-primary border-b-[1px] border-t-[1px] ">
+                <Typography.H2 className="text-gray-700">{el.price}</Typography.H2>
 
-            <div className={cn("w-[25%]")}>
+                <Typography.MicroText className="mt-[6px]">per month</Typography.MicroText>
+              </div>
+
+              <Typography className="font-semibold py-3">{el.description}</Typography>
+
+              <Typography className="font-semibold mb-2 underline underline-offset-4"> Features</Typography>
+
+              <div className="space-y-2 mb-4">
+                {el.features.map((feature, i) => {
+                  return (
+                    <Typography key={`feature-${i}`} className="font-light text-sm">
+                      {feature}
+                    </Typography>
+                  );
+                })}
+              </div>
+
               <Button variant="default" className="w-[100%] h-[40px]">
                 <a href={URLS.ORDIT_AI} target="_blank">
                   Get Started
                 </a>
               </Button>
             </div>
-            <div className={cn("w-[25%]")}>
-              <Button variant="default" className="w-[100%] h-[40px]">
-                <a href={URLS.ORDIT_AI} target="_blank">
-                  Get Started
-                </a>
-              </Button>
-            </div>
-          </div>
-        </div>
+          );
+        })}
       </div>
     </div>
   );
