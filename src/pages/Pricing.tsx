@@ -1,72 +1,9 @@
 import Typography from "@/components/Typography";
 import { Button } from "@/components/common/Button";
 import { URLS } from "@/constants/app-routes";
-import { cn } from "@/helpers/classHelpers";
-import { IoIosCheckmarkCircleOutline } from "react-icons/io";
 import { PlanTiers } from "./features.config";
 
-const plans = [
-  { name: "User Profile/Organization", basic: true, pro: true, enterprise: true },
-  { name: "Workspaces", basic: false, pro: true, enterprise: true },
-  { name: "Journal Transfer", basic: false, pro: true, enterprise: true },
-  { name: "Account Setup", basic: false, pro: true, enterprise: true },
 
-  { name: "Depreciation Setup", basic: false, pro: true, enterprise: true },
-  { name: "Account Services", basic: "Limited Access", pro: true, enterprise: true },
-  { name: "Journal Entries", basic: false, pro: true, enterprise: true },
-
-  { name: "Payroll", basic: false, pro: true, enterprise: true },
-  { name: "General Ledgers", basic: false, pro: true, enterprise: true },
-  {
-    name: "Statement of Profit or Loss and Other Comprehensive Income Feature",
-    basic: false,
-    pro: true,
-    enterprise: true,
-  },
-
-  { name: "Statement of Cash Flow", basic: false, pro: true, enterprise: true },
-  { name: "Statement of Financial Position Feature", basic: false, pro: true, enterprise: true },
-  { name: "Statement of Changes in Equity", basic: false, pro: true, enterprise: true },
-
-  { name: "Audit Logs", basic: false, pro: true, enterprise: true },
-  { name: "Asset Schedule", basic: "Limited Access", pro: true, enterprise: true },
-  { name: "Customer Support", basic: false, pro: true, enterprise: true },
-
-  { name: "Debt Management Schedule", basic: "Limited Access", pro: true, enterprise: true },
-  { name: "Income Summary", basic: "Limited Access", pro: true, enterprise: true },
-  { name: "Expense Summary", basic: "Limited Access", pro: true, enterprise: true },
-
-  { name: "Sandboxes", basic: false, pro: true, enterprise: true },
-  { name: "Roles and Permissions", basic: false, pro: true, enterprise: true },
-  { name: "AI Chatbot Features ", basic: "Limited Access", pro: true, enterprise: true },
-];
-
-const planHeader = [
-  {},
-  // {
-  //   name: "Basic",
-  //   tag: "",
-
-  //   price: "$29.99",
-  //   description: "Basic features for up to 10 employees with everything you",
-  // },
-  {
-    name: "Professional",
-    tag: "Popular",
-
-    price: "$199.99",
-    description: "Advanced features and reporting, better workflows and automation.",
-  },
-  {
-    name: "Enterprise",
-    tag: "",
-
-    price: "$299.99",
-    description: "Personalised service and enterprise security for large ",
-  },
-];
-
-const FLEX = "flex items-center justify-center";
 
 const Pricing = () => {
   return (
