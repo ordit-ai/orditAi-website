@@ -11,8 +11,6 @@ const AccountApi = axios.create({
 export function setupGlobalAxiosInstanceAuth(axios: Axios) {
   axios.interceptors.request.use(
     (config) => {
-      
-
       return config;
     },
     (error) => {

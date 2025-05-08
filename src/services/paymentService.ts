@@ -12,7 +12,6 @@ interface BasePaginatedResult<T> {
   data: T[];
 }
 
-
 export interface Plan {
   id: string; // UUID format
   name: string;
@@ -30,7 +29,6 @@ export interface Plan {
   }[];
 }
 
-
 export default {
   getSubscriptionPlans: async (
     currency?: string,
@@ -45,5 +43,4 @@ export default {
       throw handleApiError(error);
     }
   },
-}
-
+};
