@@ -1,7 +1,7 @@
-import PhoneInput from "@/components/Inputs/PhoneInput";
-import PrimaryInput from "@/components/Inputs/PrimaryInput";
+// import PhoneInput from "@/components/Inputs/PhoneInput";
+// import PrimaryInput from "@/components/Inputs/PrimaryInput";
 import Typography from "@/components/Typography";
-import { Button } from "@/components/common/Button";
+// import { Button } from "@/components/common/Button";
 
 const ContactUs = () => {
   return (
