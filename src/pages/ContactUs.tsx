@@ -42,9 +42,16 @@ const ContactUs = () => {
                 Experiencing problems or you need assistance with an important issue? Send an email to get it resolved.
               </Typography.SubText>
             </div>
+
+            <div>
+              <Typography.SubText className="font-semibold text-gray-600 ">
+                Email address: contact@orditai.com
+              </Typography.SubText>
+              <Typography.SubText className="font-light text-gray-600 ">Phone number: 09060016233</Typography.SubText>
+            </div>
           </div>
 
-          <div className="space-y-4 my-[2em]">
+          {/* <div className="space-y-4 my-[2em]">
             <div className="flex space-x-4">
               <PrimaryInput
                 label="First Name"
@@ -89,12 +96,12 @@ const ContactUs = () => {
                 className=" p-2  border-[1px] border-borderGrey rounded-lg h-[120px] text-xs placeholder:text-xs pl-4 outline-none focus:border-[#C8BEEB] focus:border-2 transition-all w-[100%] duration-300 resize-none "
               ></textarea>
             </div>
-          </div>
+          </div> */}
 
           <div>
-            <Button variant={"default"} className="w-[100%]">
+            {/* <Button variant={"default"} className="w-[100%]">
               Send Message
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

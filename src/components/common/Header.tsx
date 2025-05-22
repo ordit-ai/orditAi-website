@@ -31,10 +31,10 @@ const Header = () => {
       name: "Pricing",
       path: APP_ROUTES.PRICING,
     },
-    // {
-    //   name: "Contact Us",
-    //   path: APP_ROUTES.CONTACT,
-    // },
+    {
+      name: "Contact Us",
+      path: APP_ROUTES.CONTACT,
+    },
   ];
 
   const checkArray = (array: string[]) => {
