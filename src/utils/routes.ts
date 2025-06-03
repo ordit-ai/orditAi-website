@@ -19,4 +19,10 @@ export const routes = [
   {
     path: APP_ROUTES.CAREERS,
   },
+  {
+    path: APP_ROUTES.PRIVACY_POLICY,
+  },
+  {
+    path: APP_ROUTES.TERMS_OF_SERVICE,
+  },
 ];

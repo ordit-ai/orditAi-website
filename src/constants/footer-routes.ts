@@ -41,8 +41,8 @@ const footerCol4 = {
 export const footerRow = {
   name: `© ${new Date().getFullYear()} Ordit AI. All rights reserved.`,
   rowArray: [
-    { id: "terms", value: "Terms", link: "", tag: "" },
-    { id: "privacy", value: "Privacy", link: "", tag: "" },
+    { id: "terms", value: "Terms", link: APP_ROUTES.TERMS_OF_SERVICE, tag: "" },
+    { id: "privacy", value: "Privacy", link: APP_ROUTES.PRIVACY_POLICY, tag: "" },
     { id: "cookies", value: "Cookies", link: "", tag: "" },
   ],
 };

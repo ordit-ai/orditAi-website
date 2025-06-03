@@ -7,6 +7,8 @@ export const APP_ROUTES = {
   RESOURCES: "/",
   CONTACT: "/contact-us",
   CAREERS: "/careers",
+  PRIVACY_POLICY: "/privacy-policy",
+  TERMS_OF_SERVICE: "/terms-of-service",
 };
 
 export const URLS = {

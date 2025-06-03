@@ -41,7 +41,7 @@ const Footer = () => {
           <div className="flex items-center space-x-5">
             {footerRow.rowArray.map((el) => (
               <Typography.SubText key={el.id} className="cursor-pointer">
-                {el.value}
+                <Link to={el.link}>{el.value}</Link>
               </Typography.SubText>
             ))}
           </div>
