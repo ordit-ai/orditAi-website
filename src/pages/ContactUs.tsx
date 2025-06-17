@@ -48,6 +48,8 @@ const ContactUs = () => {
                 Email address: contact@orditai.com
               </Typography.SubText>
               <Typography.SubText className="font-light text-gray-600 ">Phone number: 09060016233</Typography.SubText>
+<Typography.SubText className="font-light text-gray-600 ">Maben Estate, Chevron</Typography.SubText>
+          
             </div>
           </div>
 

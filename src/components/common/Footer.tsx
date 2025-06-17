@@ -13,6 +13,14 @@ const Footer = () => {
             <Typography.Text className="text-gray-800">George Powers Your Financial Success 24/7</Typography.Text>
 
             <Typography.SubText className="">Your dedicated AI-powered digital employee for audit.</Typography.SubText>
+            <Typography.SubText className="">
+              It is owned and operated by Ordit Technologies Limited.
+            </Typography.SubText>
+             <Typography.SubText className="">
+          Maben Estate, Chevron
+            </Typography.SubText>
+
+           
           </div>
 
           <div className="md:flex grid grid-cols-2 items-start justify-around md:w-[65%] w-[100%] md:gap-0 gap-6 md:py-0 py-[2em]">
@@ -52,3 +60,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+//https://api.usemooyi.com/v2/api

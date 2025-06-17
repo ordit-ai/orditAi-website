@@ -43,6 +43,7 @@ export const footerRow = {
   rowArray: [
     { id: "terms", value: "Terms", link: APP_ROUTES.TERMS_OF_SERVICE, tag: "" },
     { id: "privacy", value: "Privacy", link: APP_ROUTES.PRIVACY_POLICY, tag: "" },
+    { id: "refund_policy", value: "Refund policy", link: APP_ROUTES.REFUND_POLICY, tag: "" },
     { id: "cookies", value: "Cookies", link: "", tag: "" },
   ],
 };

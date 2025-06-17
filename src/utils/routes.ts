@@ -25,4 +25,7 @@ export const routes = [
   {
     path: APP_ROUTES.TERMS_OF_SERVICE,
   },
+   {
+    path: APP_ROUTES.REFUND_POLICY,
+  },
 ];

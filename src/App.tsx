@@ -11,6 +11,7 @@ import FeaturesPage from "./pages/features";
 import Careers from "./pages/Careers";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfUse from "./pages/TermsOfUse";
+import RefundPolicy from "./pages/RefundPolicy";
 
 function App() {
   const Element = {
@@ -22,6 +23,7 @@ function App() {
     [APP_ROUTES.CAREERS]: <Careers />,
     [APP_ROUTES.PRIVACY_POLICY]: <PrivacyPolicy />,
     [APP_ROUTES.TERMS_OF_SERVICE]: <TermsOfUse />,
+    [APP_ROUTES.REFUND_POLICY]: <RefundPolicy />,
   };
 
   return (
