@@ -52,18 +52,18 @@ const Home = () => {
         <div className="flex sm:flex-row  flex-col  pl-[7.5%] justify-between">
           <div className="sm:w-[47%] pt-[3em] w-[90%] flex justify-between flex-col">
             <div className="space-y-6">
+              {/* AI Auditor for modern businesses */}
               <Typography.Heading className="w-[100%] text-center sm:text-left ">
-                Precise Numbers, <br />
+                AI Auditor <br />
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
                   {/* AI Agent */}
-                  Extraordinary Results,
-                </span>{" "}
+                  for modern 
+                </span> businesses{" "}
                 {/* for Auditing and Accounting  */}
-                Zero Supervision.
+                {/* businesses. */}
               </Typography.Heading>
               <Typography.Text className="sm:text-left text-center">
-                Meet George, your AI Auditor and Accountant! ...and he is here to redefine the way you approach auditing
-                and accounting.
+                Meet George — the AI auditor that makes your team 1000x more efficient. Collaborate. Automate. Deliver.
               </Typography.Text>
               <div className="flex sm:justify-start justify-center w-[100%]">
                 <a href={URLS.ORDIT_AI} target="_blank">
@@ -95,10 +95,10 @@ const Home = () => {
       </div>
 
       <div className="flex items-center justify-center flex-col py-[3em] space-y-4 border-t-[1px]  border-b-[1px] ">
-        <Typography.SubText className="text-gray-600 sm:w-[70%] w-[100%] text-center">
+        {/* <Typography.SubText className="text-gray-600 sm:w-[70%] w-[100%] text-center">
           George is an autonomous auditing and accounting professional,trained using global standards. He is capable of
           doing everything a human auditor can do without oversight.
-        </Typography.SubText>
+        </Typography.SubText> */}
 
         <div className="flex flex-wrap items-center justify-center gap-[1em] w-[85%] mx-auto">
           {["GAAP", "CAS", "JGAAP", "ISA", "SEC", "GDPR", "SOX"].map((el) => (
@@ -120,7 +120,8 @@ const Home = () => {
           </Typography.H2>
 
           <Typography.Text className="text-gray-600 text-center">
-            Uncover insights, ensure compliance, and achieve unmatched accuracy!{" "}
+            {/* Uncover insights, ensure compliance, and achieve unmatched accuracy!{" "} */}
+            Increase efficiency by 1000x — beyond human capacity. Deliver fast and accurate audits.
           </Typography.Text>
         </div>
       </div>
@@ -431,7 +432,10 @@ const Home = () => {
               Delivers Result
             </Typography.H2>
 
-            <Typography.Text className="text-gray-600 ">Hear what others have to say about George</Typography.Text>
+            <Typography.Text className="text-gray-600 ">
+              The testimonials below are attributed to fictional characters, <br />
+              but they reflect real sentiments and feedback we’ve received from early users.
+            </Typography.Text>
           </div>
 
           <div className="flex  items-center sm:justify-center justify-between sm:w-auto w-[60%] space-x-4">
