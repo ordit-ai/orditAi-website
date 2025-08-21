@@ -301,7 +301,7 @@ const Pricing = () => {
       </div>
 
       {/* FAQ Section */}
-      <div className="w-[85%] mx-auto mb-16">
+      <div className="w-[85%] mx-auto pb-16">
         <div className="text-center mb-12">
           <Typography.Headers className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             Frequently Asked Questions
