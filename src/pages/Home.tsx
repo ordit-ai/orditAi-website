@@ -57,9 +57,9 @@ const Home = () => {
                 AI Auditor <br />
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
                   {/* AI Agent */}
-                  for modern 
-                </span> businesses{" "}
-                {/* for Auditing and Accounting  */}
+                  for modern
+                </span>{" "}
+                businesses {/* for Auditing and Accounting  */}
                 {/* businesses. */}
               </Typography.Heading>
               <Typography.Text className="sm:text-left text-center">

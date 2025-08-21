@@ -32,8 +32,6 @@ const Pricing = () => {
     return plans.sort((a, b) => a.plan_type - b.plan_type);
   }, [data?.data, isYearly]);
 
-
-
   // Calculate savings/loss for annual vs monthly
   const getSavingsInfo = (plan: Plan) => {
     if (!isYearly) return null;
