@@ -1,13 +1,14 @@
 import Typography from "@/components/Typography";
 import { Button } from "@/components/common/Button";
 import { URLS } from "@/constants/app-routes";
-
 import { useQuerySubscriptionPlans } from "@/hooks/useQueryOrgSubscription";
 import { BiLayer, BiCheckCircle } from "react-icons/bi";
 import { cn } from "@/helpers/classHelpers";
+import { useState, useMemo } from "react";
 
 const Pricing = () => {
   const { data } = useQuerySubscriptionPlans();
+  const [isYearly, setIsYearly] = useState(false);
 
   const auditPlans = [
     "Per audit stage: $25",
@@ -18,96 +19,336 @@ const Pricing = () => {
     "George analysis breakdown and access to documentation: $50",
   ];
 
+  // Filter plans by frequency and organize by plan type
+  const filteredPlans = useMemo(() => {
+    if (!data?.data) return [];
+
+    const frequency = isYearly ? 2 : 1; // 1 = Monthly, 2 = Annually
+
+    //@ts-ignore
+    const plans = data.data.filter((plan) => plan.frequency === frequency);
+
+    // Sort by plan_type (0 = Basic, 1 = Professional, 2 = Enterprise)
+    return plans.sort((a, b) => a.plan_type - b.plan_type);
+  }, [data?.data, isYearly]);
+
+  // Calculate monthly equivalent for annual plans
+  const getMonthlyEquivalent = (annualPrice: string) => {
+    const price = parseFloat(annualPrice);
+    return (price / 12).toFixed(2);
+  };
+
+  // Calculate savings/loss for annual vs monthly
+  const getSavingsInfo = (plan: any) => {
+    if (!isYearly) return null;
+
+    const monthlyPlan = data?.data?.find(
+      (p) =>
+        //@ts-ignore
+        p.plan_type === plan.plan_type && p.frequency === 1,
+    );
+
+    if (!monthlyPlan) return null;
+
+    const monthlyPrice = parseFloat(monthlyPlan.price);
+    const annualPrice = parseFloat(plan.price);
+    const monthlyEquivalent = annualPrice / 12;
+    const difference = monthlyEquivalent - monthlyPrice;
+
+    return {
+      monthlyEquivalent: monthlyEquivalent.toFixed(2),
+      difference: difference.toFixed(2),
+      isSavings: difference < 0,
+    };
+  };
+
   return (
-    <div className=" bg-[#EFF4FF] pt-[8%] pb-[2em]">
-      <div className="w-[85%] mx-auto  flex flex-col items-center justify-between my-[3em]">
-        <div className="text-center  ">
-          <Typography.SubText className="text-primary">Pricing</Typography.SubText>
+    <div className="min-h-screen bg-gradient-to-br from-[#EFF4FF] via-white to-[#F8FAFF]">
+      {/* Hero Section */}
+      <div className="pt-[8%] pb-[4em]">
+        <div className="w-[85%] mx-auto text-center space-y-6">
+          <div className="inline-block px-6 py-2 bg-primary/10 rounded-full">
+            <Typography.SubText className="text-primary font-medium tracking-wide">Pricing Plans</Typography.SubText>
+          </div>
 
-          <Typography.H1 className="text-gray-800 my-4">Compare our plans and find yours</Typography.H1>
-        </div>
+          <Typography.H1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
+            Choose Your Perfect Plan
+          </Typography.H1>
 
-        <Typography.Text className="text-gray-500">
-          Simple, transparent pricing that grows with you. Try any plan free for 30 days.
-        </Typography.Text>
-      </div>
+          <Typography.Text className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Simple, transparent pricing that grows with you. Try any plan free for 30 days.
+          </Typography.Text>
 
-      <div className="w-[85%] mx-auto bg-white p-8 rounded-lg">
-        <Typography.H3 className="underline text-gray-700">Audit Pricing</Typography.H3>
-
-        <div className="w-[70%] space-y-2 py-5">
-          <p className="text-lg font-semibold">
-            Our most advanced AI called George is capable of independent reasoning and carrying out intelligent tasks
-            without supervision.
-          </p>
-
-          <div className="space-y-2">
-            {auditPlans.map((plan, index) => (
-              <div key={index} className="flex items-center space-x-2">
-                <BiCheckCircle size={20} className="text-[#667085]" />
-                <Typography className="text-[#667085]">{plan}</Typography>
-              </div>
-            ))}
+          {/* Billing Toggle */}
+          <div className="flex items-center justify-center space-x-4 mt-8">
+            <span
+              className={cn("text-sm font-medium transition-colors", !isYearly ? "text-gray-900" : "text-gray-500")}
+            >
+              Monthly
+            </span>
+            <button
+              onClick={() => setIsYearly(!isYearly)}
+              className={cn(
+                "relative inline-flex h-8 w-16 items-center rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2",
+                isYearly ? "bg-primary" : "bg-gray-200",
+              )}
+            >
+              <span
+                className={cn(
+                  "inline-block h-6 w-6 transform rounded-full bg-white transition-transform",
+                  isYearly ? "translate-x-9" : "translate-x-1",
+                )}
+              />
+            </button>
+            <span className={cn("text-sm font-medium transition-colors", isYearly ? "text-gray-900" : "text-gray-500")}>
+              Yearly
+              <span className="ml-1 inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full font-medium">
+                Extended Access
+              </span>
+            </span>
           </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[2em] w-[85%] mx-auto my-[3em]">
-        {data?.data?.map((el, i) => {
-          return (
-            <div
-              key={`plan-${i}`}
-              className={cn(
-                "w-[100%] group mx-auto my-4 border-[2px] border-gray-200 hover:border-primary rounded-lg bg-white p-4 cursor-pointer hover:shadow-lg transition-all ease-in-out duration-300",
-              )}
-            >
-              <div className={cn("p-4 flex gap-x-2 items-center border-b-2")}>
-                <div className=" p-2 bg-[#F4EBFF] rounded-full [&>*]:text-brand ">
-                  <BiLayer color="#7F56D9" />
-                </div>
-                <Typography.Text className="font-semibold">{el.name}</Typography.Text>
-              </div>
+      {/* Subscription Plans */}
+      <div className="w-[85%] mx-auto mb-16">
+        <div className="grid lg:grid-cols-3 gap-8">
+          {filteredPlans.map((el, i) => {
+            const isPopular = el.plan_type === 1; // Professional plan
+            const savingsInfo = getSavingsInfo(el);
 
-              <div className="flex  items-baseline">
-                <div className="text-[30px] text-[#344054] " style={{ fontWeight: 500 }}>
-                  ${el.price}
-                </div>
-                <div className="w-[4px]" />
-                <Typography.MicroText>Per month</Typography.MicroText>
-              </div>
-
-              <Typography className="font-semibold py-3">{el.description}</Typography>
-
-              <Typography className="font-semibold mb-2 underline underline-offset-4"> Features</Typography>
-
-              <div className="space-y-2 mb-4">
-                {el?.features?.map((feature, i) => {
-                  return (
-                    <div className="flex gap-x-2" key={`feature-${i}`}>
-                      <div className="w-[30px]">
-                        <BiCheckCircle size={20} className={"text-[#667085]"} />
-                      </div>
-
-                      <Typography className={"text-[#667085]"} style={{ fontWeight: 400, fontSize: 14 }}>
-                        {feature?.name}
-                      </Typography>
+            return (
+              <div
+                key={`plan-${i}`}
+                className={cn(
+                  "relative group rounded-3xl p-8 transition-all duration-500 hover:scale-105",
+                  isPopular
+                    ? "bg-gradient-to-br from-primary to-primary/80 text-white shadow-2xl border-2 border-primary"
+                    : "bg-white shadow-xl border border-gray-100 hover:shadow-2xl",
+                )}
+              >
+                {/* Popular Badge */}
+                {isPopular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <div className="bg-gradient-to-r from-orange-400 to-orange-600 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg">
+                      Most Popular
                     </div>
-                  );
-                })}
+                  </div>
+                )}
+
+                {/* Plan Header */}
+                <div className="text-center mb-8">
+                  <div
+                    className={cn(
+                      "w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4",
+                      isPopular ? "bg-white/20" : "bg-primary/10",
+                    )}
+                  >
+                    <BiLayer className={cn("w-8 h-8", isPopular ? "text-white" : "text-primary")} />
+                  </div>
+
+                  <Typography.Headers
+                    className={cn("text-2xl font-bold mb-2", isPopular ? "text-white" : "text-gray-800")}
+                  >
+                    {el.plan_type_display}
+                  </Typography.Headers>
+
+                  <Typography.SubText className={cn("text-sm", isPopular ? "text-white/80" : "text-gray-600")}>
+                    {el.description}
+                  </Typography.SubText>
+                </div>
+
+                {/* Price */}
+                <div className="text-center mb-8">
+                  <div className="flex items-baseline justify-center">
+                    <span className={cn("text-5xl font-bold", isPopular ? "text-white" : "text-gray-800")}>
+                      ${el.price}
+                    </span>
+                    <span className={cn("text-lg ml-2", isPopular ? "text-white/80" : "text-gray-600")}>
+                      /{isYearly ? "year" : "month"}
+                    </span>
+                  </div>
+                  {isYearly && savingsInfo && (
+                    <div className="mt-2">
+                      <Typography.SubText className={cn("text-sm", isPopular ? "text-white/70" : "text-gray-500")}>
+                        ${savingsInfo.monthlyEquivalent}/month equivalent
+                      </Typography.SubText>
+                      <div
+                        className={cn(
+                          "text-xs mt-1 px-2 py-1 rounded-full inline-block",
+                          savingsInfo.isSavings ? "bg-green-100 text-green-800" : "bg-orange-100 text-orange-800",
+                        )}
+                      >
+                        {savingsInfo.isSavings ? "Save" : "Premium"} ${Math.abs(parseFloat(savingsInfo.difference))}
+                        /month
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Features */}
+                <div className="space-y-4 mb-8">
+                  <Typography.SubText
+                    className={cn(
+                      "font-semibold text-sm uppercase tracking-wide",
+                      isPopular ? "text-white/90" : "text-gray-700",
+                    )}
+                  >
+                    Features
+                  </Typography.SubText>
+
+                  <div className="space-y-3">
+                    {el?.features?.slice(0, 6).map((feature, i) => (
+                      <div key={`feature-${i}`} className="flex items-start space-x-3">
+                        <BiCheckCircle
+                          size={20}
+                          className={cn("flex-shrink-0 mt-0.5", isPopular ? "text-white" : "text-green-500")}
+                        />
+                        <Typography.SubText
+                          className={cn("text-sm leading-relaxed", isPopular ? "text-white/90" : "text-gray-600")}
+                        >
+                          {feature?.name}
+                        </Typography.SubText>
+                      </div>
+                    ))}
+                    {el?.features && el.features.length > 6 && (
+                      <Typography.SubText
+                        className={cn("text-sm italic", isPopular ? "text-white/70" : "text-gray-500")}
+                      >
+                        +{el.features.length - 6} more features
+                      </Typography.SubText>
+                    )}
+                  </div>
+                </div>
+
+                {/* CTA Button */}
+                <div className="space-y-4">
+                  <a
+                    href={URLS.ORDIT_AI}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={cn(
+                      "block w-full py-4 px-6 rounded-xl font-semibold text-center transition-all duration-300 transform hover:scale-105",
+                      isPopular
+                        ? "bg-white text-primary hover:bg-gray-50 shadow-lg"
+                        : "bg-primary text-white hover:bg-primary/90 shadow-lg",
+                    )}
+                  >
+                    Get Started
+                  </a>
+
+                  <Typography.SubText
+                    className={cn("text-center text-xs", isPopular ? "text-white/70" : "text-gray-500")}
+                  >
+                    Free 30-day trial • No credit card required
+                  </Typography.SubText>
+                </div>
               </div>
+            );
+          })}
+        </div>
+      </div>
 
-              <Typography className="text-[#6941C6] text-center mb-2">Explore All Features</Typography>
-
-              <Button variant="default" className="w-[100%] h-[40px]">
-                <a href={URLS.ORDIT_AI} target="_blank">
-                  Get Started
-                </a>
-              </Button>
-
-              {/* <center>{renderActionButton(el.id, el.plan_type_display)}</center> */}
+      {/* Audit Pricing Section */}
+      <div className="w-[85%] mx-auto mb-16">
+        <div className="bg-white rounded-3xl p-12 shadow-xl border border-gray-100">
+          <div className="text-center mb-12">
+            <div className="inline-block px-4 py-2 bg-orange-100 rounded-lg mb-4">
+              <Typography.SubText className="text-orange-700 font-semibold">Audit Services</Typography.SubText>
             </div>
-          );
-        })}
+
+            <Typography.Headers className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+              AI-Powered Audit Pricing
+            </Typography.Headers>
+
+            <Typography.Text className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Our most advanced AI called George is capable of independent reasoning and carrying out intelligent tasks
+              without supervision.
+            </Typography.Text>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-4">
+              {auditPlans.slice(0, 3).map((plan, index) => (
+                <div key={index} className="flex items-start space-x-3 p-4 bg-gray-50 rounded-xl">
+                  <BiCheckCircle size={20} className="text-green-500 flex-shrink-0 mt-0.5" />
+                  <Typography.SubText className="text-gray-700 font-medium">{plan}</Typography.SubText>
+                </div>
+              ))}
+            </div>
+
+            <div className="space-y-4">
+              {auditPlans.slice(3).map((plan, index) => (
+                <div key={index} className="flex items-start space-x-3 p-4 bg-gray-50 rounded-xl">
+                  <BiCheckCircle size={20} className="text-green-500 flex-shrink-0 mt-0.5" />
+                  <Typography.SubText className="text-gray-700 font-medium">{plan}</Typography.SubText>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="text-center mt-8">
+            <a
+              href={URLS.ORDIT_AI}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary/90 transition-all duration-300 transform hover:scale-105"
+            >
+              Start Your Audit
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* FAQ Section */}
+      <div className="w-[85%] mx-auto mb-16">
+        <div className="text-center mb-12">
+          <Typography.Headers className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+            Frequently Asked Questions
+          </Typography.Headers>
+          <Typography.Text className="text-lg text-gray-600">
+            Everything you need to know about our pricing and plans
+          </Typography.Text>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+            <Typography.Headers className="text-xl font-semibold text-gray-800 mb-4">
+              Can I change plans anytime?
+            </Typography.Headers>
+            <Typography.SubText className="text-gray-600">
+              Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing
+              cycle.
+            </Typography.SubText>
+          </div>
+
+          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+            <Typography.Headers className="text-xl font-semibold text-gray-800 mb-4">
+              Is there a free trial?
+            </Typography.Headers>
+            <Typography.SubText className="text-gray-600">
+              Absolutely! All plans come with a 30-day free trial. No credit card required to get started.
+            </Typography.SubText>
+          </div>
+
+          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+            <Typography.Headers className="text-xl font-semibold text-gray-800 mb-4">
+              What payment methods do you accept?
+            </Typography.Headers>
+            <Typography.SubText className="text-gray-600">
+              We accept all major credit cards, PayPal, and bank transfers for annual plans.
+            </Typography.SubText>
+          </div>
+
+          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+            <Typography.Headers className="text-xl font-semibold text-gray-800 mb-4">
+              Do you offer refunds?
+            </Typography.Headers>
+            <Typography.SubText className="text-gray-600">
+              Yes, we offer a 30-day money-back guarantee. If you're not satisfied, we'll refund your payment.
+            </Typography.SubText>
+          </div>
+        </div>
       </div>
     </div>
   );
