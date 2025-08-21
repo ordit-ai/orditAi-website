@@ -1,10 +1,10 @@
 import Typography from "@/components/Typography";
-import { Button } from "@/components/common/Button";
 import { URLS } from "@/constants/app-routes";
 import { useQuerySubscriptionPlans } from "@/hooks/useQueryOrgSubscription";
 import { BiLayer, BiCheckCircle } from "react-icons/bi";
 import { cn } from "@/helpers/classHelpers";
 import { useState, useMemo } from "react";
+import { Plan } from "@/services/paymentService";
 
 const Pricing = () => {
   const { data } = useQuerySubscriptionPlans();
@@ -25,26 +25,22 @@ const Pricing = () => {
 
     const frequency = isYearly ? 2 : 1; // 1 = Monthly, 2 = Annually
 
-    //@ts-ignore
+    //@ts-expect-error frequency is not defined in the plan type
     const plans = data.data.filter((plan) => plan.frequency === frequency);
 
     // Sort by plan_type (0 = Basic, 1 = Professional, 2 = Enterprise)
     return plans.sort((a, b) => a.plan_type - b.plan_type);
   }, [data?.data, isYearly]);
 
-  // Calculate monthly equivalent for annual plans
-  const getMonthlyEquivalent = (annualPrice: string) => {
-    const price = parseFloat(annualPrice);
-    return (price / 12).toFixed(2);
-  };
+
 
   // Calculate savings/loss for annual vs monthly
-  const getSavingsInfo = (plan: any) => {
+  const getSavingsInfo = (plan: Plan) => {
     if (!isYearly) return null;
 
     const monthlyPlan = data?.data?.find(
       (p) =>
-        //@ts-ignore
+        //@ts-expect-error frequency is not defined in the plan type
         p.plan_type === plan.plan_type && p.frequency === 1,
     );
 

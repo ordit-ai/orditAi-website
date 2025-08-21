@@ -1,9 +1,6 @@
 // import JobCard from "@/components/TeamCards/JobCard";
 // import TeamCard1 from "@/components/TeamCards/TeamCard1";
 import Typography from "@/components/Typography";
-import SectionHeaders from "@/components/common/SectionHeaders";
-// import { useRef } from "react";
-// import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 
 const AboutUs = () => {
   // const scrollContainerRef = useRef<HTMLDivElement>(null);
