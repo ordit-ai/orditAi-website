@@ -25,10 +25,10 @@ const Footer = () => {
 
             {/* Contact Information */}
             <div className="space-y-4">
-              <Typography.H4 className="text-gray-900 font-semibold">Contact Information</Typography.H4>
+              {/* <Typography.H4 className="text-gray-900 font-semibold">Contact Information</Typography.H4> */}
 
               {/* Email */}
-              <div className="flex items-center space-x-3">
+              {/* <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
                   <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
@@ -47,10 +47,10 @@ const Footer = () => {
                     temidayo@orditai.com
                   </Typography.SubText>
                 </a>
-              </div>
+              </div> */}
 
               {/* Phone */}
-              <div className="flex items-center space-x-3">
+              {/* <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
                   <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
@@ -66,10 +66,10 @@ const Footer = () => {
                     08065432603
                   </Typography.SubText>
                 </a>
-              </div>
+              </div> */}
 
               {/* Address */}
-              <div className="flex items-start space-x-3">
+              {/* <div className="flex items-start space-x-3">
                 <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
                   <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
@@ -93,7 +93,7 @@ const Footer = () => {
                     Lagos, Nigeria
                   </Typography.SubText>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
 

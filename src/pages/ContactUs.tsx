@@ -1,9 +1,12 @@
 // import PhoneInput from "@/components/Inputs/PhoneInput";
 // import PrimaryInput from "@/components/Inputs/PrimaryInput";
 import Typography from "@/components/Typography";
+import { URLS } from "@/constants/app-routes";
+import { useNavigate } from "react-router-dom";
 // import { Button } from "@/components/common/Button";
 
 const ContactUs = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#EFF4FF] via-white to-[#F8FAFF]">
       {/* Hero Section */}
@@ -53,7 +56,7 @@ const ContactUs = () => {
             </div>
 
             {/* Email Section */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
+            {/* <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center flex-shrink-0">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -88,104 +91,10 @@ const ContactUs = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
-          {/* Right Column - Contact Info */}
-          <div className="space-y-8">
-            {/* Phone Section */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-                    />
-                  </svg>
-                </div>
-                <div className="flex-1">
-                  <Typography.Headers className="text-xl font-semibold text-gray-800 mb-2">
-                    Call us directly
-                  </Typography.Headers>
-                  <Typography.SubText className="text-gray-600 leading-relaxed mb-4">
-                    Prefer to talk? Give us a call for immediate assistance and personalized support.
-                  </Typography.SubText>
-                  <a
-                    href="tel:08065432603"
-                    className="inline-flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors duration-200"
-                  >
-                    <span className="font-medium text-lg">08065432603</span>
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                      />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
 
-            {/* Location Section */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-                </div>
-                <div className="flex-1">
-                  <Typography.Headers className="text-xl font-semibold text-gray-800 mb-2">
-                    Visit our office
-                  </Typography.Headers>
-                  <Typography.SubText className="text-gray-600 leading-relaxed">
-                    Maben Estate, Chevron
-                    <br />
-                    Lagos, Nigeria
-                  </Typography.SubText>
-                </div>
-              </div>
-            </div>
-
-            {/* Business Hours */}
-            <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-8 border border-primary/20">
-              <div className="text-center">
-                <Typography.Headers className="text-xl font-semibold text-gray-800 mb-4">
-                  Business Hours
-                </Typography.Headers>
-                <div className="space-y-2 text-gray-600">
-                  <Typography.SubText className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span className="font-medium">9:00 AM - 6:00 PM</span>
-                  </Typography.SubText>
-                  <Typography.SubText className="flex justify-between">
-                    <span>Saturday</span>
-                    <span className="font-medium">10:00 AM - 4:00 PM</span>
-                  </Typography.SubText>
-                  <Typography.SubText className="flex justify-between">
-                    <span>Sunday</span>
-                    <span className="font-medium text-gray-500">Closed</span>
-                  </Typography.SubText>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -198,10 +107,14 @@ const ContactUs = () => {
             help transform your business.
           </Typography.SubText>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-4 bg-white text-primary font-semibold rounded-xl hover:bg-gray-100 transition-colors duration-200">
-              Schedule a Demo
+            <button onClick={() => {
+              window.open("https://sandbox.orditai.com/", "_blank");
+            }} className="px-8 py-4 bg-white text-primary font-semibold rounded-xl hover:bg-gray-100 transition-colors duration-200">
+              Get Started
             </button>
-            <button className="px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-primary transition-colors duration-200">
+            <button onClick={() => {
+              navigate("/about-us");
+            }} className="px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-primary transition-colors duration-200">
               Learn More
             </button>
           </div>
