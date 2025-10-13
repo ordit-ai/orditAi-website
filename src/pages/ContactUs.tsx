@@ -93,8 +93,6 @@ const ContactUs = () => {
               </div>
             </div> */}
           </div>
-
-
         </div>
       </div>
 
@@ -107,14 +105,20 @@ const ContactUs = () => {
             help transform your business.
           </Typography.SubText>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button onClick={() => {
-              window.open("https://sandbox.orditai.com/", "_blank");
-            }} className="px-8 py-4 bg-white text-primary font-semibold rounded-xl hover:bg-gray-100 transition-colors duration-200">
+            <button
+              onClick={() => {
+                window.open("https://sandbox.orditai.com/", "_blank");
+              }}
+              className="px-8 py-4 bg-white text-primary font-semibold rounded-xl hover:bg-gray-100 transition-colors duration-200"
+            >
               Get Started
             </button>
-            <button onClick={() => {
-              navigate("/about-us");
-            }} className="px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-primary transition-colors duration-200">
+            <button
+              onClick={() => {
+                navigate("/about-us");
+              }}
+              className="px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-primary transition-colors duration-200"
+            >
               Learn More
             </button>
           </div>
