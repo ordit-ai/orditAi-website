@@ -1,7 +1,6 @@
 // import PhoneInput from "@/components/Inputs/PhoneInput";
 // import PrimaryInput from "@/components/Inputs/PrimaryInput";
 import Typography from "@/components/Typography";
-import { URLS } from "@/constants/app-routes";
 import { useNavigate } from "react-router-dom";
 // import { Button } from "@/components/common/Button";
 
