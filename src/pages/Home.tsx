@@ -57,10 +57,9 @@ const Home = () => {
                 AI Auditor <br />
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
                   {/* AI Agent */}
-                  for modern
+                  for audit
                 </span>{" "}
-                businesses {/* for Auditing and Accounting  */}
-                {/* businesses. */}
+                professionals
               </Typography.Heading>
               <Typography.Text className="sm:text-left text-center">
                 Meet George — the AI auditor that makes your team 1000x more efficient. Collaborate. Automate. Deliver.
@@ -116,7 +115,7 @@ const Home = () => {
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#492AB1] via-purple-500 to-[#FB8C3C] leading-[1.4em] ">
               George
             </span>{" "}
-            Drives your accounting and auditing business
+            is your intelligent partner for faster, and more accurate audits.
           </Typography.H2>
 
           <Typography.Text className="text-gray-600 text-center">

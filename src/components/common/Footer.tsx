@@ -18,8 +18,7 @@ const Footer = () => {
                 George Powers Your Financial Success 24/7
               </Typography.Text>
               <Typography.SubText className="text-gray-600 leading-relaxed">
-                Your dedicated AI-powered digital employee for audit. It is owned and operated by Ordit Technologies
-                Limited.
+              George is your intelligent audit partner — always on, always accurate.
               </Typography.SubText>
             </div>
 
