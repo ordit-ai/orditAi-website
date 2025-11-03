@@ -106,7 +106,7 @@ const ContactUs = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => {
-                window.open("https://sandbox.orditai.com/", "_blank");
+                window.open("https://app.orditai.com/", "_blank");
               }}
               className="px-8 py-4 bg-white text-primary font-semibold rounded-xl hover:bg-gray-100 transition-colors duration-200"
             >

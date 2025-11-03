@@ -18,7 +18,7 @@ const Footer = () => {
                 George Powers Your Financial Success 24/7
               </Typography.Text>
               <Typography.SubText className="text-gray-600 leading-relaxed">
-              George is your intelligent audit partner — always on, always accurate.
+                George is your intelligent audit partner — always on, always accurate.
               </Typography.SubText>
             </div>
 

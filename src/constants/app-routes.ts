@@ -13,5 +13,5 @@ export const APP_ROUTES = {
 };
 
 export const URLS = {
-  ORDIT_AI: "https://sandbox.orditai.com/auth/register",
+  ORDIT_AI: "https://app.orditai.com/auth/register",
 };
