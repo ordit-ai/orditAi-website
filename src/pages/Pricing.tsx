@@ -66,12 +66,10 @@ const Pricing = () => {
           </div>
 
           <Typography.H1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
-          Flexible Plans. Powerful Tools.
+            Flexible Plans. Powerful Tools.
           </Typography.H1>
-    
         </div>
       </div>
-
 
       <div className="w-[85%] mx-auto mb-8">
         <div className="bg-white rounded-3xl p-12 shadow-xl border border-gray-100">
@@ -81,12 +79,12 @@ const Pricing = () => {
             </div>
 
             <Typography.Headers className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            AI Auditor Pricing
+              AI Auditor Pricing
             </Typography.Headers>
 
             <Typography.Text className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Our most advanced AI called George is capable of independent reasoning and carrying out intelligent audit tasks
-              without supervision. Pricing for Audit Professionals.
+              Our most advanced AI called George is capable of independent reasoning and carrying out intelligent audit
+              tasks without supervision. Pricing for Audit Professionals.
             </Typography.Text>
           </div>
 
@@ -135,11 +133,12 @@ const Pricing = () => {
           </Typography.Headers>
 
           <Typography.Text className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Access our comprehensive accounting platform with powerful AI-driven tools to streamline your financial operations. Choose the plan that fits your business needs.
+            Access our comprehensive accounting platform with powerful AI-driven tools to streamline your financial
+            operations. Choose the plan that fits your business needs.
           </Typography.Text>
 
-              {/* Billing Toggle */}
-              <div className="flex items-center justify-center space-x-4 mt-8">
+          {/* Billing Toggle */}
+          <div className="flex items-center justify-center space-x-4 mt-8">
             <span
               className={cn("text-sm font-medium transition-colors", !isYearly ? "text-gray-900" : "text-gray-500")}
             >
@@ -306,7 +305,6 @@ const Pricing = () => {
       </div>
 
       {/* Audit Pricing Section */}
-
 
       {/* FAQ Section */}
       <div className="w-[85%] mx-auto pb-16">
