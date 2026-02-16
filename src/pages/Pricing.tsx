@@ -50,7 +50,7 @@ const Pricing = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#EFF4FF] via-white to-[#F8FAFF]">
       {/* Subscription Plans */}
-      <div className="w-[85%] mx-auto mb-24">
+      <div className="w-[85%] mx-auto my-24">
         <div className="text-center mb-12">
           <Typography.Headers className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             Pricing Plans
