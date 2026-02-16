@@ -10,7 +10,6 @@ const Pricing = () => {
   const { data } = useQuerySubscriptionPlans();
   const [isYearly, setIsYearly] = useState(false);
 
-
   // Filter plans by frequency and organize by plan type
   const filteredPlans = useMemo(() => {
     if (!data?.data) return [];
@@ -50,19 +49,15 @@ const Pricing = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#EFF4FF] via-white to-[#F8FAFF]">
-    
-  
       {/* Subscription Plans */}
       <div className="w-[85%] mx-auto mb-24">
         <div className="text-center mb-12">
-      
-
           <Typography.Headers className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             Pricing Plans
           </Typography.Headers>
 
           <Typography.Text className="text-lg text-gray-600 max-w-3xl mx-auto">
-          Get more work done with our modern AI built for audit professionals.
+            Get more work done with our modern AI built for audit professionals.
           </Typography.Text>
 
           {/* Billing Toggle */}
@@ -217,7 +212,7 @@ const Pricing = () => {
                         : "bg-primary text-white hover:bg-primary/90 shadow-lg",
                     )}
                   >
-                    Start Accounting Platform
+                    Get Started
                   </a>
 
                   <Typography.SubText
