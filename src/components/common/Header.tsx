@@ -31,10 +31,10 @@ const Header = () => {
       name: "Pricing",
       path: APP_ROUTES.PRICING,
     },
-    {
-      name: "Contact Us",
-      path: APP_ROUTES.CONTACT,
-    },
+    // {
+    //   name: "Contact Us",
+    //   path: APP_ROUTES.CONTACT,
+    // },
   ];
 
   const checkArray = (array: string[]) => {
@@ -68,8 +68,8 @@ const Header = () => {
 
         <div className="md:flex hidden items-center space-x-6">
           <Link to="/">
-            <Typography.SubText className={cn(checkArray(locationArray) ? "text-black" : "text-white")}>
-              Login
+            <Typography.SubText className={ "text-black"}>
+              Sign In
             </Typography.SubText>
           </Link>
 
