@@ -2,18 +2,16 @@
 import PurpleLogo from "@/assets/images/PurpleLogo.png";
 import { APP_ROUTES, URLS } from "@/constants/app-routes";
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Typography from "../Typography";
 import { Button } from "./Button";
 import { HiMenu } from "react-icons/hi";
-import { cn } from "@/helpers/classHelpers";
 import Navbar from "./Navbar";
 
 const Header = () => {
-  const location = useLocation();
   const [open, setOpen] = useState(false);
 
-  const locationArray = location.pathname.split("/");
+
   const links = [
     {
       name: "About Us",
@@ -37,15 +35,6 @@ const Header = () => {
     // },
   ];
 
-  const checkArray = (array: string[]) => {
-    const x = ["contact-us", "pricing"];
-
-    for (let i = 0; i < array.length; i++) {
-      if (array.includes(x[i])) {
-        return true;
-      }
-    }
-  };
 
   return (
     <div className="h-[80px] flex items-center  w-[100vw] justify-center border-b-[1px]">
