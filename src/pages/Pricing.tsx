@@ -10,14 +10,6 @@ const Pricing = () => {
   const { data } = useQuerySubscriptionPlans();
   const [isYearly, setIsYearly] = useState(false);
 
-  const auditPlans = [
-    "Per audit stage: $25",
-    "Billable hours: $2 per hour spent during the audit process",
-    "Computer vision (Inventory checking): $250 (Extra charges may apply depending on complexity and volume)",
-    "Per document upload and storage: $5 (Large documents attract higher charges)",
-    "Audit report generation: $100",
-    "George analysis breakdown and access to documentation: $50",
-  ];
 
   // Filter plans by frequency and organize by plan type
   const filteredPlans = useMemo(() => {
@@ -58,83 +50,19 @@ const Pricing = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#EFF4FF] via-white to-[#F8FAFF]">
-      {/* Hero Section */}
-      <div className="pt-[8%] pb-[4em]">
-        <div className="w-[85%] mx-auto text-center space-y-6">
-          <div className="inline-block px-6 py-2 bg-primary/10 rounded-full">
-            <Typography.SubText className="text-primary font-medium tracking-wide">Pricing Plans</Typography.SubText>
-          </div>
-
-          <Typography.H1 className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent">
-            Flexible Plans. Powerful Tools.
-          </Typography.H1>
-        </div>
-      </div>
-
-      <div className="w-[85%] mx-auto mb-8">
-        <div className="bg-white rounded-3xl p-12 shadow-xl border border-gray-100">
-          <div className="text-center mb-12">
-            <div className="inline-block px-4 py-2 bg-orange-100 rounded-lg mb-4">
-              <Typography.SubText className="text-orange-700 font-semibold">Audit Services</Typography.SubText>
-            </div>
-
-            <Typography.Headers className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-              AI Auditor Pricing
-            </Typography.Headers>
-
-            <Typography.Text className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Our most advanced AI called George is capable of independent reasoning and carrying out intelligent audit
-              tasks without supervision. Pricing for Audit Professionals.
-            </Typography.Text>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              {auditPlans.slice(0, 3).map((plan, index) => (
-                <div key={index} className="flex items-start space-x-3 p-4 bg-gray-50 rounded-xl">
-                  <BiCheckCircle size={20} className="text-green-500 flex-shrink-0 mt-0.5" />
-                  <Typography.SubText className="text-gray-700 font-medium">{plan}</Typography.SubText>
-                </div>
-              ))}
-            </div>
-
-            <div className="space-y-4">
-              {auditPlans.slice(3).map((plan, index) => (
-                <div key={index} className="flex items-start space-x-3 p-4 bg-gray-50 rounded-xl">
-                  <BiCheckCircle size={20} className="text-green-500 flex-shrink-0 mt-0.5" />
-                  <Typography.SubText className="text-gray-700 font-medium">{plan}</Typography.SubText>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="text-center mt-8">
-            <a
-              href={URLS.ORDIT_AI}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary/90 transition-all duration-300 transform hover:scale-105"
-            >
-              Start Your Audit with OrditAI
-            </a>
-          </div>
-        </div>
-      </div>
-
+    
+  
       {/* Subscription Plans */}
       <div className="w-[85%] mx-auto mb-24">
         <div className="text-center mb-12">
-          <div className="inline-block px-4 py-2 bg-blue-100 rounded-lg mb-4">
-            <Typography.SubText className="text-blue-700 font-semibold">Accounting Platform</Typography.SubText>
-          </div>
+      
 
           <Typography.Headers className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Accounting Subscription Plans
+            Pricing Plans
           </Typography.Headers>
 
           <Typography.Text className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Access our comprehensive accounting platform with powerful AI-driven tools to streamline your financial
-            operations. Choose the plan that fits your business needs.
+          Get more work done with our modern AI built for audit professionals.
           </Typography.Text>
 
           {/* Billing Toggle */}
@@ -301,59 +229,6 @@ const Pricing = () => {
               </div>
             );
           })}
-        </div>
-      </div>
-
-      {/* Audit Pricing Section */}
-
-      {/* FAQ Section */}
-      <div className="w-[85%] mx-auto pb-16">
-        <div className="text-center mb-12">
-          <Typography.Headers className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Frequently Asked Questions
-          </Typography.Headers>
-          <Typography.Text className="text-lg text-gray-600">
-            Everything you need to know about our pricing and plans
-          </Typography.Text>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-            <Typography.Headers className="text-xl font-semibold text-gray-800 mb-4">
-              Can I change plans anytime?
-            </Typography.Headers>
-            <Typography.SubText className="text-gray-600">
-              Yes, you can upgrade or downgrade your plan at any time. Changes will be reflected in your next billing
-              cycle.
-            </Typography.SubText>
-          </div>
-
-          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-            <Typography.Headers className="text-xl font-semibold text-gray-800 mb-4">
-              Is there a free trial?
-            </Typography.Headers>
-            <Typography.SubText className="text-gray-600">
-              Absolutely! All plans come with a 30-day free trial. No credit card required to get started.
-            </Typography.SubText>
-          </div>
-
-          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-            <Typography.Headers className="text-xl font-semibold text-gray-800 mb-4">
-              What payment methods do you accept?
-            </Typography.Headers>
-            <Typography.SubText className="text-gray-600">
-              We accept all major credit cards, PayPal, and bank transfers for annual plans.
-            </Typography.SubText>
-          </div>
-
-          <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-            <Typography.Headers className="text-xl font-semibold text-gray-800 mb-4">
-              Do you offer refunds?
-            </Typography.Headers>
-            <Typography.SubText className="text-gray-600">
-              Yes, we offer a 30-day money-back guarantee. If you're not satisfied, we'll refund your payment.
-            </Typography.SubText>
-          </div>
         </div>
       </div>
     </div>
