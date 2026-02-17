@@ -261,7 +261,7 @@ export const testimonialData = [
     subTitle:
       "With OrditAI, our auditing workflow has transformed entirely. What used to take several days is now handled within hours. The platform’s automation features provide us with real-time data and ensure we’re always compliant.",
     office: "Finance Director",
-    name: "Aisha Bassey",
+    name: "Victor Ballard",
   },
   {
     noOfStars: 5,
@@ -269,7 +269,7 @@ export const testimonialData = [
     subTitle:
       "Before OrditAI, our audits required extensive manual preparation. Now, we rely on OrditAI to manage everything smoothly, delivering instant reports and helping us catch errors early. It’s a game-changer for our team.",
     office: "Senior Financial Analyst",
-    name: "Daniel Okonkwo",
+    name: "Alexia Wagner",
   },
   {
     noOfStars: 5,
@@ -285,7 +285,7 @@ export const testimonialData = [
     subTitle:
       "OrditAI’s automated reporting has transformed our monthly audit routine. We save hours, and the accuracy is unmatched. Our team now focuses on strategy, knowing OrditAI handles the heavy lifting.",
     office: "Financial Controller",
-    name: "Kemi Olatunji",
+    name: "Patric Defoe",
   },
 
   {
@@ -294,7 +294,7 @@ export const testimonialData = [
     subTitle:
       "OrditAI has been instrumental in simplifying our audit processes. The software is intuitive, fast, and helps us stay compliant effortlessly. We now get real-time updates, and it’s been an absolute asset.",
     office: "Chief Accountant",
-    name: "Mohammed Adamu",
+    name: "Eric Cole",
   },
   // {noOfStars: 5, title: "", subTitle:"", office: "", name: ""},
   // {noOfStars: 5, title: "", subTitle:"", office: "", name: ""}

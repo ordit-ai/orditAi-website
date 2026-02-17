@@ -56,7 +56,7 @@ const Header = () => {
         </div>
 
         <div className="md:flex hidden items-center space-x-6">
-          <Link to="/">
+          <Link to={URLS.ORDIT_AI}>
             <Typography.SubText className={ "text-black"}>
               Sign In
             </Typography.SubText>
