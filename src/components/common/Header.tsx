@@ -1,68 +1,72 @@
-import Logo from "@/assets/images/Logo.png";
-import { APP_ROUTES } from "@/constants/app-routes";
-import React from "react";
-import { Link, NavLink } from "react-router-dom";
+// import Logo from "@/assets/images/Logo.png";
+import PurpleLogo from "@/assets/images/PurpleLogo.png";
+import { APP_ROUTES, URLS } from "@/constants/app-routes";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Typography from "../Typography";
 import { Button } from "./Button";
 import { HiMenu } from "react-icons/hi";
+import Navbar from "./Navbar";
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
+
   const links = [
     {
-      name: "Home",
-      path: APP_ROUTES.HOME,
+      name: "About Us",
+      path: APP_ROUTES.ABOUT_US,
     },
     {
       name: "Features",
       path: APP_ROUTES.FEATURES,
     },
+    // {
+    //   name: "Careers",
+    //   path: APP_ROUTES.CAREERS,
+    // },
     {
       name: "Pricing",
       path: APP_ROUTES.PRICING,
     },
-    {
-      name: "About Us",
-      path: APP_ROUTES.ABOUT_US,
-    },
-
-    {
-      name: "Resources",
-      path: APP_ROUTES.ABOUT_US,
-    },
-
-    {
-      name: "Contact",
-      path: APP_ROUTES.ABOUT_US,
-    },
+    // {
+    //   name: "Contact Us",
+    //   path: APP_ROUTES.CONTACT,
+    // },
   ];
 
   return (
-    <div className="absolute h-[80px] flex items-center  w-[100vw] justify-center">
-      <div className="flex items-center justify-between w-[85vw] h-[60px] px-4 border-b-[1px]">
-        <div className="flex items-center space-x-6">
-          <img src={Logo} alt="Logo" className="h-[25px]" />
+    <div className="h-[80px] flex items-center  w-[100vw] justify-center border-b-[1px]">
+      <div className="flex items-center justify-between w-[85vw] h-[70px] ">
+        <div className="flex items-center justify-between space-x-6 w-[60%]">
+          <Link to={"/"}>
+            <img src={PurpleLogo} alt="PurpleLogo" className="h-[25px]" />
+          </Link>
 
           <div className="hidden items-center gap-x-6 md:flex">
             {React.Children.toArray(
               links?.map((link) => (
-                <NavLink to={link.path} className={({ isActive }) => (isActive ? "text-white" : "text-white")}>
+                <a href={link.path} className={"text-black"}>
                   <Typography.SubText>{link.name}</Typography.SubText>
-                </NavLink>
+                </a>
               )),
             )}
           </div>
         </div>
 
         <div className="md:flex hidden items-center space-x-6">
-          <Link to="/">
-            <Typography.SubText className="text-white">Login</Typography.SubText>
+          <Link to={URLS.ORDIT_AI}>
+            <Typography.SubText className={"text-black"}>Sign In</Typography.SubText>
           </Link>
 
-          <Button variant="quickAction">Get Started</Button>
+          <a href={URLS.ORDIT_AI} target="_blank">
+            <Button variant={"default"}>Hire George Today</Button>
+          </a>
         </div>
 
-        <HiMenu className="flex md:hidden text-white text-3xl cursor-pointer" />
+        <HiMenu onClick={() => setOpen(true)} className="sm:hidden flex text-black text-2xl cursor-pointer" />
       </div>
+
+      <Navbar open={open} setOpen={setOpen} />
     </div>
   );
 };

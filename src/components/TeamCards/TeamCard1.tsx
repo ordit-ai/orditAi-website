@@ -7,15 +7,15 @@ const TeamCard1 = () => {
   return (
     <div className="bg-team1 bg-cover h-[380px] min-w-[300px] border-gray-500 border-[1px] flex items-center justify-between flex-col">
       <div></div>
-      <div className="bg-white bg-opacity-10 backdrop-blur-[8px] h-[50%] p-4 text-white space-y-4 cursor-pointer">
+      <div className="bg-black bg-opacity-10 backdrop-blur-[8px] h-[50%] p-4 text-white space-y-4 cursor-pointer">
         <div className="flex items-center justify-between text-white">
-          <Typography.H3>Alisa Hester</Typography.H3>
+          <Typography.H3>Temidayo Dauda</Typography.H3>
 
           <MdArrowOutward className="text-xl" />
         </div>
 
         <div className="space-y-1">
-          <Typography.SubText>Founder & CEO</Typography.SubText>
+          <Typography.SubText className="text-white">Founder & CEO</Typography.SubText>
 
           <Typography.MicroText className="text-white">
             Former co-founder of Opendoor. Early staff at Spotify and Clearbit.

@@ -5,6 +5,27 @@ export const routes = [
     path: APP_ROUTES.HOME,
   },
   {
+    path: APP_ROUTES.FEATURES,
+  },
+  {
     path: APP_ROUTES.ABOUT_US,
+  },
+  {
+    path: APP_ROUTES.CONTACT,
+  },
+  {
+    path: APP_ROUTES.PRICING,
+  },
+  {
+    path: APP_ROUTES.CAREERS,
+  },
+  {
+    path: APP_ROUTES.PRIVACY_POLICY,
+  },
+  {
+    path: APP_ROUTES.TERMS_OF_SERVICE,
+  },
+  {
+    path: APP_ROUTES.REFUND_POLICY,
   },
 ];

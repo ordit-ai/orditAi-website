@@ -1,14 +1,29 @@
 import { Route, Routes } from "react-router-dom";
 import WebsiteLayout from "./Layouts/WebsiteLayout";
-import Home from "./pages/Home";
+// import Home from "./archives/Home";
 import { APP_ROUTES } from "./constants/app-routes";
 import { routes } from "./utils/routes";
 import AboutUs from "./pages/AboutUs";
+import ContactUs from "./pages/ContactUs";
+import Pricing from "./pages/Pricing";
+import Home from "./pages/Home";
+import FeaturesPage from "./pages/features";
+import Careers from "./pages/Careers";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsOfUse from "./pages/TermsOfUse";
+import RefundPolicy from "./pages/RefundPolicy";
 
 function App() {
   const Element = {
     [APP_ROUTES.HOME]: <Home />,
+    [APP_ROUTES.FEATURES]: <FeaturesPage />,
     [APP_ROUTES.ABOUT_US]: <AboutUs />,
+    [APP_ROUTES.CONTACT]: <ContactUs />,
+    [APP_ROUTES.PRICING]: <Pricing />,
+    [APP_ROUTES.CAREERS]: <Careers />,
+    [APP_ROUTES.PRIVACY_POLICY]: <PrivacyPolicy />,
+    [APP_ROUTES.TERMS_OF_SERVICE]: <TermsOfUse />,
+    [APP_ROUTES.REFUND_POLICY]: <RefundPolicy />,
   };
 
   return (

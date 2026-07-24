@@ -1,0 +1,98 @@
+import { AuditIcon } from "@/assets/images/auditProcess/auditIcon";
+import { cn } from "@/helpers/classHelpers";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import Typography from "./Typography";
+import { Button } from "./common/Button";
+import { OnboardItem } from "@/constants/homedata";
+import { URLS } from "@/constants/app-routes";
+
+interface TProps {
+  data: OnboardItem[];
+  position: "left" | "right";
+}
+
+const AnimatedSection = ({ data, position }: TProps) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const interval = setTimeout(() => {
+      setCount((prevCount) => (prevCount === 3 ? 0 : prevCount + 1));
+    }, 3500);
+
+    return () => clearTimeout(interval);
+  }, [count]);
+
+  const handleHover = (id: number) => {
+    setCount(count !== id ? id : count);
+  };
+
+  return (
+    <div className="flex md:flex-row flex-col gap-[1.5em] items-center my-[3em]">
+      {position === "left" && (
+        <div className="bg-[#030124] rounded-xl md:h-[75vh]  h-[250px] md:w-[80%] w-[100%] mx-auto flex items-center justify-center relative">
+          {data.map((el, i) => (
+            <motion.div
+              key={i}
+              className="bg-[#030124] md:p-[4em] p-[1em] absolute w-[100%] flex items-center justify-center rounded-xl " // Layer images on top of each other
+              initial={{ opacity: 0 }} // Start with hidden
+              animate={{ opacity: count === i ? 1 : 0 }} // Show current image, hide others
+              transition={{ duration: 1, ease: "easeInOut" }} // mdooth transition
+            >
+              <img src={el.image} alt={`image-${i}`} className="h-auto w-[100%] object-center rounded-xl" />
+            </motion.div>
+          ))}
+        </div>
+      )}
+
+      {position === "left" ? null : (
+        <div className="md:w-[35%] w-[100%] space-y-5">
+          {data.map((el, i) => (
+            <motion.div
+              className={cn(
+                "border-[1px] rounded-xl p-7 space-y-3 transition-all duration-300 cursor-pointer bg-white ",
+                count === i ? "" : "",
+              )}
+              key={el.id}
+              onClick={() => handleHover(i)}
+              onMouseEnter={() => handleHover(i)}
+              onMouseLeave={() => handleHover(count)}
+              transition={{ duration: 0.8, ease: "easeIn" }}
+            >
+              <AuditIcon />
+
+              <Typography.H3>{el.title}</Typography.H3>
+              {count === i ? (
+                <motion.div className="space-y-3">
+                  <Typography.SubText>{el.subtitle}</Typography.SubText>
+
+                  <a href={URLS.ORDIT_AI} target="_blank">
+                    <Button className="mt-5">Hire George Today</Button>
+                  </a>
+                </motion.div>
+              ) : null}
+            </motion.div>
+          ))}
+        </div>
+      )}
+
+      {position === "right" && (
+        <div className=" rounded-xl md:w-[65%] w-[100%] md:h-[80vh] sm:h-[500px] h-[300px]  mt-[3em] md:mt-0 border-[1px] flex items-center justify-center relative">
+          {data.map((el, i) => (
+            <motion.div
+              key={i}
+              className=" absolute w-[100%] flex items-center justify-center rounded-xl " // Layer images on top of each other
+              initial={{ opacity: 0 }} // Start with hidden
+              animate={{ opacity: count === i ? 1 : 0 }} // Show current image, hide others
+              transition={{ duration: 1, ease: "easeInOut" }} // mdooth transition
+            >
+              <img src={el.image} alt={`image-${i}`} className="h-auto w-[70%] object-center rounded-xl" />
+            </motion.div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default AnimatedSection;

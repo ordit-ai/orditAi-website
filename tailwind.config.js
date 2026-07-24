@@ -7,7 +7,8 @@ export default {
         primary: "#4E2DBE",
       },
       fontFamily: {
-        primary: ["Onest", "sans-serif"],
+        primary: ["'Host Grotesk'", "sans-serif"],
+        secondary: ["'Host Grotesk'", "sans-serif"],
       },
       backgroundImage: {
         bg2: "url('assets/images/bg2.png')",
