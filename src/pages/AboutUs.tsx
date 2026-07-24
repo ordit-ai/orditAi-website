@@ -1,8 +1,27 @@
 // import JobCard from "@/components/TeamCards/JobCard";
 // import TeamCard1 from "@/components/TeamCards/TeamCard1";
 import Typography from "@/components/Typography";
+import { useState } from "react";
 
 const AboutUs = () => {
+  const [form, setForm] = useState({ name: "", email: "", organisation: "" });
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!form.name.trim() || !form.email.trim()) {
+      setError("Please fill in your name and email.");
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
+      setError("Please enter a valid email address.");
+      return;
+    }
+    setError("");
+    setSubmitted(true);
+  };
+
   // const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   // const scroll = (direction: "left" | "right"): void => {
@@ -244,18 +263,62 @@ const AboutUs = () => {
                 value.
               </Typography.Text>
 
-              <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="http://web.orditai.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary/90 hover:shadow-lg transition-all duration-300 transform hover:scale-105 inline-block text-center"
-                >
-                  Join the Future
-                </a>
-                <button className="px-8 py-4 border-2 border-primary text-primary font-semibold rounded-xl hover:bg-primary hover:text-white transition-all duration-300 transform hover:scale-105">
-                  Learn More
-                </button>
+              <div className="mt-10 w-full max-w-md mx-auto">
+                {submitted ? (
+                  <div className="bg-green-50 border border-green-200 rounded-2xl p-8 text-center space-y-3">
+                    <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto">
+                      <svg className="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </div>
+                    <Typography.Headers className="text-xl font-bold text-gray-800">
+                      You're on the list!
+                    </Typography.Headers>
+                    <Typography.SubText className="text-gray-600">
+                      Thanks, {form.name.split(" ")[0]}. We'll be in touch soon.
+                    </Typography.SubText>
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-4 text-left">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">Full Name *</label>
+                      <input
+                        type="text"
+                        placeholder="e.g. Abdullateef Abdulrahman"
+                        value={form.name}
+                        onChange={(e) => setForm({ ...form, name: e.target.value })}
+                        className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary text-sm"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
+                      <input
+                        type="email"
+                        placeholder="you@yourfirm.com"
+                        value={form.email}
+                        onChange={(e) => setForm({ ...form, email: e.target.value })}
+                        className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary text-sm"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">Organisation</label>
+                      <input
+                        type="text"
+                        placeholder="Firm or company name (optional)"
+                        value={form.organisation}
+                        onChange={(e) => setForm({ ...form, organisation: e.target.value })}
+                        className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary text-sm"
+                      />
+                    </div>
+                    {error && <Typography.SubText className="text-red-500 text-sm">{error}</Typography.SubText>}
+                    <button
+                      type="submit"
+                      className="w-full py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary/90 hover:shadow-lg transition-all duration-300"
+                    >
+                      Join the Future
+                    </button>
+                  </form>
+                )}
               </div>
             </div>
           </div>

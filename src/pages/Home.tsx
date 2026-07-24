@@ -71,16 +71,21 @@ const Home = () => {
               </div>
             </div>
 
-            {/* <div className="py-[2em] space-y-4">
+            <div className="py-[2em] space-y-4">
               <Typography.SubText className="text-gray-600 sm:text-left text-center">
-                Trusted by Audit and accounting firms committed to accuracy and compliance
+                Trusted by audit professionals and firms committed to accuracy and compliance
               </Typography.SubText>
-              <div className="flex items-center space-x-4 pt-[0.5em]">
-                {HeroLogo.map((el, i) => (
-                  <img src={el} alt={`missionImage-${i}`} key={`missionImage-${i}`} className="h-[20px]" />
+              <div className="flex flex-wrap items-center sm:justify-start justify-center gap-x-6 gap-y-2 pt-[0.5em]">
+                {["SwipeTech Limited", "Exquisite Analytica (KPC)"].map((name) => (
+                  <Typography.SubText
+                    key={name}
+                    className="text-gray-500 font-medium tracking-wide border-l-2 border-primary pl-2"
+                  >
+                    {name}
+                  </Typography.SubText>
                 ))}
               </div>
-            </div> */}
+            </div>
           </div>
 
           <img
@@ -432,8 +437,7 @@ const Home = () => {
             </Typography.H2>
 
             <Typography.Text className="text-gray-600 ">
-              The testimonials below are attributed to fictional characters, <br />
-              but they reflect real sentiments and feedback we’ve received from early users.
+              Hear from audit professionals and firms already using George.
             </Typography.Text>
           </div>
 
@@ -464,7 +468,7 @@ const Home = () => {
           {testimonialData.map((elm, i) => (
             <div
               key={`TestimonialCard-${i}`}
-              className=" p-8 h-[400px]  sm:min-w-[400px] min-w-[350px] border-[1px] rounded-xl bg-white cursor-pointer hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+              className="p-8 min-h-[400px] sm:min-w-[400px] min-w-[350px] border-[1px] rounded-xl bg-white cursor-pointer hover:shadow-md transition-all duration-300 flex flex-col justify-between gap-6"
             >
               <div className="space-y-4">
                 <div className="flex items-center space-x-2">

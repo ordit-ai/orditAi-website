@@ -11,7 +11,6 @@ import Navbar from "./Navbar";
 const Header = () => {
   const [open, setOpen] = useState(false);
 
-
   const links = [
     {
       name: "About Us",
@@ -35,7 +34,6 @@ const Header = () => {
     // },
   ];
 
-
   return (
     <div className="h-[80px] flex items-center  w-[100vw] justify-center border-b-[1px]">
       <div className="flex items-center justify-between w-[85vw] h-[70px] ">
@@ -57,9 +55,7 @@ const Header = () => {
 
         <div className="md:flex hidden items-center space-x-6">
           <Link to={URLS.ORDIT_AI}>
-            <Typography.SubText className={ "text-black"}>
-              Sign In
-            </Typography.SubText>
+            <Typography.SubText className={"text-black"}>Sign In</Typography.SubText>
           </Link>
 
           <a href={URLS.ORDIT_AI} target="_blank">

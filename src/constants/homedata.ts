@@ -194,20 +194,20 @@ export const auditProcess1 = [
 export const numberStats = [
   {
     id: "number1",
-    title: "10x",
-    subtitle: "The cost savings compared to a traditional auditing team.",
+    title: "Significant Cost Reduction",
+    subtitle: "Clients report major cost savings compared to building a traditional in-house audit team.",
     icon: TrendIcon,
   },
   {
     id: "number2",
-    title: "Save 90%",
-    subtitle: "On hiring personnel by deploying AI-powered solutions.",
+    title: "Faster Audit Cycles",
+    subtitle: "Audit engagements that took weeks are completed in a fraction of the time with George.",
     icon: ChipIcon,
   },
   {
     id: "number3",
-    title: "1000x",
-    subtitle: "Capacity to handle audits and accounting tasks 24/7 at scale, with zero downtime.",
+    title: "24/7 Availability",
+    subtitle: "George handles audit tasks around the clock with no downtime, no holidays, no fatigue.",
     icon: ScaleIcon,
   },
 ];
@@ -257,45 +257,34 @@ export const onboardState = [
 export const testimonialData = [
   {
     noOfStars: 5,
-    title: "OrditAI Has Revolutionized Our Auditing Process",
+    title: "George Handles the Detail Work So I Can Focus on What Matters",
     subTitle:
-      "With OrditAI, our auditing workflow has transformed entirely. What used to take several days is now handled within hours. The platform’s automation features provide us with real-time data and ensure we’re always compliant.",
-    office: "Finance Director",
-    name: "Victor Ballard",
+      "As a pension fund auditor, accuracy and regulatory compliance are non-negotiable. OrditAI’s George has significantly reduced the time I spend on repetitive verification tasks, allowing me to focus on higher-level risk assessments and audit quality. It is a tool built with a real understanding of how professional auditing works.",
+    office: "Director, Pension & Gratuity Audit | FCA, FCTI — Kwara State Auditor General",
+    name: "Abdullateef Abdulrahman",
   },
   {
     noOfStars: 5,
-    title: "Efficient, Accurate, and Time-Saving!",
+    title: "Our Audit Process Is Now Structured and Efficient",
     subTitle:
-      "Before OrditAI, our audits required extensive manual preparation. Now, we rely on OrditAI to manage everything smoothly, delivering instant reports and helping us catch errors early. It’s a game-changer for our team.",
-    office: "Senior Financial Analyst",
-    name: "Alexia Wagner",
+      "Before OrditAI, keeping up with financial compliance while running a growing technology business was a constant challenge. George guided us through the entire audit engagement process step by step — from engagement planning to documentation. Our team now approaches audits with far more confidence and structure.",
+    office: "Management, SwipeTech Limited",
+    name: "SwipeTech Limited",
   },
   {
     noOfStars: 5,
-    title: "Compliance Made Easy with OrditAI",
+    title: "The Precision George Delivers Is Exactly What Analytics Demands",
     subTitle:
-      "OrditAI has drastically cut down our audit preparation time. From data uploads to generating insights, everything is seamless. Their compliance checks keep us confident in our reporting accuracy.",
-    office: "CFO",
-    name: "Jessica Wong",
+      "OrditAI brings the kind of structured, data-driven approach that an analytics firm expects. George walked us through our audit workflow in a way that was thorough and easy to follow. Our compliance documentation is now more consistent, and our preparation time has dropped considerably.",
+    office: "Management, Exquisite Analytica (KPC)",
+    name: "Exquisite Analytica (KPC)",
   },
   {
     noOfStars: 5,
-    title: "OrditAI Saves Us Valuable Time and Resources",
+    title: "A Practical Tool Built for Real Audit Practice",
     subTitle:
-      "OrditAI’s automated reporting has transformed our monthly audit routine. We save hours, and the accuracy is unmatched. Our team now focuses on strategy, knowing OrditAI handles the heavy lifting.",
-    office: "Financial Controller",
-    name: "Patric Defoe",
+      "Running a chartered accounting firm means managing multiple client engagements simultaneously. OrditAI's George has made it significantly easier to structure audit engagements, maintain compliance with standards, and deliver consistent quality across clients. It is the kind of tool that understands how professional practice actually works.",
+    office: "Principal Partner, FCA, FCTI — Benjamin Akanji Omonayajo & Co., Abeokuta",
+    name: "Omonayajo Benjamin Akanji",
   },
-
-  {
-    noOfStars: 5,
-    title: "A Reliable Partner in Financial Auditing",
-    subTitle:
-      "OrditAI has been instrumental in simplifying our audit processes. The software is intuitive, fast, and helps us stay compliant effortlessly. We now get real-time updates, and it’s been an absolute asset.",
-    office: "Chief Accountant",
-    name: "Eric Cole",
-  },
-  // {noOfStars: 5, title: "", subTitle:"", office: "", name: ""},
-  // {noOfStars: 5, title: "", subTitle:"", office: "", name: ""}
 ];
