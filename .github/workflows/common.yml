@@ -16,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
           cache: "npm"
 
       - name: Install dependencies
@@ -31,7 +31,9 @@ jobs:
       - name: Build and start
         run: |
           npm run build
-          nohup npm run start &
+          # `next start` doesn't work with output: "export" (no server build
+          # is produced), so smoke-test by serving the static export instead.
+          nohup npx serve -s out -l ${PORT} &
           sleep 5
 
       # - name: Unit tests
