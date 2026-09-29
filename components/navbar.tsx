@@ -121,7 +121,7 @@ export function Navbar() {
 
         <div className="flex items-center gap-2 sm:gap-6">
           <Link
-            href="/sign-in"
+            href="https://app.orditai.com/auth/register/"
             className="type-body-s hidden font-medium text-ink transition-colors duration-150 ease-out hover:text-violet lg:inline"
           >
             Sign in
@@ -186,7 +186,7 @@ export function Navbar() {
 
                 <div className="mt-4 border-t border-neutral-200 pt-6">
                   <Link
-                    href="/sign-in"
+                    href="https://app.orditai.com/auth/register/"
                     onClick={() => setMenuOpen(false)}
                     className={buttonVariants({ variant: "outline", className: "w-full" })}
                   >

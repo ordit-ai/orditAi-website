@@ -31,7 +31,7 @@ const COLUMNS = [
     links: [
       { label: "About", href: "/about" },
       { label: "Contact", href: "/contact" },
-      { label: "Sign in", href: "/sign-in" },
+      { label: "Sign in", href: "https://app.orditai.com/auth/register/" },
     ],
   },
   {
